@@ -1,7 +1,10 @@
 {
   "name": "datos-en-fuga",
+  "description": "Datos en fuga static website, developed by DER, @NicoC0 & @GerardoDR",
+  "homepage": "https://datosenfuga.org",
+  "license": "GPL-3.0",  
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
