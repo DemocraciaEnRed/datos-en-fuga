@@ -1,9 +1,45 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Open_Sans } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 import NavBar from './components/NavBar'
 
 const inter = Inter({ subsets: ['latin'] })
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  variable: '--font-open-sans'
+})
+const nippo = localFont({
+  src: [
+    {
+      path: './fonts/NIPPO-EXTRALIGHT.otf',
+      weight: '200',
+      style: 'normal',
+    },
+    {
+      path: './fonts/NIPPO-LIGHT.otf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: './fonts/NIPPO-REGULAR.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/NIPPO-MEDIUM.otf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './fonts/NIPPO-BOLD.otf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-nippo',
+  display: 'swap'
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +53,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={inter.className}>
+      <body className={`${nippo.variable} ${openSans.className} ${inter.className}`}>
         <NavBar />
         {children}
       </body>
