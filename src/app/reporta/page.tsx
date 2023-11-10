@@ -5,7 +5,7 @@ import squaresData2 from "./_dataProteger.js"
 const Reportes = () => {
     return (
         <>
-            <div className="py-6 flex flex-col flex-wrap justify-center justify-items-center items-center bg-[#f1f1f1] h-4/5">
+            <div className="py-6 flex flex-col flex-wrap justify-center justify-items-center items-center bg-[#f1f1f1] h-4/5 text-center">
                 <Image
                     className="relative"
                     src="/reporta/qant.png"
