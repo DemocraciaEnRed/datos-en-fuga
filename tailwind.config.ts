@@ -23,9 +23,6 @@ const config: Config = {
       colors: {
         'der-black': '#212121'
       }
-    },
-    screens: {
-      'squareBox': '845px'
     }
   },
   plugins: [],
