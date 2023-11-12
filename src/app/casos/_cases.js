@@ -27,7 +27,7 @@ const cases = [
   },
   {
     id: 2,
-    avatar: casesImages.joaquin,
+    avatar: casesImages.gaspar,
     name: "Gaspar Ariel Ortmann",
     occupation: "Ocupado",
     year:"2019",
@@ -50,7 +50,7 @@ const cases = [
   },
   {
     id: 3,
-    avatar: casesImages.joaquin,
+    avatar: casesImages.javier,
     name: "Javier Smaldone",
     occupation: "Programador informático",
     year:"2019",

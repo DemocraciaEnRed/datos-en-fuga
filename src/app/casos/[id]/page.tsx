@@ -21,7 +21,7 @@ const ID = () => {
 
       <div className='bg-[#F1F1F1] py-[3vh] h-4/6'>
         <h2 className='font-nippo text-5xl bg-[#CC4356] py-4 pl-14 pr-5 inline-block font-extrabold'>ELLOS, NO LO SABÍAN</h2>
-        <p className='text-der-black text-xl pl-12 my-4 font-medium'>
+        <p className='font-nippo text-der-black text-xl pl-12 my-4 font-medium'>
           TE CONTAMOS QUIÉNES SON Y CUÁL ES SU HISTORIA
         </p>
 
