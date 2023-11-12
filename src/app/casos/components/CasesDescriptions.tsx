@@ -2,23 +2,25 @@ import React from 'react'
 import Image from "next/image"
 import cases from "../_cases.js"
 
-const CasesDescription = ({id}) => {
-  let number = Number(id)
-  let casos = cases.find((c) => c.id === number)
-  let content = Object.values(casos.content)
+const CasesDescription = ({id} : { id: number }) => {
+  let casos = cases.find((c) => c.id === id)
+  let content: any[] = []
+  if (casos && casos.content) {
+    content = Object.values(casos.content)
+  } else return
 
   return (
     <div className='my-6 text-black mx-14'>
-        <h3 className='font-extrabold text-2xl'>{casos?.name}</h3>
+        <h3 className='font-extrabold text-2xl'>{casos.name}</h3>
         <div className='flex flex-row justify-between'>
-          <p className='text-xl'>{casos?.occupation}</p>
-          <p>{casos?.year}</p>
+          <p className='text-xl'>{casos.occupation}</p>
+          <p>{casos.year}</p>
         </div>
         <hr className="border-black border-0.5 my-1" />
 
         <div className='my-6'>
           <p className='font-extrabold'>
-            {casos?.subtitle}
+            {casos.subtitle}
           </p>
           <br />
           <div>

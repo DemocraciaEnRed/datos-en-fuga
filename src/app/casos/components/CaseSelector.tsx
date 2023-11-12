@@ -5,7 +5,7 @@ import cases from "../_cases.js"
 import Image from "next/image"
 import { notFound, useParams } from 'next/navigation.js'
 import Link from 'next/link'
-import CasesDescription from './CasesDescriptions.tsx'
+import CasesDescription from './CasesDescriptions' 
 
 const CaseSelector = () => {
   const [caso, setCaso] = useState(0)
