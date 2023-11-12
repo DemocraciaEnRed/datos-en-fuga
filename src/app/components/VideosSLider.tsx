@@ -50,7 +50,7 @@ const VideosSLider = ({ iframes }: { iframes: IFrame[] }) => {
             </div>
             {!fadeIn &&
                 <div className="flex justify-center items-center w-[70vw] h-[39.5vw] mx-auto bg-der-black rounded-sm shadow">
-                    <Spinner />
+                    <Spinner/>
                 </div>
             }
             <div className="flex justify-center mt-3">

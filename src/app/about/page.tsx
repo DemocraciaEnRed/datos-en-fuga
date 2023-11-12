@@ -19,8 +19,8 @@ const About = () => {
         <main className="bg-gray-100 text-der-black font-open-sans">
             <header className="p-[6vw] md:p-[3vw] border-b-2 border-b-der-black">
                 <h1 className="font-nippo text-4xl font-bold uppercase">¿qué queremos?</h1>
-                <p className="my-7 md:w-[70vw] text-xl">Queremos que el Estado asegure estándares de ciberseguridad y que atienda a las alarmas que suenan por todos lados.</p>
-                <p className="my-7 md:w-[70vw] text-xl">Queremos que el Estado deje de perseguir penalmente a quienes identifican, denuncian y reportan vulnerabilidades informáticas.</p>
+                <p className="my-7 md:w-[65vw] lg:w-[55vw] text-xl">Queremos que el Estado asegure estándares de ciberseguridad y que atienda a las alarmas que suenan por todos lados.</p>
+                <p className="my-7 md:w-[65vw] lg:w-[55vw] text-xl">Queremos que el Estado deje de perseguir penalmente a quienes identifican, denuncian y reportan vulnerabilidades informáticas.</p>
             </header>
             <section className="p-[6vw] md:p-[3vw] border-b-2 border-b-der-black">
                 <h2 className="font-nippo text-4xl font-bold uppercase">¿por qué datos en fuga?</h2>
