@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from "next/image"
-import CaseSelector from './components/CaseSelector.tsx'
+import CaseSelector from '../components/CaseSelector.tsx'
 
-const Casos = () => {
+const ID = () => {
   return (
     <section>
       <div className='bg-[#2D2D2D] py-[8vh] px-10 h-4/6'>
@@ -61,4 +61,4 @@ const Casos = () => {
   )
 }
 
-export default Casos
+export default ID
