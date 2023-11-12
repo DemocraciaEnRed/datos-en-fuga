@@ -1,0 +1,17 @@
+
+export type Direction = 'left' | 'right';
+
+const ChevronSVG = ({ direction }: { direction: Direction }) => {
+
+    const chevrons = {
+        left: "M15.75 19.5L8.25 12l7.5-7.5",
+        right: "M8.25 4.5l7.5 7.5-7.5 7.5"
+    }
+
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d={chevrons[direction]} />
+        </svg>
+    )
+}
+export default ChevronSVG
