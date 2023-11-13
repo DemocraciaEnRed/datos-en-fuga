@@ -4,9 +4,10 @@ import cases from "../_cases.js"
 
 const CasesDescription = ({id} : { id: number }) => {
   let casos = cases.find((c) => c.id === id)
-  let content: any[] = []
+  let content: React.ReactElement | undefined 
+
   if (casos && casos.content) {
-    content = Object.values(casos.content)
+    content = casos?.content
   } else return
 
   return (
