@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Script from 'next/script'
 
 export default function Home() {
   return (
@@ -13,6 +14,10 @@ export default function Home() {
           height={37}
           priority
         />
+      </div>
+
+      <div className="flourish-embed w-[750px]" data-src="story/1969359">
+        <Script src="https://public.flourish.studio/resources/embed.js" />
       </div>
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
