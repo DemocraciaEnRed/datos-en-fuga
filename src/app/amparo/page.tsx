@@ -9,77 +9,98 @@ const Amparo = () => {
           <span className="font-extrabold">#CON</span>MIS<span className='font-extrabold'>DATOS</span>NO
         </h1>
         <p className='text-5xl max-[810px]:w-[500px] max-[500px]:w-[250px] max-[500px]:text-3xl max-[375px]:text-2xl'>
-          PRESENTAMOS UN AMPARO CONTRA EL <br/> ESTADO PARA PROTEGER NUESTROS DATOS <br /> PERSONALES EN UN AÑO DE ELECCIONES.
+          PRESENTAMOS UN AMPARO CONTRA EL <br /> ESTADO PARA PROTEGER NUESTROS DATOS <br /> PERSONALES EN UN AÑO DE ELECCIONES.
         </p>
       </div>
       <div className='py-[3vh] px-5 h-4/6 bg-[#F1F1F1] text-black'>
         <h2 className='w-[70%] mx-auto text-center text-5xl font-nippo font-bold max-[376px]:text-2xl'>
           PRESENTAMOS UN AMPARO PARA PROTEGER NUESTROS DATOS PERSONALES Y NUESTRA DEMOCRACIA
         </h2>
-        <div className='my-10 flex flex-col justify-center items-center'>
-          <Image 
-            alt="amparo"
-            src="/amparo/desktop/desktop1.png"
-            width={1600}
-            height={621}
-          />
-          <Image 
-          alt="amparo"
-          src="/amparo/desktop/desktop2.png"
-          width={1600}
-          height={621}
-        />
+        <div className='my-10'>
+          <div className='flex flex-col overflow-scroll overflow-y-hidden w-full'>
+            <Image
+              alt="amparo"
+              src="/amparo/desktop/desktop1.png"
+              width={1600}
+              height={621}
+              className='w-auto h-96 max-w-none self-start md:h-auto md:w-full md:max-w-[1600px] md:self-center'
+            />
+          </div>
+          <div className='flex justify-center items-center'>
+            <Image
+              alt="amparo"
+              src="/amparo/desktop/desktop2.png"
+              width={1600}
+              height={621}
+              className='hidden md:block w-full max-w-[1600px]'
+            />
+            <Image
+              alt="amparo"
+              src="/amparo/mobile/mobile2.png"
+              width={535}
+              height={456}
+              className='block md:hidden w-full max-w-[535px]'
+            />
+
+          </div>
         </div>
         <p className='text-5xl font-extrabold font-nippo text-center'>¿Y QUÉ ES LO QUE PUEDE PASAR MIENTRAS SIGA VIGENTE?</p>
-        <div className='my-7 flex flex-row flex-wrap gap-2 w-[80%] items-center justify-center mx-auto'>
-          <Image 
+        <div className='my-7 flex flex-row flex-wrap gap-5 items-center justify-center mx-auto'>
+          <Image
             alt="amparo"
             src="/amparo/desktop/desktop3.png"
             width={535}
             height={456}
+            className='w-full max-w-[522px]'
           />
-          <Image 
+          <Image
             alt="amparo"
             src="/amparo/desktop/desktop4.png"
             width={535}
             height={456}
+            className='w-full max-w-[522px]'
           />
-          <Image 
+          <Image
             alt="amparo"
             src="/amparo/desktop/desktop5.png"
             width={535}
             height={456}
+            className='w-full max-w-[522px]'
           />
         </div>
         <div className='flex flex-col justify-center items-center'>
-        <Image 
+          <Image
             alt="amparo"
             src="/amparo/desktop/desktop6.png"
             width={1600}
             height={420}
             className='hidden md:block'
           />
-          <Image 
+          <Image
             alt="amparo"
             src="/amparo/mobile/mobile6.png"
             width={300}
             height={334}
-            className='block md:hidden'
+            className='block md:hidden w-full max-w-[535px]'
           />
         </div>
         <p className='text-5xl font-extrabold font-nippo mx-auto text-center w-[65%] my-6'>PERO, ADEMÁS, EL USO DE DATOS PERSONALES TAMBIÉN AMENAZA LA DEMOCRACIA Y TIENE GRANDES ANTECEDENTES…</p>
-        <div className='flex flex-col justify-center items-center gap-2'>
-          <Image 
+        <div className='flex flex-col overflow-scroll overflow-y-hidden w-full my-5'>
+          <Image
             alt="amparo"
             src="/amparo/desktop/desktop8.png"
             width={1600}
             height={420}
+            className='w-auto h-96 max-w-none self-start md:h-auto md:w-full md:max-w-[1600px] md:self-center'
           />
-          <Image 
+        </div>
+        <div className='flex flex-col overflow-scroll overflow-y-hidden w-full'>
+          <Image
             alt="amparo"
             src="/amparo/desktop/desktop9.png"
             width={1600}
             height={420}
+            className='w-auto h-96 max-w-none self-start md:h-auto md:w-full md:max-w-[1600px] md:self-center'
           />
         </div>
       </div>
