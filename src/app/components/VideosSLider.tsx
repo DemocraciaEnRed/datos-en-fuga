@@ -23,17 +23,21 @@ const VideosSLider = ({ iframes }: { iframes: IFrame[] }) => {
         const newSlide = isLastSlide ? 0 : currentSlide + 1
         setCurrentSlide(newSlide)
     };
+    const manuallySelectSlide = (index: number) => {
+        console.log(currentSlide);
+        console.log(index);
+        const isCurrent = currentSlide == index
+        !isCurrent && setCurrentSlide(index)
+    }
 
     useEffect(() => { setFadeIn(false) }, [currentSlide]);
     return (
         <div className="h-[100%] relative">
-            <div className="absolute w-full h-full flex justify-between items-center z-10 cursor-pointer">
-                <div onClick={previousSlide}>
-                    <ChevronSVG direction="left" />
-                </div>
-                <div onClick={nextSlide}>
-                    <ChevronSVG direction="right" />
-                </div>
+            <div className="absolute top-1/2 right-full z-10 cursor-pointer" onClick={nextSlide}>
+                <ChevronSVG direction="left" />
+            </div>
+            <div className="absolute top-1/2 left-full z-10 cursor-pointer" onClick={nextSlide}>
+                <ChevronSVG direction="right" />
             </div>
             <div className={`flex justify-center items-center ${fadeIn ? '' : "hidden"}`}>
                 <div className={`transition-opacity ${fadeIn ? 'opacity-100' : "opacity-0"} w-[70vw] h-[39.5vw] mx-auto`}>
@@ -50,11 +54,13 @@ const VideosSLider = ({ iframes }: { iframes: IFrame[] }) => {
             </div>
             {!fadeIn &&
                 <div className="flex justify-center items-center w-[70vw] h-[39.5vw] mx-auto bg-der-black rounded-sm shadow">
-                    <Spinner/>
+                    <Spinner />
                 </div>
             }
-            <div className="flex justify-center mt-3">
-                {iframes.map((item, i) => <div key={i} className={`rounded-lg w-3 h-3 first:mr-3 ${currentSlide == i ? 'bg-gray-800' : 'bg-gray-300'}`}></div>)}
+            <div className="flex justify-center mt-3 z-20">
+                {iframes.map((item, i) => (<div key={i}
+                    className={`rounded-lg w-3 h-3 mr-3 last:mr-0 select-none cursor-pointer ${currentSlide == i ? 'bg-gray-800' : 'bg-gray-300'}`}
+                    onClick={() => manuallySelectSlide(i)}></div>))}
             </div>
         </div>
     )

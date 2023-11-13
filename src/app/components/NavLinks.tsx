@@ -10,7 +10,7 @@ const links: Navlink[] = [
     { href: "/casos", label: "CASOS" },
     { href: "/reporta", label: "REPORTÁ" },
     { href: "/eventos", label: "EVENTOS" },
-    { href: "/ABC", label: "ABC" },
+    { href: "/abc", label: "ABC" },
     { href: "/about", label: "ACERCA DE" }
 ]
 
