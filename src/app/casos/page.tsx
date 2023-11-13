@@ -13,8 +13,8 @@ const Casos = () => {
           <a href="#reporta" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 my-2 bg-[#CC4356] text-white w-[300px] text-center font-extrabold">
             ¿CÓMO REPORTAR SEGURO?
           </a>
-          <a href="#reporta" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 my-2 bg-[#2D2D2D] text-[#CC4356] w-[300px] text-center font-extrabold">
-            ¿CÓMO REPORTAR SEGURO?
+          <a href="#reporta" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 my-2 bg-[#2D2D2D] text-[#CC4356] w-[300px] text-center font-extrabold flex items-center justify-center">
+            CASOS
           </a>
         </div>
       </div>
@@ -25,7 +25,7 @@ const Casos = () => {
           TE CONTAMOS QUIÉNES SON Y CUÁL ES SU HISTORIA
         </p>
 
-        <div>
+        <div id="caseData">
           <CaseSelector />
         </div>
       </div>

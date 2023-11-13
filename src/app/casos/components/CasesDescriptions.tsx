@@ -29,18 +29,18 @@ const CasesDescription = ({id} : { id: number }) => {
               content
             }
           </div>
-          <div className='flex flex-row flex-wrap'>
+          <div className='flex flex-row flex-wrap gap-2 my-6'>
             {casos?.buttons?.map((b) => {
               return (
-                  <a href="#reporta" type="button" className="border-2 border-black rounded-xl p-2 my-4 bg-[#212121] text-white w-[250px] text-center flex flex-row justify-center mx-2" key={b.id}>
+                  <a href="#reporta" type="button" className="border-2 border-black rounded-xl p-2 bg-[#212121] text-white w-[350px] text-center flex flex-row justify-between items-center" key={b.id}>
                     <Image
                       alt="icon"
                       src={b.icon}
                       height={25}
                       width={25}
-                      className='mx-2'
+                      className='mx-2 max-[320px]:w-[20px] max-[320px]:h-[20px]'
                     />
-                    {b.text}   
+                    <span className='flex-grow'>{b.text}</span>
                 </a>
               )
             })}

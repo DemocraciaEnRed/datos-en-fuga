@@ -29,7 +29,7 @@ const CaseSelector = () => {
         {
           cases.map((c) => {
             return (
-              <Link href={`/casos/${c.id}`} key={c.id} className={`grayscale hover:grayscale-0 ${caso === c.id ? 'grayscale-0' : ''}`}>
+              <Link href={`/casos/${c.id}#caseData`} key={c.id} className={`grayscale hover:grayscale-0 ${caso === c.id ? 'grayscale-0' : ''}`}>
                 <div className="h-[405px] w-[385px] mx-2 my-2 rounded-xl max-[390px]:w-[95%]">
                   <p className='font-nippo z-10 absolute mt-80 mx-5 text-3xl font-extrabold'>{c.name}</p>
                     <Image
