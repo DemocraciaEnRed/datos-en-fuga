@@ -12,8 +12,8 @@ const Amparo = () => {
           PRESENTAMOS UN AMPARO CONTRA EL <br/> ESTADO PARA PROTEGER NUESTROS DATOS <br /> PERSONALES EN UN AÑO DE ELECCIONES.
         </p>
       </div>
-      <div className='py-[8vh] px-5 h-4/6 bg-[#F1F1F1] text-black'>
-        <h2 className='text-center text-5xl font-nippo font-bold max-[376px]:text-2xl'>
+      <div className='py-[3vh] px-5 h-4/6 bg-[#F1F1F1] text-black'>
+        <h2 className='w-[70%] mx-auto text-center text-5xl font-nippo font-bold max-[376px]:text-2xl'>
           PRESENTAMOS UN AMPARO PARA PROTEGER NUESTROS DATOS PERSONALES Y NUESTRA DEMOCRACIA
         </h2>
         <div className='my-10 flex flex-col justify-center items-center'>
