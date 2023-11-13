@@ -62,8 +62,8 @@ const Amparo = () => {
           <Image 
             alt="amparo"
             src="/amparo/mobile/mobile6.png"
-            width={1600}
-            height={420}
+            width={300}
+            height={334}
             className='block md:hidden'
           />
         </div>

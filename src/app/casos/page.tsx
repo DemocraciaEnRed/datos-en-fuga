@@ -36,7 +36,7 @@ const Casos = () => {
         </h2>
 
         <div className="flex flex-col justify-center items-center my-12 mx-3">
-          <p className='text-left w-[850px] text-2xl max-[860px]:w-[400px] max-[375px]:w-[250px]'>
+          <p className='mx-auto text-left w-[850px] text-2xl max-[860px]:w-[400px] max-[375px]:w-[250px]'>
             Según la ley de datos personales, que establece xxxxxxxx, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <div className='w-[850px] h-[340px] bg-[#D9D9D9] flex flex-col items-center rounded-md my-10 max-[856px]:w-[600px] max-[856px]:h-[400px] max-[610px]:w-[310px] max-[610px]:h-[550px]'>

@@ -106,7 +106,7 @@ const Reportes = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="bg-[#D9D9D9] text-der-black p-[3vw]">
+                <div className="bg-[#D9D9D9] text-der-black p-[3vw] mx-auto">
                     <h2 className="py-5 text-3xl font-extrabold">¿CÓMO Y QUÉ PODES REPORTAR?</h2>
                     <p className="text-left text-xl">
                     La Fundación Via Libre se encarga de recibir reportes sobre defectos en aplicaciones empleadas por organizaciones públicas o privadas que afecten derechos de las personas. En particular, cuando se ponen en riesgo sus datos personales. Así, si encontraste una falla en una aplicación que permite que alguien no autorizado extraiga o modifique datos, tuyos o de otras personas, este es el lugar para poder informarlo. También sirve para informar sobre vulnerabilidades potenciales, por ejemplo si encontraste que un sitio está corriendo una versión obsoleta (por &quot;obsoleta&quot; entendemos una versión que ya no recibe soporte ni parches de seguridad) o insegura de software.
