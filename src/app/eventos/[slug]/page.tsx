@@ -1,4 +1,4 @@
-import { ISbStoriesParams, getStoryblokApi, ISbStory, ISbStoryData, renderRichText } from "@storyblok/react/rsc";
+import { ISbStoriesParams, getStoryblokApi, ISbStory, ISbStoryData } from "@storyblok/react/rsc";
 import { render } from 'storyblok-rich-text-react-renderer';
 import { notFound } from "next/navigation";
 
@@ -12,6 +12,25 @@ const fetchArticleBySlug = async (slug: string): Promise<ISbStory> => {
 
     return article
 }
+
+const fetchData = async () => {
+    const storyblokApi = getStoryblokApi()
+
+    let sbParams: ISbStoriesParams = {
+        version: 'draft',
+        starts_with: "news/"
+    };
+    return await storyblokApi.get(`cdn/stories`, sbParams);
+}
+
+export async function generateStaticParams() {
+    const news = await fetchData()
+    return news.data.stories.map((article: any) => {
+        return { slug: article.slug }
+    })
+    // return [{ id: '1' }, { id: '2' }]
+}
+
 const richText = (document: ISbStoryData<Body>) => {
     // document is the rich text object you receive from Storyblok,
     // in the form { type: "doc", content: [ ... ] }
