@@ -4,16 +4,16 @@ import Image from 'next/image'
 const Amparo = () => {
   return (
     <section>
-      <div className='bg-[#2D2D2D] py-[8vh] px-10'>
-        <h1 className='font-nippo text-5xl w-[800px] max-[810px]:w-[500px] max-[500px]:w-[250px] max-[500px]:text-3xl max-[375px]:text-2xl'>
+      <div className='bg-[#2D2D2D] py-[8vh] px-[3vw] md:px-[6vw]'>
+        <h1 className='font-nippo text-[29px] max-[810px]:w-[500px] max-[500px]:w-[250px] sm:text-[40px]'>
           <span className="font-extrabold">#CON</span>MIS<span className='font-extrabold'>DATOS</span>NO
         </h1>
-        <p className='text-5xl max-[810px]:w-[500px] max-[500px]:w-[250px] max-[500px]:text-3xl max-[375px]:text-2xl'>
+        <p className='text-2xl max-[810px]:w-[500px] max-[500px]:w-[250px] sm:text-4xl'>
           PRESENTAMOS UN AMPARO CONTRA EL <br /> ESTADO PARA PROTEGER NUESTROS DATOS <br /> PERSONALES EN UN AÑO DE ELECCIONES.
         </p>
       </div>
       <div className='py-[3vh] px-5 h-4/6 bg-[#F1F1F1] text-black'>
-        <h2 className='w-[70%] mx-auto text-center text-5xl font-nippo font-bold max-[376px]:text-2xl'>
+        <h2 className='md:w-[65%] mx-auto text-center text-2xl font-nippo font-bold sm:text-4xl'>
           PRESENTAMOS UN AMPARO PARA PROTEGER NUESTROS DATOS PERSONALES Y NUESTRA DEMOCRACIA
         </h2>
         <div className='my-10'>
@@ -44,7 +44,7 @@ const Amparo = () => {
 
           </div>
         </div>
-        <p className='text-5xl font-extrabold font-nippo text-center'>¿Y QUÉ ES LO QUE PUEDE PASAR MIENTRAS SIGA VIGENTE?</p>
+        <p className='text-2xl font-extrabold font-nippo text-center sm:text-4xl'>¿Y QUÉ ES LO QUE PUEDE PASAR MIENTRAS SIGA VIGENTE?</p>
         <div className='my-7 flex flex-row flex-wrap gap-5 items-center justify-center mx-auto'>
           <Image
             alt="amparo"
@@ -84,7 +84,7 @@ const Amparo = () => {
             className='block md:hidden w-full max-w-[535px]'
           />
         </div>
-        <p className='text-5xl font-extrabold font-nippo mx-auto text-center w-[65%] my-6'>PERO, ADEMÁS, EL USO DE DATOS PERSONALES TAMBIÉN AMENAZA LA DEMOCRACIA Y TIENE GRANDES ANTECEDENTES…</p>
+        <p className='text-2xl font-extrabold font-nippo mx-auto text-center md:w-[65%] my-6 sm:text-4xl'>PERO, ADEMÁS, EL USO DE DATOS PERSONALES TAMBIÉN AMENAZA LA DEMOCRACIA Y TIENE GRANDES ANTECEDENTES…</p>
         <div className='flex flex-col overflow-scroll overflow-y-hidden w-full my-5'>
           <Image
             alt="amparo"
@@ -105,10 +105,10 @@ const Amparo = () => {
         </div>
       </div>
       <div className='py-[8vh] bg-[#2D2D2D]'>
-        <h2 className='font-nippo text-5xl bg-[#006482] py-4 pl-14 pr-5 inline-block font-extrabold max-[466px]:text-2xl'>¿QUÉ PRESENTAMOS?
+        <h2 className='font-nippo text-4xl bg-[#006482] py-4 pl-14 pr-5 inline-block font-extrabold max-[466px]:text-2xl'>¿QUÉ PRESENTAMOS?
         </h2>
         <div className='my-10 flex flex-row justify-center'>
-          <div className='w-[610px] h-[360px] px-10 bg-[#F1F1F1] flex flex-col justify-around items-center text-black max-[375px]:w-[350px] max-[328px]:w-[200px]'>
+          <div className='w-[610px] h-[360px] px-10 bg-[#F1F1F1] flex flex-col justify-around items-center text-black sm:w-[350px] max-[328px]:w-[200px]'>
             <p className='text-2xl font-extrabold'>AMPARO</p>
             <Image
               alt="icon"

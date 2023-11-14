@@ -2,7 +2,7 @@ import React from 'react'
 import Image from "next/image"
 import cases from "../_cases.js"
 
-const CasesDescription = ({id} : { id: number }) => {
+const CasesDescription = ({id} : { id: string }) => {
   let casos = cases.find((c) => c.id === id)
   let content: React.ReactElement | undefined 
 

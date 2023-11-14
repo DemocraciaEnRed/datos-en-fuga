@@ -20,7 +20,7 @@ const Casos = () => {
       </div>
 
       <div className='bg-[#F1F1F1] py-[3vh] h-4/6'>
-        <h2 className='font-nippo text-5xl bg-[#CC4356] py-4 pl-14 pr-5 inline-block font-extrabold'>ELLOS, NO LO SABÍAN</h2>
+        <h2 className='font-nippo text-6xl bg-[#CC4356] py-4 pl-[4vw] md:pl-14 pr-5 inline-block font-extrabold max-[500px]:text-4xl max-[375px]:text-3xl'>ELLOS, NO LO SABÍAN</h2>
         <p className='font nippo text-der-black text-xl pl-12 my-4 font-medium'>
           TE CONTAMOS QUIÉNES SON Y CUÁL ES SU HISTORIA
         </p>
@@ -31,8 +31,8 @@ const Casos = () => {
       </div>
 
       <div className='bg-[#2D2D2D] py-[3vh] h-4/6'>
-        <h2 className='font-nippo text-5xl bg-[#008BB4] py-4 pl-14 pr-5 inline-block font-extrabold max-[375px]:w-[250px] max-[375px]:text-3xl max-[375px]:w-full'>ENTONCES, <br />
-          ¿QUÉ Y CÓMO PUEDO REPORTAR?
+        <h2 className='font-nippo text-6xl bg-[#008BB4] py-4 pl-[4vw] md:pl-14 pr-5 inline-block font-extrabold max-[500px]:text-4xl max-[375px]:text-3xl w-[90%] sm:w-auto'>ENTONCES, <br />
+          <span className='text-5xl max-[500px]:text-3xl max-[375px]:text-2xl'>¿QUÉ Y CÓMO PUEDO REPORTAR?</span>
         </h2>
 
         <div className="flex flex-col justify-center items-center my-12 mx-3">

@@ -2,7 +2,7 @@ import { casesImages } from "../../../public/cases"
 
 const cases = [
   {
-    id: 1,
+    id: 'joaquin-sorianello',
     avatar: casesImages.joaquin,
     name: "Joaquín Sorianello",
     occupation: "Desarrollador de software",
@@ -18,7 +18,7 @@ const cases = [
     </>
   },
   {
-    id: 2,
+    id: 'gaspar-ariel-ortmann',
     avatar: casesImages.gaspar,
     name: "Gaspar Ariel Ortmann",
     occupation: "Ocupado",
@@ -39,7 +39,7 @@ const cases = [
     </>
   },
   {
-    id: 3,
+    id: 'javier-smaldone',
     avatar: casesImages.javier,
     name: "Javier Smaldone",
     occupation: "Programador informático",
