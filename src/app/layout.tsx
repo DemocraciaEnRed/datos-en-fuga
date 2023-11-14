@@ -4,6 +4,13 @@ import localFont from 'next/font/local'
 import './globals.css'
 import NavBar from './components/NavBar'
 
+import { storyblokInit, apiPlugin } from "@storyblok/react";
+ 
+storyblokInit({
+  accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
+  use: [apiPlugin]
+});
+
 const inter = Inter({ subsets: ['latin'] })
 const openSans = Open_Sans({
   subsets: ['latin'],
@@ -51,6 +58,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="es">
       <body className={`${nippo.variable} ${openSans.className} ${inter.className}`}>
