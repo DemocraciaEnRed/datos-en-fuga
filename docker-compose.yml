@@ -5,7 +5,8 @@ services:
     build:
       context: .
     image: democraciaenred/datosenfuga-next:latest
-    env_file: .env.local
+    env_file:
+      - .env.local
     volumes: 
       - .:/usr/src/app    
     ports:
