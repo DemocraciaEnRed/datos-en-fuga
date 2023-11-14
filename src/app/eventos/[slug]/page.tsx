@@ -28,7 +28,6 @@ export async function generateStaticParams() {
     return news.data.stories.map((article: any) => {
         return { slug: article.slug }
     })
-    // return [{ id: '1' }, { id: '2' }]
 }
 
 const richText = (document: ISbStoryData<Body>) => {

@@ -1,6 +1,13 @@
 import React from 'react'
 import Image from "next/image"
 import CaseSelector from './components/CaseSelector'
+import cases from "./_cases.js"
+
+export async function generateStaticParams() {
+  cases.map((caso: any) => {
+    return { id: caso.id }
+  })
+}
 
 const Casos = () => {
   return (
