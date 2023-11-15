@@ -24,10 +24,7 @@ const ID = () => {
         <p className='font-nippo text-der-black text-xl pl-12 my-4 font-medium'>
           TE CONTAMOS QUIÉNES SON Y CUÁL ES SU HISTORIA
         </p>
-
-        <div>
-          <CaseSelector />
-        </div>
+        <CaseSelector />
       </div>
 
       <div className='bg-[#2D2D2D] py-[3vh] h-4/6'>

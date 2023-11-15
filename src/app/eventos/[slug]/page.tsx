@@ -30,7 +30,7 @@ export async function generateStaticParams() {
     })
 }
 
-const richText = (document: ISbStoryData<Body>) => {
+const richText = (document: ISbStoryData) => {
     // document is the rich text object you receive from Storyblok,
     // in the form { type: "doc", content: [ ... ] }
     return <>{render(document)}</>;
