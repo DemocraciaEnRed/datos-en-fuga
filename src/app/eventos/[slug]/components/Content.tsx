@@ -1,8 +1,9 @@
-import { ISbStoryData } from "@storyblok/react";
-import { MARK_BOLD, MARK_UNDERLINE, NODE_HEADING, NODE_HR, NODE_IMAGE, NODE_LI, NODE_OL, NODE_PARAGRAPH, NODE_QUOTE, NODE_UL, render } from "storyblok-rich-text-react-renderer";
+import { ISbRichtext, ISbStoryData } from "@storyblok/react";
+import { MARK_BOLD, MARK_STYLED, MARK_UNDERLINE, NODE_HEADING, NODE_HR, NODE_IMAGE, NODE_LI, NODE_OL, NODE_PARAGRAPH, NODE_QUOTE, NODE_UL, render } from "storyblok-rich-text-react-renderer";
 import { ReactNode, createElement } from "react";
 import Image from "next/image";
 import emptyImg from "~/shared/not-available.png"
+import { isMapIterator } from "util/types";
 
 const Content = ({ document }: { document: ISbStoryData }) => {
 
@@ -10,10 +11,21 @@ const Content = ({ document }: { document: ISbStoryData }) => {
         {render(document, {
             markResolvers: {
                 [MARK_BOLD]: (children) => <strong className="font-bold">{children}</strong>,
-                [MARK_UNDERLINE]: (children) => <span className="underline underline-offset-2">{children}</span>
+                [MARK_UNDERLINE]: (children) => <span className="underline underline-offset-2">{children}</span>,
+                [MARK_STYLED]: (children: any, props: { class?: string | undefined }) => {
+
+                    let blok: ISbRichtext = { ...children }
+                    props.class == 'centered' ? props.class = 'text-center flex flex-col items-center' : null
+                    props.class == 'to-left' ? props.class = 'text-left flex flex-col items-start' : null
+                    props.class == 'to-right' ? props.class = 'text-right flex flex-col items-end' : null
+                    props.class == 'img-fl' ? props.class = 'block float-left' : null
+                    props.class == 'img-fr' ? props.class = 'block float-right my-2' : null
+
+                    return <span className={props.class}>{children}</span>
+                }
             },
             nodeResolvers: {
-                [NODE_PARAGRAPH]: (children: ReactNode) => <p className="mb-2">{children}</p>,
+                // [NODE_PARAGRAPH]: (children: any) => <p className="my-2">{children}</p>,
                 [NODE_HEADING]: (children: ReactNode, { level }) => {
                     let elem = ''
                     let setClass = ''
@@ -28,7 +40,7 @@ const Content = ({ document }: { document: ISbStoryData }) => {
                 },
                 [NODE_OL]: (children: ReactNode) => <ol className="list-decimal my-5">{children}</ol>,
                 [NODE_UL]: (children: ReactNode) => <ul className="list-disc my-5">{children}</ul>,
-                [NODE_LI]: (children: ReactNode) => <li className="[&_p]:my-0">{children}</li>,
+                [NODE_LI]: (children: ReactNode) => <li className="[&_p]:my-0 ml-5">{children}</li>,
                 [NODE_QUOTE]: (children: ReactNode) => (
                     <blockquote className="pl-4 border-l-4 border-gray-300 italic">
                         {children}
@@ -36,7 +48,7 @@ const Content = ({ document }: { document: ISbStoryData }) => {
                 [NODE_HR]: () => <hr className="border-t-[1px] border-t-gray-300 my-4" />,
                 [NODE_IMAGE]: (children: ReactNode, { src, alt, title }) => {
                     if (!alt) { alt = 'alternative image description not available' }
-                    return <Image className="object-contain m-auto" src={src ? src : emptyImg} alt={alt} title={title} width={500} height={500}/>
+                    return <Image className="object-contain" src={src ? src : emptyImg} alt={alt} title={title} width={500} height={500} />
                 }
             }
         })}

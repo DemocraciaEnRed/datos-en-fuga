@@ -24,8 +24,6 @@ const VideosSLider = ({ iframes }: { iframes: IFrame[] }) => {
         setCurrentSlide(newSlide)
     };
     const manuallySelectSlide = (index: number) => {
-        console.log(currentSlide);
-        console.log(index);
         const isCurrent = currentSlide == index
         !isCurrent && setCurrentSlide(index)
     }
