@@ -3,7 +3,7 @@ import { MARK_BOLD, MARK_STYLED, MARK_UNDERLINE, NODE_HEADING, NODE_HR, NODE_IMA
 import { ReactNode, createElement } from "react";
 import Image from "next/image";
 import emptyImg from "~/shared/not-available.png"
-import { isMapIterator } from "util/types";
+
 
 const Content = ({ document }: { document: ISbStoryData }) => {
 
@@ -12,20 +12,17 @@ const Content = ({ document }: { document: ISbStoryData }) => {
             markResolvers: {
                 [MARK_BOLD]: (children) => <strong className="font-bold">{children}</strong>,
                 [MARK_UNDERLINE]: (children) => <span className="underline underline-offset-2">{children}</span>,
-                [MARK_STYLED]: (children: any, props: { class?: string | undefined }) => {
-
-                    let blok: ISbRichtext = { ...children }
+                [MARK_STYLED]: (children: ReactNode, props: { class?: string | undefined }) => {
                     props.class == 'centered' ? props.class = 'text-center flex flex-col items-center' : null
                     props.class == 'to-left' ? props.class = 'text-left flex flex-col items-start' : null
                     props.class == 'to-right' ? props.class = 'text-right flex flex-col items-end' : null
                     props.class == 'img-fl' ? props.class = 'block float-left' : null
                     props.class == 'img-fr' ? props.class = 'block float-right my-2' : null
-
                     return <span className={props.class}>{children}</span>
                 }
             },
             nodeResolvers: {
-                // [NODE_PARAGRAPH]: (children: any) => <p className="my-2">{children}</p>,
+                [NODE_PARAGRAPH]: (children: any) => <p className="my-2">{children}</p>,
                 [NODE_HEADING]: (children: ReactNode, { level }) => {
                     let elem = ''
                     let setClass = ''
