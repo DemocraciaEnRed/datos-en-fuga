@@ -1,6 +1,8 @@
 import { ISbStoriesParams, getStoryblokApi, ISbStory, ISbStoryData } from "@storyblok/react/rsc";
-import { render } from 'storyblok-rich-text-react-renderer';
+import { MARK_BOLD, NODE_HEADING, NODE_PARAGRAPH, render } from 'storyblok-rich-text-react-renderer';
 import { notFound } from "next/navigation";
+import { ReactNode, createElement } from "react";
+import Content from "./components/Content";
 
 const fetchArticleBySlug = async (slug: string): Promise<ISbStory> => {
     const storyblokApi = getStoryblokApi()
@@ -30,25 +32,12 @@ export async function generateStaticParams() {
     })
 }
 
-const richText = (document: ISbStoryData) => {
-    // document is the rich text object you receive from Storyblok,
-    // in the form { type: "doc", content: [ ... ] }
-    return <>{render(document)}</>;
-}
-
 const EventosBySlug = async ({ params }: { params: { slug: string } }) => {
     const { data } = await fetchArticleBySlug(params.slug)
-    console.log('-----------------------------------------------');
-    console.log(data.story.content.body);
-
-    // const renderedRichText = renderRichText(data.story.content.body);
-    // return <div dangerouslySetInnerHTML={{ __html: html }} />;
-    // console.log(renderedRichText);
 
     return (
-        <section className="text-white p-[3vw] md:p-[6vw]">
-            {richText(data.story.content.body)}
-            {/* <div dangerouslySetInnerHTML={{ __html: renderedRichText }}></div> */}
+        <section className="bg-gray-100 text-black p-[3vw] md:p-[6vw] text-base">
+            <Content document={data.story.content.body}/>
         </section>
     )
 }

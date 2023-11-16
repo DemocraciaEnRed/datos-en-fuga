@@ -1,17 +1,23 @@
 import type { Metadata } from 'next'
-import { Inter, Open_Sans } from 'next/font/google'
+import { Inter, Open_Sans, Roboto } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
 import NavBar from './components/NavBar'
 
 import { storyblokInit, apiPlugin } from "@storyblok/react";
- 
+
 storyblokInit({
   accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
   use: [apiPlugin]
 });
 
 const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  variable: '--font-roboto'
+})
 const openSans = Open_Sans({
   subsets: ['latin'],
   variable: '--font-open-sans'
@@ -61,7 +67,7 @@ export default function RootLayout({
 
   return (
     <html lang="es">
-      <body className={`${nippo.variable} ${openSans.className} ${inter.className}`}>
+      <body className={`${nippo.variable} ${roboto.variable} ${openSans.className} ${inter.className}`}>
         <NavBar />
         {children}
       </body>

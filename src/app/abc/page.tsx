@@ -1,4 +1,4 @@
-import amparo from "../../../public/abc/amparo.png"
+import amparo from "../../../public/shared/amparo.png"
 import VideosSLider from "../components/VideosSLider"
 import Resource from "./components/Resource"
 import SubtopicsMap from "./components/SubtopicsMap"

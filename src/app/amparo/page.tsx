@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
+import { cartoons } from '../../../public/amparo'
+import amparoIcon from '../../../public/shared/amparo.png'
 
 const Amparo = () => {
   return (
@@ -20,7 +22,7 @@ const Amparo = () => {
           <div className='flex flex-col overflow-scroll overflow-y-hidden w-full'>
             <Image
               alt="amparo"
-              src="/amparo/desktop/desktop1.png"
+              src={cartoons.desktop1}
               width={1600}
               height={621}
               className='w-auto h-96 max-w-none self-start md:h-auto md:w-full md:max-w-[1600px] md:self-center'
@@ -29,17 +31,17 @@ const Amparo = () => {
           <div className='flex justify-center items-center'>
             <Image
               alt="amparo"
-              src="/amparo/desktop/desktop2.png"
+              src={cartoons.desktop2}
               width={1600}
               height={621}
-              className='hidden md:block w-full max-w-[1600px]'
+              className='hidden md:block w-full h-auto max-w-[1600px]'
             />
             <Image
               alt="amparo"
-              src="/amparo/mobile/mobile2.png"
+              src={cartoons.mobile2}
               width={535}
               height={456}
-              className='block md:hidden w-full max-w-[535px]'
+              className='block md:hidden w-full h-auto max-w-[535px]'
             />
 
           </div>
@@ -48,47 +50,47 @@ const Amparo = () => {
         <div className='my-7 flex flex-row flex-wrap gap-5 items-center justify-center mx-auto'>
           <Image
             alt="amparo"
-            src="/amparo/desktop/desktop3.png"
+            src={cartoons.desktop3}
             width={535}
             height={456}
-            className='w-full max-w-[522px]'
+            className='w-full h-auto max-w-[522px]'
           />
           <Image
             alt="amparo"
-            src="/amparo/desktop/desktop4.png"
+            src={cartoons.desktop4}
             width={535}
             height={456}
-            className='w-full max-w-[522px]'
+            className='w-full h-auto max-w-[522px]'
           />
           <Image
             alt="amparo"
-            src="/amparo/desktop/desktop5.png"
+            src={cartoons.desktop5}
             width={535}
             height={456}
-            className='w-full max-w-[522px]'
+            className='w-full h-auto max-w-[522px]'
           />
         </div>
         <div className='flex flex-col justify-center items-center'>
           <Image
             alt="amparo"
-            src="/amparo/desktop/desktop6.png"
+            src={cartoons.desktop6}
             width={1600}
             height={420}
             className='hidden md:block'
           />
           <Image
             alt="amparo"
-            src="/amparo/mobile/mobile6.png"
+            src={cartoons.mobile6}
             width={300}
             height={334}
-            className='block md:hidden w-full max-w-[535px]'
+            className='block md:hidden w-full h-auto max-w-[535px]'
           />
         </div>
         <p className='text-2xl font-extrabold font-nippo mx-auto text-center md:w-[65%] my-6 sm:text-4xl'>PERO, ADEMÁS, EL USO DE DATOS PERSONALES TAMBIÉN AMENAZA LA DEMOCRACIA Y TIENE GRANDES ANTECEDENTES…</p>
         <div className='flex flex-col overflow-scroll overflow-y-hidden w-full my-5'>
           <Image
             alt="amparo"
-            src="/amparo/desktop/desktop8.png"
+            src={cartoons.desktop7}
             width={1600}
             height={420}
             className='w-auto h-96 max-w-none self-start md:h-auto md:w-full md:max-w-[1600px] md:self-center'
@@ -97,7 +99,7 @@ const Amparo = () => {
         <div className='flex flex-col overflow-scroll overflow-y-hidden w-full'>
           <Image
             alt="amparo"
-            src="/amparo/desktop/desktop9.png"
+            src={cartoons.desktop8}
             width={1600}
             height={420}
             className='w-auto h-96 max-w-none self-start md:h-auto md:w-full md:max-w-[1600px] md:self-center'
@@ -112,7 +114,7 @@ const Amparo = () => {
             <p className='text-2xl font-extrabold'>AMPARO</p>
             <Image
               alt="icon"
-              src="/amparo/icon.png"
+              src={amparoIcon}
               height={96}
               width={96}
             />

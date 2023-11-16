@@ -1,6 +1,7 @@
 import Image from "next/image"
 import squaresData from "./_dataReporta.js"
 import squaresData2 from "./_dataProteger.js"
+import { otherLogos } from "../../../public/reporta/index.js"
 
 const Reportes = () => {
     return (
@@ -8,7 +9,7 @@ const Reportes = () => {
             <div className="py-6 flex flex-col flex-wrap justify-center justify-items-center items-center bg-[#f1f1f1] h-4/5 text-center">
                 <Image
                     className="relative"
-                    src="/reporta/qant.png"
+                    src={otherLogos.qant}
                     alt="QANT logo"
                     width={550}
                     height={356}
