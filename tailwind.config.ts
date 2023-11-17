@@ -16,7 +16,8 @@ const config: Config = {
       fontFamily: {
         nippo: ['var(--font-nippo)'],
         "open-sans": ['var(--font-open-sans)'],
-        roboto: ['var(--font-roboto)']
+        roboto: ['var(--font-roboto)'],
+        raleway: ['var(--font-raleway)']
       },
       listStyleType: {
         disc: 'disc'

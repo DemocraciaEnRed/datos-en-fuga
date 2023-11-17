@@ -25,44 +25,68 @@ const Eventos = async () => {
                         const formattedDate = format(new Date(story.created_at), "dd/MM/yyyy")
 
                         return (
-
-                        <Link
-                            href={`/eventos/${story.slug}`}
-                            key={story.id}
-                            className="w-[400px] max-[408px]:w-[250px]"
-                        >
-                        <div className="w-[400px] h-[550px] bg-white text-black rounded-[10px] max-[408px]:w-[250px]" >
-                            <div className="w-full h-[202px] rounded-t-lg overflow-hidden">
-                                <Image
-                                    alt={story.content.header?.name}
-                                    src={story.content.header?.filename}
-                                    width={400}
-                                    height={202}
-                                    className="w-[400px] max-w-none min-h-full"
-                                />
-                            </div>
-                            <div className="py-5 px-3">
-                                <p className="text-right mx-2">{formattedDate}</p>
-                                <p className="text-2xl font-extrabold">
-                                    {story.content.title}
-                                </p>
-                                <p className="mb-6 truncate hover:text-clip hover:whitespace-normal">
-                                    {story.content.brief}
-                                </p>
-                                <div className="flex flex-row flex-wrap gap-2 w-full mx-2">
-                                    {
-                                        story.tag_list.map((tag: string) => {
-                                            return (
-                                                <span className="text-black bg-[#DFDFDF] rounded-3xl font-roboto text-center px-3 py-2 whitespace-nowrap max-[408px]:text-sm" key={tag}>
-                                                    {tag}
-                                                </span>
-                                            )
-                                        })
-                                    }
+                            //     <Link href={`/eventos/${story.slug}`} key={story.id} className=" bg-white rounded-lg overflow-hidden max-w-xs mx-auto">
+                            // <div className="text-black">
+                            //     <div className="rounded-t-lg overflow-hidden bg-der-black">
+                            //         <Image alt={story.content.header?.name} src={story.content.header?.filename} width={400} height={202}
+                            //             className="object-scale-down max-h-48 min-h-[150px] mx-auto" />
+                            //     </div>
+                            //     <div className="p-6 font-raleway">
+                            //         <p className="text-right mx-2">{formattedDate}</p>
+                            //         <p className="text-2xl font-extrabold">
+                            //             {story.content.title}
+                            //         </p>
+                            //         <p className="mb-6 truncate hover:text-clip hover:whitespace-normal">
+                            //             {story.content.brief}
+                            //         </p>
+                            //         <div className="flex flex-row flex-wrap gap-2 w-full">
+                            //             {story.tag_list.map((tag: string) => {
+                            //             return (
+                            //             <span key={tag}
+                            //                 className="text-black bg-[#DFDFDF] rounded-3xl font-roboto text-center py-1 px-3 max-[408px]:text-sm shadow-sm border-[1px] border-gray-300">
+                            //                 {tag}
+                            //             </span>
+                            //             )
+                            //             })}
+                            //         </div>
+                            //     </div>
+                            // </div>
+                            // </Link>
+                            <Link
+                                href={`/eventos/${story.slug}`}
+                                key={story.id}
+                                className="w-[400px] max-[408px]:w-[250px]"
+                            >
+                                <div className="w-[400px] h-[550px] bg-white text-black rounded-[10px] max-[408px]:w-[250px]" >
+                                    <div className="w-full h-[202px] rounded-t-lg overflow-hidden">
+                                        <Image
+                                            alt={story.content.header?.name}
+                                            src={story.content.header?.filename}
+                                            width={400}
+                                            height={202}
+                                            className="w-[400px] max-w-none min-h-full"
+                                        />
+                                    </div>
+                                    <div className="py-5 px-3">
+                                        <p className="text-right mx-2">{formattedDate}</p>
+                                        <p className="text-2xl font-extrabold">
+                                            {story.content.title}
+                                        </p>
+                                        <p className="mb-6 truncate hover:text-clip hover:whitespace-normal">
+                                            {story.content.brief}
+                                        </p>
+                                        <div className="flex flex-row flex-wrap gap-2 w-full">
+                                            {story.tag_list.map((tag: string) => {
+                                                return (
+                                                    <span key={tag} className="text-black bg-[#DFDFDF] rounded-3xl font-roboto text-center py-1 px-3 max-[408px]:text-sm shadow-sm border-[1px] border-gray-300">
+                                                        {tag}
+                                                    </span>
+                                                )
+                                            })}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </Link>
+                            </Link>
                         )
                     })
                 }
