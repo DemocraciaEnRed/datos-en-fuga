@@ -1,9 +1,9 @@
-import { ISbRichtext, ISbStoryData } from "@storyblok/react";
-import { MARK_BOLD, MARK_STYLED, MARK_UNDERLINE, NODE_HEADING, NODE_HR, NODE_IMAGE, NODE_LI, NODE_OL, NODE_PARAGRAPH, NODE_QUOTE, NODE_UL, render } from "storyblok-rich-text-react-renderer";
+import { ISbStoryData } from "@storyblok/react";
+import { LinkCustomAttributes, MARK_BOLD, MARK_LINK, MARK_STYLED, MARK_UNDERLINE, NODE_HEADING, NODE_HR, NODE_IMAGE, NODE_LI, NODE_OL, NODE_PARAGRAPH, NODE_QUOTE, NODE_UL, render } from "storyblok-rich-text-react-renderer";
 import { ReactNode, createElement } from "react";
 import Image from "next/image";
 import emptyImg from "~/shared/not-available.png"
-
+import Link from "next/link";
 
 const Content = ({ document }: { document: ISbStoryData }) => {
 
@@ -19,10 +19,29 @@ const Content = ({ document }: { document: ISbStoryData }) => {
                     props.class == 'img-fl' ? props.class = 'block float-left' : null
                     props.class == 'img-fr' ? props.class = 'block float-right my-2' : null
                     return <span className={props.class}>{children}</span>
-                }
+                },
+                [MARK_LINK]: (children: ReactNode, props: {
+                    linktype?: string;
+                    href?: string;
+                    target?: string;
+                    anchor?: string;
+                    uuid?: string;
+                    custom?: LinkCustomAttributes;
+                }) => {
+                    const { linktype, href } = props;
+                    if (linktype === 'email') {
+                        // Email links: add `mailto:` scheme and map to <a>
+                        return <a href={`mailto:${href}`}>{children}</a>;
+                    }
+                    if (href?.match(/^(https?:)?\/\//)) {
+                        // External links: map to <a>
+                        return <Link href={href} target="_blank" rel="noopener noreferrer">{children}</Link>;
+                    }                    // Internal links: map to <Link>`
+                    return <Link href={String(href)}>{children}</Link>;
+                },
             },
             nodeResolvers: {
-                [NODE_PARAGRAPH]: (children: any) => <p className="my-2">{children}</p>,
+                [NODE_PARAGRAPH]: (children: ReactNode) => <p className="my-2">{children}</p>,
                 [NODE_HEADING]: (children: ReactNode, { level }) => {
                     let elem = ''
                     let setClass = ''

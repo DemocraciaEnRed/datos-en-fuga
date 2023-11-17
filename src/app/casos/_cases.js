@@ -1,5 +1,6 @@
 import { casesImages } from "../../../public/cases"
 
+
 const cases = [
   {
     id: 'joaquin-sorianello',
@@ -7,7 +8,7 @@ const cases = [
     name: "Joaquín Sorianello",
     occupation: "Desarrollador de software",
     year: "2015",
-    subtitle:"Quiso alertar sobre la facilidad de cometer un fraude informático con el sistema de votación con Boleta Única Electrónica y lo denunciaron penalmente.",
+    subtitle: "Quiso alertar sobre la facilidad de cometer un fraude informático con el sistema de votación con Boleta Única Electrónica y lo denunciaron penalmente.",
     content: <>
       <p className="mb-4">
         Días antes de las Elecciones Generales para jefe de Gobierno de 2015 en la Ciudad de Buenos Aires, <b>Joaquín alertó fallas en el sistema de seguridad de la empresa Magic Software Argentina SA (MSA)</b>, elegida por el gobierno <b>para implementar la Boleta Única Electrónica.</b>
@@ -22,8 +23,8 @@ const cases = [
     avatar: casesImages.gaspar,
     name: "Gaspar Ariel Ortmann",
     occupation: "Ocupado",
-    year:"2019",
-    subtitle:"Logró modificar la cotización del dólar a través de su homebanking del Banco Nación y realizó varias operaciones de compraventa por un total de u$s 11.800.",
+    year: "2019",
+    subtitle: "Logró modificar la cotización del dólar a través de su homebanking del Banco Nación y realizó varias operaciones de compraventa por un total de u$s 11.800.",
     content: <>
       <p className="mb-4">El 3 de septiembre de 2019, Gaspar ingresó como cualquiera de nosotros/as a su homebanking del Banco de la Nación Argentina -desarrollada y operada por la firma Red Link S.A.- pero con una pequeña gran diferencia: <b>mediante técnicas específicas para detectar vulnerabilidades en sistemas informáticos, descubrió que podía modificar el valor del dólar, corriendo la coma en los valores</b>.
       </p>
@@ -43,8 +44,8 @@ const cases = [
     avatar: casesImages.javier,
     name: "Javier Smaldone",
     occupation: "Programador informático",
-    year:"2019",
-    subtitle:"A través de su cuenta de Twitter alertó en reiteradas oportunidades la posibilidad de vulnerar el sistema de Boleta Única Electrónica. Sin muchas pruebas ni explicaciones, lo involucraron por una investigación que hizo la Policía Federal sobre #LaGorraLeaks: el robo de 700 gigabytes de documentos internos de la Policía que se conoció en agosto último",
+    year: "2019",
+    subtitle: "A través de su cuenta de Twitter alertó en reiteradas oportunidades la posibilidad de vulnerar el sistema de Boleta Única Electrónica. Sin muchas pruebas ni explicaciones, lo involucraron por una investigación que hizo la Policía Federal sobre #LaGorraLeaks: el robo de 700 gigabytes de documentos internos de la Policía que se conoció en agosto último",
     content: <>
       <p className="mb-4">
         En octubre de 2019 fue demorado por una investigación por la filtración de documentos internos de la Policía de la Ciudad de Buenos Aires, la Policía Federal y la Prefectura Naval. #LaGorraLeaks2.0 fue el usuario responsable de filtrar en redes sociales dicha información: un robo de alrededor de 700 gigabytes entre documentos, audios y copias de seguridad que dejó al descubierto la vulnerabilidad de la ciberseguridad argentina.

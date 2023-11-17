@@ -16,7 +16,7 @@ const Reportes = () => {
                     priority
                 />
                 <h1 className="text-3xl font-extrabold text-der-black my-5">¿ENCONTRASTE UNA FALLA DE SEGURIDAD Y TEMÉS REPORTARLA?</h1>
-                <a href="#reporta" type="button" className="border-2 border-black rounded-xl p-2 my-2 bg-[#212121] text-white w-[300px] text-center">
+                <a href="#reporta" type="button" target="_blank" rel="noopener noreferrer" className="border-2 border-black rounded-xl p-2 my-2 bg-[#212121] text-white w-[300px] text-center">
                     ¿CÓMO REPORTAR SEGURO?
                 </a>
             </div>
@@ -127,7 +127,7 @@ const Reportes = () => {
                                 </li>
                             </ol>
                         </div>
-                        <a href="https://reportes.vialibre.ngo" target="_blank" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 my-4 bg-[#CC4356] text-white w-[300px] text-center text-lg font-bold">
+                        <a href="https://reportes.vialibre.ngo" target="_blank" rel="noopener noreferrer" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 my-4 bg-[#CC4356] text-white w-[300px] text-center text-lg font-bold">
                             HACÉ TU REPORTE ANÓNIMO
                         </a>
 

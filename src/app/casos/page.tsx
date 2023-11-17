@@ -1,14 +1,7 @@
-import React from 'react'
-import Image from "next/image"
-import CaseSelector from './components/CaseSelector'
 import cases from "./_cases.js"
+import CaseSelector from './components/CaseSelector'
 import HowToReport from './components/HowToReport'
 
-export async function generateStaticParams() {
-  return cases.map((caso: any) => {
-    return { id: caso.id }
-  })
-}
 
 const Casos = () => {
   return (
@@ -32,7 +25,7 @@ const Casos = () => {
         <p className='font nippo text-der-black text-xl pl-12 my-4 font-medium'>
           TE CONTAMOS QUIÉNES SON Y CUÁL ES SU HISTORIA
         </p>
-        <CaseSelector />
+        <CaseSelector cases={cases} />
       </div>
       <HowToReport />
     </section>

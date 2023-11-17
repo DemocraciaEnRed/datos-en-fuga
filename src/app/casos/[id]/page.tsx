@@ -1,9 +1,24 @@
-import React from 'react'
-import Image from "next/image"
+import cases from "../_cases"
 import CaseSelector from '../components/CaseSelector'
 import HowToReport from '../components/HowToReport'
+import CasesDescription from '../components/CasesDescriptions'
+import { StaticImageData } from "next/image"
+import { notFound } from "next/navigation"
 
-const ID = () => {
+export async function generateStaticParams() {
+  return cases.map((caso) => {
+    return { id: caso.id }
+  })
+}
+
+const getCaso = (id: string) => cases.find((c) => c.id === id)
+
+const ID = ({ params }: { params: { id: string } }) => {
+  const { id } = params
+  let caso = getCaso(id)
+
+  !caso && notFound()
+  
   return (
     <section>
       <div className='bg-[#2D2D2D] py-[8vh] px-10 h-4/6'>
@@ -25,7 +40,8 @@ const ID = () => {
         <p className='font-nippo text-der-black text-xl pl-12 my-4 font-medium'>
           TE CONTAMOS QUIÉNES SON Y CUÁL ES SU HISTORIA
         </p>
-        <CaseSelector />
+        <CaseSelector cases={cases} id={id} />
+        <CasesDescription caso={caso} />
       </div>
       <HowToReport />
     </section>

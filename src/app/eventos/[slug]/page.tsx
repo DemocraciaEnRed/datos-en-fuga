@@ -1,7 +1,5 @@
-import { ISbStoriesParams, getStoryblokApi, ISbStory, ISbStoryData } from "@storyblok/react/rsc";
-import { MARK_BOLD, NODE_HEADING, NODE_PARAGRAPH, render } from 'storyblok-rich-text-react-renderer';
+import { ISbStoriesParams, getStoryblokApi, ISbStory } from "@storyblok/react/rsc";
 import { notFound } from "next/navigation";
-import { ReactNode, createElement } from "react";
 import Content from "./components/Content";
 
 const fetchArticleBySlug = async (slug: string): Promise<ISbStory> => {
