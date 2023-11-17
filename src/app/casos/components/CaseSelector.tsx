@@ -1,17 +1,25 @@
-// 'use client'
+'use client'
+import { useEffect, useState } from "react";
+import { notFound, useParams } from "next/navigation"
 import Image from "next/image"
 import Link from 'next/link'
+import CasesDescription from "./CasesDescriptions";
+import cases from '../_cases'
 
-const CaseSelector = ({ id, cases }: { id?: string, cases: any }) => {
-  // const [caso, setCaso] = useState('')
-  // const { id } = useParams()
-  // useEffect(() => {
-  //   if (id) {
-  //     let caseId = String(id)
-  //     const isValidCaso = cases.some(caso => caso.id == caseId)
-  //     isValidCaso ? setCaso(caseId) : notFound()
-  //   }
-  // }, [id])
+
+const CaseSelector = () => {
+  const [caso, setCaso] = useState({})
+  const { id } = useParams()
+  useEffect(() => {
+    if (id) {
+      let caseId = String(id)
+      if (caseId === 'index') return setCaso({})
+      const caso = cases.find((c) => c.id === caseId)
+      if (caso) setCaso(caso)
+      else notFound()
+      return
+    }
+  }, [id])
 
   return (
     <>
@@ -34,6 +42,7 @@ const CaseSelector = ({ id, cases }: { id?: string, cases: any }) => {
           })
         }
       </div>
+      {Object.keys(caso).length > 0 && <CasesDescription caso={caso} />}
     </>
   )
 }

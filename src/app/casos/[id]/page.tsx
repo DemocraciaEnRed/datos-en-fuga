@@ -1,9 +1,6 @@
-import cases from "../_cases"
+import cases from "../_cases.js"
 import CaseSelector from '../components/CaseSelector'
 import HowToReport from '../components/HowToReport'
-import CasesDescription from '../components/CasesDescriptions'
-import { StaticImageData } from "next/image"
-import { notFound } from "next/navigation"
 
 export async function generateStaticParams() {
   return cases.map((caso) => {
@@ -11,14 +8,7 @@ export async function generateStaticParams() {
   })
 }
 
-const getCaso = (id: string) => cases.find((c) => c.id === id)
-
-const ID = ({ params }: { params: { id: string } }) => {
-  const { id } = params
-  let caso = getCaso(id)
-
-  !caso && notFound()
-  
+const ID = () => {
   return (
     <section>
       <div className='bg-[#2D2D2D] py-[8vh] px-10 h-4/6'>
@@ -29,19 +19,18 @@ const ID = ({ params }: { params: { id: string } }) => {
           <a href="#reporta" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 my-2 bg-[#CC4356] text-white w-[300px] text-center font-extrabold">
             ¿CÓMO REPORTAR SEGURO?
           </a>
-          <a href="#reporta" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 my-2 bg-[#2D2D2D] text-[#CC4356] w-[300px] text-center font-extrabold">
-            ¿CÓMO REPORTAR SEGURO?
+          <a href="#reporta" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 my-2 bg-[#2D2D2D] text-[#CC4356] w-[300px] text-center font-extrabold flex items-center justify-center">
+            CASOS
           </a>
         </div>
       </div>
 
       <div className='bg-[#F1F1F1] py-[3vh] h-4/6'>
-        <h2 className='font-nippo text-5xl bg-[#CC4356] py-4 pl-14 pr-5 inline-block font-extrabold'>ELLOS, NO LO SABÍAN</h2>
-        <p className='font-nippo text-der-black text-xl pl-12 my-4 font-medium'>
+        <h2 className='font-nippo text-6xl bg-[#CC4356] py-4 pl-[4vw] md:pl-14 pr-5 inline-block font-extrabold max-[500px]:text-4xl max-[375px]:text-3xl'>ELLOS, NO LO SABÍAN</h2>
+        <p className='font nippo text-der-black text-xl pl-12 my-4 font-medium'>
           TE CONTAMOS QUIÉNES SON Y CUÁL ES SU HISTORIA
         </p>
-        <CaseSelector cases={cases} id={id} />
-        <CasesDescription caso={caso} />
+        <CaseSelector />
       </div>
       <HowToReport />
     </section>

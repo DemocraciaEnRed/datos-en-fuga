@@ -3,12 +3,11 @@ import Image, { StaticImageData } from "next/image"
 
 
 const CasesDescription = ({ caso }: { caso: any }) => {
-  // let casos = cases.find((c) => c.id === id)
+  // let caso = cases.find((c) => c.id === id)
   let content: React.ReactElement | undefined
 
-  if (caso && caso.content) {
-    content = caso?.content
-  } else return
+  if (caso && caso.content) content = caso.content
+  else return null
 
   return (
     <div className='my-6 text-black mx-14'>
@@ -25,7 +24,7 @@ const CasesDescription = ({ caso }: { caso: any }) => {
         </p>
         <div className='mt-4'>{content}</div>
         <div className='flex flex-row flex-wrap gap-2 my-6'>
-          {caso?.buttons?.map((b: Button) => {
+          {caso.buttons?.map((b: Button) => {
             return (
               <a href="#reporta" type="button" className="border-2 border-black rounded-xl p-2 bg-[#212121] text-white w-[350px] text-center flex flex-row justify-between items-center" key={b.id}>
                 <Image
