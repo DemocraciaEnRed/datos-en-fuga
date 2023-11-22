@@ -1,6 +1,6 @@
 
-type Direction = 'left' | 'right' | 'up';
-type Size = 8 | 11 | 14
+type Direction = 'left' | 'right' | 'up' | 'down';
+type Size = 8 | 11 | 14 //default 6
 type Color = 'red'
 
 const ChevronSVG = (
