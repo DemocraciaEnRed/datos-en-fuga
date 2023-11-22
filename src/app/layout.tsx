@@ -5,6 +5,7 @@ import './globals.css'
 import NavBar from './components/NavBar'
 
 import { storyblokInit, apiPlugin } from "@storyblok/react";
+import ScrollTopButton from './components/ScrollTopButton'
 
 storyblokInit({
   accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
@@ -70,6 +71,7 @@ export default function RootLayout({
       <body className={`${nippo.variable} ${roboto.variable} ${openSans.className} ${inter.className}`}>
         <NavBar />
         {children}
+        <ScrollTopButton/>
       </body>
     </html>
   )
