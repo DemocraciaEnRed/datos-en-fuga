@@ -2,6 +2,7 @@ import Image from "next/image"
 import squaresData from "./_dataReporta.js"
 import squaresData2 from "./_dataProteger.js"
 import { otherLogos } from "../../../public/reporta/index.js"
+import Footer from "@/app/components/Footer";
 
 const Reportes = () => {
     return (
@@ -146,6 +147,7 @@ const Reportes = () => {
                     </p>
                 </div>
             </div>
+            <Footer color="" />
         </>
     )
 }

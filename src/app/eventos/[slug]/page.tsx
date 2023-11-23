@@ -1,8 +1,7 @@
-import Image from "next/image"
-import Link from "next/link";
 import { ISbStoriesParams, getStoryblokApi, ISbStory, ISbStoryParams } from "@storyblok/react/rsc";
 import { notFound } from "next/navigation";
 import Content from "./components/Content";
+import Footer from "@/app/components/Footer";
 
 const fetchArticleBySlug = async (slug: string): Promise<ISbStory> => {
     const storyblokApi = getStoryblokApi()
@@ -87,57 +86,7 @@ const EventosBySlug = async ({ params }: { params: { slug: string } }) => {
                     </div>
                 </aside>
             </section >
-            <footer className="bg-[#212121] text-white flex flex-row justify-around flex-wrap gap-y-5 py-3">
-                <div>
-                    <Link href="https://democraciaenred.org" target="_blank">
-                        <Image
-                            alt="DER Logo"
-                            src="/shared/der.png"
-                            width={300}
-                            height={54}
-                            priority
-                        />
-                    </Link>
-                </div>
-
-                <div className="flex flex-row gap-5 justify-center items-center content-center">
-                    <Link href="https://twitter.com/fundacionDER" target="_blank">
-                        <Image
-                            alt="Twitter"
-                            src="/shared/twitter.png"
-                            width={23}
-                            height={16}
-                            priority
-                        />
-                    </Link>
-
-                    <Link href="https://www.instagram.com/democraciaenred/" target="_blank">
-                        <Image
-                            alt="Instagram"
-                            src="/shared/instagram.png"
-                            width={23}
-                            height={16}
-                            priority
-                        />
-                    </Link>
-
-                    <Link href="https://www.youtube.com/channel/UCm5n0zxmfWN0pMuMPxk7psw" target="_blank">
-                        <Image
-                            alt="Youtube"
-                            src="/shared/youtube.png"
-                            width={25}
-                            height={16}
-                            priority
-                        />
-                    </Link>
-                </div>
-
-                <div className="text-white flex flex-row justify-center items-center">
-                    <Link href="mailto:contacto@democraciaenred.com" target="_blank">
-                        <p>contacto@democraciaenred.com</p>
-                    </Link>
-                </div>
-            </footer>
+            <Footer color="black" />
         </>
     )
 }
