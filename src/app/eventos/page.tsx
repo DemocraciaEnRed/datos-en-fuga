@@ -6,7 +6,7 @@ import { format } from "date-fns";
 
 const Eventos = async () => {
     const { data } = await fetchData();
-    console.log(data.stories[2])
+    console.log(data.stories[0])
 
     return (
         <section className="bg-[#F1F1F1]">
@@ -77,7 +77,9 @@ const fetchData = async () => {
 
     let sbParams: ISbStoriesParams = {
         version: 'draft',
-        starts_with: "news/"
+        starts_with: "news/",
+        excluding_fields: 'body,_editable,_uid',
+        sort_by: "created_at:asc"
     };
     return await storyblokApi.get(`cdn/stories`, sbParams);
 }

@@ -1,15 +1,16 @@
-import { ISbStoriesParams, getStoryblokApi, ISbStory } from "@storyblok/react/rsc";
+import Image from "next/image"
+import Link from "next/link";
+import { ISbStoriesParams, getStoryblokApi, ISbStory, ISbStoryParams } from "@storyblok/react/rsc";
 import { notFound } from "next/navigation";
 import Content from "./components/Content";
 
 const fetchArticleBySlug = async (slug: string): Promise<ISbStory> => {
     const storyblokApi = getStoryblokApi()
 
-    let sbParams: ISbStoriesParams = { version: 'draft' };
+    let sbParams: ISbStoryParams = { version: 'draft' };
     const article = await storyblokApi.get(`cdn/stories/news/${slug}`, sbParams);
 
     if (!article) notFound()
-
     return article
 }
 
@@ -18,7 +19,8 @@ const fetchData = async () => {
 
     let sbParams: ISbStoriesParams = {
         version: 'draft',
-        starts_with: "news/"
+        starts_with: "news/",
+        excluding_fields: 'title,brief,body,header,_editable,_uid,component'
     };
     return await storyblokApi.get(`cdn/stories`, sbParams);
 }
@@ -30,13 +32,113 @@ export async function generateStaticParams() {
     })
 }
 
+const mapAuthors = (authors: any) => {
+    let authorsString = ''
+    if (authors) {
+        authors.forEach((author: { name: string }, i: number) => {
+            if (authors.length > 1 && i + 1 < authors.length) authorsString = `${authorsString}${author.name}, `
+            else if (authors.length > 1) authorsString = `${authorsString}y ${author.name}`
+            else authorsString = `${authorsString}${author.name}`
+        })
+    } else {
+        authorsString = 'Anónimo'
+    }
+    return authorsString
+}
+
 const EventosBySlug = async ({ params }: { params: { slug: string } }) => {
     const { data } = await fetchArticleBySlug(params.slug)
 
     return (
-        <section className="bg-gray-100 text-black p-[3vw] md:p-[6vw] text-base">
-            <Content document={data.story.content.body}/>
-        </section>
+        <>
+            <section className="bg-[#F1F1F1] text-[#212121] p-[3vw] md:p-[6vw] text-base flex flex-col-reverse justify-around md:flex-row">
+                <div>
+                    <h1 className="text-3xl font-extrabold my-4">{data.story.name}</h1>
+                    <p className="my-4 text-xl">Por <span className="uppercase">{mapAuthors(data.story.content.authors)}</span></p>
+                    <Content document={data.story.content.body} />
+                </div>
+                <aside className="flex flex-col gap-5 text-center md:text-right">
+                    <div>
+                        <p className="font-bold">Autor</p>
+                        {data.story.content.authors ?
+                            (data.story.content.authors.map((author: { name: string }) => {
+                                return <p className="text-sm" key={author.name}>{author.name}</p>
+                            }))
+                            :
+                            <p className="text-sm">Anónimo</p>
+                        }
+                    </div>
+
+                    <div>
+                        <p className="font-bold">Publicado</p>
+                        <p className="text-sm">23/11/2023</p>
+                    </div>
+
+                    <div className="flex flex-col gap-2">
+                        {
+                            data.story.tag_list.map((tag) => {
+                                return (
+                                    <span className="text-white bg-[#008BB4] text-sm rounded-3xl font-roboto text-center py-2 whitespace-nowrap" key={tag}>
+                                        {tag}
+                                    </span>
+                                )
+                            })
+                        }
+                    </div>
+                </aside>
+            </section >
+            <footer className="bg-[#212121] text-white flex flex-row justify-around flex-wrap gap-y-5 py-3">
+                <div>
+                    <Link href="https://democraciaenred.org" target="_blank">
+                        <Image
+                            alt="DER Logo"
+                            src="/shared/der.png"
+                            width={300}
+                            height={54}
+                            priority
+                        />
+                    </Link>
+                </div>
+
+                <div className="flex flex-row gap-5 justify-center items-center content-center">
+                    <Link href="https://twitter.com/fundacionDER" target="_blank">
+                        <Image
+                            alt="Twitter"
+                            src="/shared/twitter.png"
+                            width={23}
+                            height={16}
+                            priority
+                        />
+                    </Link>
+
+                    <Link href="https://www.instagram.com/democraciaenred/" target="_blank">
+                        <Image
+                            alt="Instagram"
+                            src="/shared/instagram.png"
+                            width={23}
+                            height={16}
+                            priority
+                        />
+                    </Link>
+
+                    <Link href="https://www.youtube.com/channel/UCm5n0zxmfWN0pMuMPxk7psw" target="_blank">
+                        <Image
+                            alt="Youtube"
+                            src="/shared/youtube.png"
+                            width={25}
+                            height={16}
+                            priority
+                        />
+                    </Link>
+                </div>
+
+                <div className="text-white flex flex-row justify-center items-center">
+                    <Link href="mailto:contacto@democraciaenred.com" target="_blank">
+                        <p>contacto@democraciaenred.com</p>
+                    </Link>
+                </div>
+            </footer>
+        </>
     )
 }
 export default EventosBySlug

@@ -17,7 +17,7 @@ const Content = ({ document }: { document: ISbStoryData }) => {
                     props.class == 'to-left' ? props.class = 'text-left flex flex-col items-start' : null
                     props.class == 'to-right' ? props.class = 'text-right flex flex-col items-end' : null
                     props.class == 'img-fl' ? props.class = 'block float-left' : null
-                    props.class == 'img-fr' ? props.class = 'block float-right my-2' : null
+                    props.class == 'img-fr' ? props.class = 'block float-right' : null
                     return <span className={props.class}>{children}</span>
                 },
                 [MARK_LINK]: (children: ReactNode, props: {
@@ -64,7 +64,7 @@ const Content = ({ document }: { document: ISbStoryData }) => {
                 [NODE_HR]: () => <hr className="border-t-[1px] border-t-gray-300 my-4" />,
                 [NODE_IMAGE]: (children: ReactNode, { src, alt, title }) => {
                     if (!alt) { alt = 'alternative image description not available' }
-                    return <Image className="object-contain" src={src ? src : emptyImg} alt={alt} title={title} width={500} height={500} />
+                    return <Image className="object-contain m-3" src={src ? src : emptyImg} alt={alt} title={title} width={500} height={500} />
                 }
             }
         })}
