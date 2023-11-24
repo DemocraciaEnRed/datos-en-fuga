@@ -6,6 +6,7 @@ import NavBar from './components/NavBar'
 
 import { storyblokInit, apiPlugin } from "@storyblok/react";
 import ScrollTopButton from './components/ScrollTopButton'
+import Footer from './components/Footer'
 
 storyblokInit({
   accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
@@ -72,6 +73,7 @@ export default function RootLayout({
         <NavBar />
         {children}
         <ScrollTopButton/>
+        <Footer/>
       </body>
     </html>
   )

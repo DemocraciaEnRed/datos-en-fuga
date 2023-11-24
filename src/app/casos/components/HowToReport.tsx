@@ -3,7 +3,7 @@ import { otherLogos } from '~/reporta/'
 
 const HowToReport = () => {
     return (
-        <div className='bg-[#2D2D2D] py-[3vh] h-4/6'>
+        <section className='bg-[#2D2D2D] py-[3vh] h-4/6'>
             <h2 className='font-nippo text-5xl bg-[#008BB4] py-4 pl-14 pr-5 inline-block font-extrabold w-[90%] max-[375px]:text-3xl lg:w-auto'>ENTONCES, <br />
                 ¿QUÉ Y CÓMO PUEDO REPORTAR?
             </h2>
@@ -29,7 +29,7 @@ const HowToReport = () => {
                     </a>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 export default HowToReport

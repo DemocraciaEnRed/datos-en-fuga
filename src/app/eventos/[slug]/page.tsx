@@ -1,28 +1,6 @@
 import { ISbStoriesParams, getStoryblokApi, ISbStory, ISbStoryParams } from "@storyblok/react/rsc";
 import { notFound } from "next/navigation";
 import Content from "./components/Content";
-import Footer from "@/app/components/Footer";
-
-const fetchArticleBySlug = async (slug: string): Promise<ISbStory> => {
-    const storyblokApi = getStoryblokApi()
-
-    let sbParams: ISbStoryParams = { version: 'draft' };
-    const article = await storyblokApi.get(`cdn/stories/news/${slug}`, sbParams);
-
-    if (!article) notFound()
-    return article
-}
-
-const fetchData = async () => {
-    const storyblokApi = getStoryblokApi()
-
-    let sbParams: ISbStoriesParams = {
-        version: 'draft',
-        starts_with: "news/",
-        excluding_fields: 'title,brief,body,header,_editable,_uid,component'
-    };
-    return await storyblokApi.get(`cdn/stories`, sbParams);
-}
 
 export async function generateStaticParams() {
     const news = await fetchData()
@@ -31,30 +9,16 @@ export async function generateStaticParams() {
     })
 }
 
-const mapAuthors = (authors: any) => {
-    let authorsString = ''
-    if (authors) {
-        authors.forEach((author: { name: string }, i: number) => {
-            if (authors.length > 1 && i + 1 < authors.length) authorsString = `${authorsString}${author.name}, `
-            else if (authors.length > 1) authorsString = `${authorsString}y ${author.name}`
-            else authorsString = `${authorsString}${author.name}`
-        })
-    } else {
-        authorsString = 'Anónimo'
-    }
-    return authorsString
-}
-
 const EventosBySlug = async ({ params }: { params: { slug: string } }) => {
     const { data } = await fetchArticleBySlug(params.slug)
 
     return (
-        <section className="bg-[#F1F1F1] text-[#212121] p-[3vw] md:p-[6vw] text-base flex flex-col-reverse justify-around md:flex-row">
-            <div>
+        <main className="bg-[#F1F1F1] text-[#212121] p-[3vw] md:p-[6vw] text-base flex flex-col-reverse justify-around md:flex-row">
+            <article>
                 <h1 className="text-3xl font-extrabold my-4">{data.story.name}</h1>
                 <p className="my-4 text-xl">Por <span className="uppercase">{mapAuthors(data.story.content.authors)}</span></p>
                 <Content document={data.story.content.body} />
-            </div>
+            </article>
             <aside className="flex flex-col gap-5 text-center md:text-right">
                 <div>
                     <p className="font-bold">Autor</p>
@@ -84,8 +48,41 @@ const EventosBySlug = async ({ params }: { params: { slug: string } }) => {
                     }
                 </div>
             </aside>
-        </section >
+        </main>
     )
 }
 export default EventosBySlug
 
+const fetchArticleBySlug = async (slug: string): Promise<ISbStory> => {
+    const storyblokApi = getStoryblokApi()
+
+    let sbParams: ISbStoryParams = { version: 'draft' };
+    const article = await storyblokApi.get(`cdn/stories/news/${slug}`, sbParams);
+
+    if (!article) notFound()
+    return article
+}
+
+const fetchData = async () => {
+    const storyblokApi = getStoryblokApi()
+
+    let sbParams: ISbStoriesParams = {
+        version: 'draft',
+        starts_with: "news/",
+        excluding_fields: 'title,brief,body,header,_editable,_uid,component'
+    };
+    return await storyblokApi.get(`cdn/stories`, sbParams);
+}
+const mapAuthors = (authors: any) => {
+    let authorsString = ''
+    if (authors) {
+        authors.forEach((author: { name: string }, i: number) => {
+            if (authors.length > 1 && i + 1 < authors.length) authorsString = `${authorsString}${author.name}, `
+            else if (authors.length > 1) authorsString = `${authorsString}y ${author.name}`
+            else authorsString = `${authorsString}${author.name}`
+        })
+    } else {
+        authorsString = 'Anónimo'
+    }
+    return authorsString
+}

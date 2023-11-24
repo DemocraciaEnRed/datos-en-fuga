@@ -1,15 +1,24 @@
+'use client'
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 type Color = 'black'
 
+const darkThemeSegments = ['about', 'abc', 'eventos']
+const isDarkTheme = (path: string) => darkThemeSegments.some(segment => segment === path.split('/')[1])
+
 const Footer = ({ color }: { color?: Color }) => {
+
+  const pathname = usePathname()
+  const darkTheme = isDarkTheme(pathname)
+
   return (
-    <footer className={`${color === 'black' ? 'bg-[#212121] text-white' : 'bg-[#F1F1F1] text-black'} flex flex-row justify-around flex-wrap gap-y-5 py-3 max-[425px]:flex-col max-[425px]:items-center`}>
+    <footer className={`${darkTheme ? 'bg-[#212121] text-white' : 'bg-[#F1F1F1] text-black'} flex flex-row justify-around flex-wrap gap-y-5 py-3 max-[425px]:flex-col max-[425px]:items-center`}>
       <div>
         <Link href="https://democraciaenred.org" target="_blank">
           {
-            color === 'black' ?
+            darkTheme ?
               <Image
                 alt="DER Logo"
                 src="/shared/der.png"
@@ -32,7 +41,7 @@ const Footer = ({ color }: { color?: Color }) => {
         <Link href="https://twitter.com/fundacionDER" target="_blank">
           <Image
             alt="Twitter"
-            src={`${color === 'black' ? "/shared/twitter.png" : "/shared/twittern.png"}`}
+            src={`${darkTheme ? "/shared/twitter.png" : "/shared/twittern.png"}`}
             width={23}
             height={16}
             priority
@@ -42,7 +51,7 @@ const Footer = ({ color }: { color?: Color }) => {
         <Link href="https://www.instagram.com/democraciaenred/" target="_blank">
           <Image
             alt="Instagram"
-            src={`${color === 'black' ? "/shared/instagram.png" : "/shared/instagramn.png"}`}
+            src={`${darkTheme ? "/shared/instagram.png" : "/shared/instagramn.png"}`}
             width={23}
             height={16}
             priority
@@ -52,7 +61,7 @@ const Footer = ({ color }: { color?: Color }) => {
         <Link href="https://www.youtube.com/channel/UCm5n0zxmfWN0pMuMPxk7psw" target="_blank">
           <Image
             alt="Youtube"
-            src={`${color === 'black' ? "/shared/youtube.png" : "/shared/youtuben.png"}`}
+            src={`${darkTheme ? "/shared/youtube.png" : "/shared/youtuben.png"}`}
             width={23}
             height={16}
             priority

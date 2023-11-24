@@ -1,5 +1,6 @@
 import Image from "next/image"
 import logosNPO from "../../../../public/about/index"
+
 const Quienes = () => {
     const npo = [
         {

@@ -12,8 +12,8 @@ const links: Navlink[] = [
     { href: "/casos", label: "CASOS" },
     { href: "/reporta", label: "REPORTÁ" },
     { href: "/eventos", label: "EVENTOS" },
-    { href: "/abc", label: "ABC" },
-    { href: "/about", label: "ACERCA DE" }
+    { href: "/about", label: "ACERCA DE" },
+    { href: "/abc", label: "ABC" }
 ]
 const firstSegment = (path: string) => `/${path.split('/')[1]}`
 

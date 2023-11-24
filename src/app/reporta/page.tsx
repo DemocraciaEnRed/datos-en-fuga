@@ -6,8 +6,8 @@ import Footer from "@/app/components/Footer";
 
 const Reportes = () => {
     return (
-        <>
-            <div className="py-6 flex flex-col flex-wrap justify-center justify-items-center items-center bg-[#f1f1f1] h-4/5 text-center">
+        <main>
+            <header className="py-6 flex flex-col flex-wrap justify-center justify-items-center items-center bg-[#f1f1f1] h-4/5 text-center">
                 <Image
                     className="relative"
                     src={otherLogos.qant}
@@ -20,8 +20,8 @@ const Reportes = () => {
                 <a href="#reporta" type="button" target="_blank" rel="noopener noreferrer" className="border-2 border-black rounded-xl p-2 my-2 bg-[#212121] text-white w-[300px] text-center">
                     ¿CÓMO REPORTAR SEGURO?
                 </a>
-            </div>
-            <div className="text-center py-10 bg-[#212121]" id="reporta">
+            </header>
+            <section className="text-center py-10 bg-[#212121]" id="reporta">
                 <p className="text-lg text-center max-w-[1000px] mx-auto">
                     El sitio desarrollado por <span className="font-extrabold">Fundación Via Libre</span> con un sistema basado en <span className="font-extrabold">GlobalLeaks</span>, permite informar de forma anónima y protegida sobre fallas en <span className="font-extrabold">sistemas informáticos</span> que afecten los derechos de las personas. Podés reportarlas acá para que sean reparadas.
                 </p>
@@ -146,9 +146,8 @@ const Reportes = () => {
                         Desde Fundación Vía Libre, ODIA y Democracia en Red realizamos todos los esfuerzos técnicos para no conservar datos personales a través de los reportes recibidos. Tal como se puede consultar en la sección “¿Cómo te protegemos?”, la información que envíes es absolutamente anónima para nosotros: la plataforma está diseñada de forma tal que únicamente conserva el contenido presentado en la denuncia y genera en consecuencia un código único para identificarla, sin quedar asociada a quien la realiza. No accedemos a ni conservamos registros que permitan individualizar o identificar a quienes completan el formulario: no empleamos ningún mecanismo para trazar tu conexión ni guardamos registro de las direcciones de red desde las que te hayas conectado o cualquier otro metadato que pueda identificarte. De todas formas, recomendamos como precaución general no incluir información personal y, en lo posible, acceder a través del navegador TOR.
                     </p>
                 </div>
-            </div>
-            <Footer />
-        </>
+            </section>
+        </main>
     )
 }
 export default Reportes
