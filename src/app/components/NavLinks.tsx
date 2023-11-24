@@ -7,12 +7,12 @@ type Navlink = {
 }
 
 const links: Navlink[] = [
-    { href: "/", label: "INICIO" },
-    { href: "/amparo", label: "AMPARO" },
-    { href: "/casos", label: "CASOS" },
-    { href: "/reporta", label: "REPORTÁ" },
-    { href: "/eventos", label: "EVENTOS" },
-    { href: "/about", label: "ACERCA DE" },
+    { href: "/", label: "inicio" },
+    { href: "/amparo", label: "amparo" },
+    { href: "/casos", label: "casos" },
+    { href: "/reporta", label: "reportá" },
+    { href: "/eventos", label: "eventos" },
+    { href: "/about", label: "acerca de" },
     { href: "/abc", label: "ABC" }
 ]
 const firstSegment = (path: string) => `/${path.split('/')[1]}`

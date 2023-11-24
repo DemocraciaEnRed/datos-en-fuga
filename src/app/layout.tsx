@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Open_Sans, Roboto } from 'next/font/google'
+import { Inter, Open_Sans, Raleway, Roboto } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
 import NavBar from './components/NavBar'
@@ -14,6 +14,10 @@ storyblokInit({
 });
 
 const inter = Inter({ subsets: ['latin'] })
+const raleway = Raleway({
+  subsets: ['latin'],
+  variable: '--font-raleway'
+})
 const roboto = Roboto({
   weight: ['400', '700'],
   style: ['normal', 'italic'],
@@ -69,7 +73,7 @@ export default function RootLayout({
 
   return (
     <html lang="es">
-      <body className={`${nippo.variable} ${roboto.variable} ${openSans.className} ${inter.className}`}>
+      <body className={`${nippo.variable} ${raleway.variable} ${roboto.variable} ${openSans.className} ${inter.className}`}>
         <NavBar />
         {children}
         <ScrollTopButton/>

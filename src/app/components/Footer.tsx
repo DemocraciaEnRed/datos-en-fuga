@@ -8,7 +8,7 @@ type Color = 'black'
 const darkThemeSegments = ['about', 'abc', 'eventos']
 const isDarkTheme = (path: string) => darkThemeSegments.some(segment => segment === path.split('/')[1])
 
-const Footer = ({ color }: { color?: Color }) => {
+const Footer = () => {
 
   const pathname = usePathname()
   const darkTheme = isDarkTheme(pathname)
@@ -71,7 +71,7 @@ const Footer = ({ color }: { color?: Color }) => {
 
       <div className="flex flex-row justify-center items-center">
         <Link href="mailto:contacto@democraciaenred.com" target="_blank">
-          <p>contacto@democraciaenred.com</p>
+          <p className="font-raleway">contacto@democraciaenred.com</p>
         </Link>
       </div>
     </footer>

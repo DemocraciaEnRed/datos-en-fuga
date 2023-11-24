@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { cartoons } from '../../../public/amparo'
 import amparoIcon from '../../../public/shared/amparo.png'
+import SiteMapFooter from '../components/SiteMapFooter'
 
 const Amparo = () => {
   return (
@@ -106,29 +107,37 @@ const Amparo = () => {
           />
         </div>
       </section>
-      <section className='py-[8vh] bg-[#2D2D2D]'>
+      <section className='py-[8vh] bg-der-black'>
         <h2 className='font-nippo text-4xl bg-[#006482] py-4 pl-14 pr-5 inline-block font-extrabold max-[466px]:text-2xl'>¿QUÉ PRESENTAMOS?
         </h2>
-        <div className='my-10 flex flex-row justify-center'>
-          <div className='w-[610px] h-[360px] px-10 bg-[#F1F1F1] flex flex-col justify-around items-center text-black sm:w-[350px] max-[328px]:w-[200px]'>
-            <p className='text-2xl font-extrabold'>AMPARO</p>
-            <Image
-              alt="icon"
-              src={amparoIcon}
-              height={96}
-              width={96}
-            />
-            <p className='text-lg'>
-              Este amparo pretende la derogación del decreto DA 410/18052, por que atenta contra la ley de datos personales hoy vigente en la constitución.
-            </p>
-            <a href="#reporta" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 my-2 bg-[#CC4356] text-white w-[300px] text-center font-extrabold">
-              DESCARGA EL COSO
+        <div className='flex flex-col justify-center items-center w-[90vw] md:w-[70vw] max-w-[950px] bg-gray-100 text-black rounded-md mx-auto my-[3vw] p-6 gap-5'>
+          <p className='text-2xl font-bold'>AMPARO</p>
+          <Image
+            alt="icon"
+            src={amparoIcon}
+            height={96}
+            width={96}
+          />
+          <p className='text-2xl font-nippo'>
+            Presentamos un amparo colectivo solicitando el pronunciamiento de inconstitucionalidad de la DA 431/2020 y de determinados artículos de Ley de Datos Personales y solicitando se dicte una medida cautelar que ordena la suspensión de lo que disponen.
+          </p>
+          <div className='flex justify-center items-center gap-5 flex-wrap'>
+            <a href="#" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
+              descargar amparo
+            </a>
+            <a href="#" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
+              descargar gacetilla
             </a>
           </div>
         </div>
-        <p className='text-white text-center py-10 text-lg'>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius accusamus quo repellat, incidunt voluptatem quam cupiditate expedita repudiandae et, hic dolor eligendi suscipit odit, atque saepe veniam aliquam explicabo id.
-        </p>
+        <div className='text-lg font-nippo w-[90vw] mx-auto'>
+          <h3 className='font-bold underline uppercase mb-3'>estado:</h3>
+          <p className='text-white text-lg mb-3'>El amparo colectivo se presento el 18 de abril de 2023 y radica en el juzgado Contencioso Administrativo Federal N 8, a cargo de la Jueza Dra. María Cecilia GILARDI MADARIAGA de NEGRE. Luego de 5 meses, el 07/09/2023, la Sra. Jueza se pronuncio sobre la medida cautelar solicitada por nosotros y rechazo la misma. Este rechazo fue apelado por nosotros y  desde el 11 de septiembre aguardamos que la Sala V del mismo fuero revise la decisión del Juzgado de origen y nos conceda la medida cautelar.</p>
+          <p className='font-extralight'>Ultima actualización: 21/11/2023</p>
+        </div>
+      </section>
+      <section className='bg-gray-950 w-[90vw] mx-auto'>
+        <SiteMapFooter/>
       </section>
     </main>
   )
