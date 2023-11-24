@@ -1,26 +1,22 @@
 import { ISbStoriesParams, getStoryblokApi } from "@storyblok/react/rsc";
-import Footer from "@/app/components/Footer";
 import EventsMasonry from "./components/EventsMasonry";
 
 const Eventos = async () => {
     const { data } = await fetchData();
     return (
-        <>
-            <section className="bg-[#F1F1F1]">
-                <div className='bg-[#2D2D2D] py-[8vh] px-10 h-4/6'>
-                    <h1 className='font-nippo text-5xl w-[800px] max-[810px]:w-[500px] max-[500px]:w-[250px] max-[500px]:text-3xl max-[375px]:text-2xl'>
-                        EVENTOS
-                    </h1>
-                    <p className='font-nippo text-5xl font-extrabold max-[810px]:w-[500px] max-[500px]:w-[250px] sm:text-4xl'>
-                        QUE ACCIONES HEMOS LLEVADO A CABO EN EL PROYECTO
-                    </p>
-                </div>
-                <section className="p-[3vw]">
-                    <EventsMasonry stories={data.stories} />
-                </section>
+        <section className="bg-[#F1F1F1]">
+            <div className='bg-[#2D2D2D] py-[8vh] px-10 h-4/6'>
+                <h1 className='font-nippo text-5xl w-[800px] max-[810px]:w-[500px] max-[500px]:w-[250px] max-[500px]:text-3xl max-[375px]:text-2xl'>
+                    EVENTOS
+                </h1>
+                <p className='font-nippo text-5xl font-extrabold max-[810px]:w-[500px] max-[500px]:w-[250px] sm:text-4xl'>
+                    QUE ACCIONES HEMOS LLEVADO A CABO EN EL PROYECTO
+                </p>
+            </div>
+            <section className="p-[3vw]">
+                <EventsMasonry stories={data.stories} />
             </section>
-            <Footer color="black" />
-        </>
+        </section>
     )
 }
 export default Eventos
@@ -32,7 +28,7 @@ const fetchData = async () => {
         version: 'draft',
         starts_with: "news/",
         excluding_fields: 'body,_editable,_uid',
-        sort_by: "created_at:asc"
+        sort_by: "created_at:desc"
     };
     return await storyblokApi.get(`cdn/stories`, sbParams);
 }

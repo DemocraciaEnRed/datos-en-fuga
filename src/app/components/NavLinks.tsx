@@ -1,4 +1,6 @@
+'use client'
 import Link from "next/link";
+import { usePathname } from 'next/navigation'
 type Navlink = {
     href: string,
     label: string
@@ -13,14 +15,18 @@ const links: Navlink[] = [
     { href: "/abc", label: "ABC" },
     { href: "/about", label: "ACERCA DE" }
 ]
+const firstSegment = (path: string) => `/${path.split('/')[1]}`
+
 
 const NavLinks = () => {
+    const pathname = usePathname()
+
     return (
         <>
             {links.map((link, i) => {
                 return (
-                    <li key={'navlink' + i} className="mx-2 first:ml-0 last:mr-0 font-bold">
-                        <Link href={link.href}>{link.label}</Link>
+                    <li key={'navlink' + i}>
+                        <Link href={link.href} className={firstSegment(pathname) === link.href ? 'font-semibold' : ''}>{link.label}</Link>
                     </li>
                 )
             })}

@@ -133,7 +133,7 @@ const Amparo = () => {
           </p>
         </div>
       </section>
-      <Footer color="" />
+      <Footer />
     </>
   )
 }

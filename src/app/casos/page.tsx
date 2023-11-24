@@ -30,7 +30,7 @@ const Casos = () => {
         </div>
         <HowToReport />
       </section>
-      <Footer color='' />
+      <Footer />
     </>
   )
 }

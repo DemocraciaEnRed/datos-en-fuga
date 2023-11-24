@@ -147,7 +147,7 @@ const Reportes = () => {
                     </p>
                 </div>
             </div>
-            <Footer color="" />
+            <Footer />
         </>
     )
 }

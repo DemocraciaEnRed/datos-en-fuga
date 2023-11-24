@@ -49,45 +49,42 @@ const EventosBySlug = async ({ params }: { params: { slug: string } }) => {
     const { data } = await fetchArticleBySlug(params.slug)
 
     return (
-        <>
-            <section className="bg-[#F1F1F1] text-[#212121] p-[3vw] md:p-[6vw] text-base flex flex-col-reverse justify-around md:flex-row">
+        <section className="bg-[#F1F1F1] text-[#212121] p-[3vw] md:p-[6vw] text-base flex flex-col-reverse justify-around md:flex-row">
+            <div>
+                <h1 className="text-3xl font-extrabold my-4">{data.story.name}</h1>
+                <p className="my-4 text-xl">Por <span className="uppercase">{mapAuthors(data.story.content.authors)}</span></p>
+                <Content document={data.story.content.body} />
+            </div>
+            <aside className="flex flex-col gap-5 text-center md:text-right">
                 <div>
-                    <h1 className="text-3xl font-extrabold my-4">{data.story.name}</h1>
-                    <p className="my-4 text-xl">Por <span className="uppercase">{mapAuthors(data.story.content.authors)}</span></p>
-                    <Content document={data.story.content.body} />
+                    <p className="font-bold">Autor</p>
+                    {data.story.content.authors ?
+                        (data.story.content.authors.map((author: { name: string }) => {
+                            return <p className="text-sm" key={author.name}>{author.name}</p>
+                        }))
+                        :
+                        <p className="text-sm">Anónimo</p>
+                    }
                 </div>
-                <aside className="flex flex-col gap-5 text-center md:text-right">
-                    <div>
-                        <p className="font-bold">Autor</p>
-                        {data.story.content.authors ?
-                            (data.story.content.authors.map((author: { name: string }) => {
-                                return <p className="text-sm" key={author.name}>{author.name}</p>
-                            }))
-                            :
-                            <p className="text-sm">Anónimo</p>
-                        }
-                    </div>
 
-                    <div>
-                        <p className="font-bold">Publicado</p>
-                        <p className="text-sm">23/11/2023</p>
-                    </div>
+                <div>
+                    <p className="font-bold">Publicado</p>
+                    <p className="text-sm">23/11/2023</p>
+                </div>
 
-                    <div className="flex flex-col gap-2">
-                        {
-                            data.story.tag_list.map((tag) => {
-                                return (
-                                    <span className="text-white bg-[#008BB4] text-sm rounded-3xl font-roboto text-center py-2 whitespace-nowrap" key={tag}>
-                                        {tag}
-                                    </span>
-                                )
-                            })
-                        }
-                    </div>
-                </aside>
-            </section >
-            <Footer color="black" />
-        </>
+                <div className="flex flex-col gap-2">
+                    {
+                        data.story.tag_list.map((tag) => {
+                            return (
+                                <span className="text-white bg-[#008BB4] text-sm rounded-3xl font-roboto text-center py-2 whitespace-nowrap" key={tag}>
+                                    {tag}
+                                </span>
+                            )
+                        })
+                    }
+                </div>
+            </aside>
+        </section >
     )
 }
 export default EventosBySlug
