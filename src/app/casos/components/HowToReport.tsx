@@ -12,7 +12,7 @@ const HowToReport = () => {
                 <p className='text-left w-[850px] text-xl max-[856px]:w-[600px] max-[610px]:w-[310px]'>
                 La Fundación Via Libre recibe informes sobre fallos en aplicaciones que puedan afectar los derechos de las personas, especialmente la seguridad de sus datos personales. Si encuentras vulnerabilidades, como la posibilidad de extracción o modificación no autorizada de datos, o identificas versiones obsoletas o inseguras de software, este es el lugar para informarlo.
                 </p>
-                <div className='w-[850px] h-[340px] bg-[#D9D9D9] flex flex-col items-center rounded-md my-10 max-[856px]:w-[600px] max-[856px]:h-[400px] max-[610px]:w-[310px] max-[610px]:h-[550px]'>
+                <div className='w-[850px] h-auto bg-[#D9D9D9] flex flex-col items-center rounded-md my-10 p-6 max-[856px]:w-[600px] max-[610px]:w-[310px]'>
                     <Image
                         src={otherLogos.lupa}
                         alt="Reportá logo"
@@ -20,11 +20,11 @@ const HowToReport = () => {
                         height={135}
                         className='my-8'
                     />
-                    <p className='text-2xl font-bold text-center px-4 text-der-black'>
+                    <p className='uppercase text-2xl font-bold text-center px-4 text-der-black'>
                         Todos los esfuerzos técnicos son importantes para conservar datos personales a través de los reportes realizados
                     </p>
 
-                    <a href="/reporta" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 my-4 bg-[#CC4356] text-white w-[300px] text-center text-lg font-bold">
+                    <a href="/reporta" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 mt-4 bg-[#CC4356] text-white w-[300px] text-center text-lg font-bold">
                         ¿CÓMO REPORTAR?
                     </a>
                 </div>

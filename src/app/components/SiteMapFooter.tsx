@@ -7,7 +7,7 @@ const SiteMapFooter = () => {
     return (
         <div className="flex flex-col gap-10 sm:justify-between sm:items-center sm:flex-row sm:gap-5 p-6">
             <div>
-                <p className='mb-3'>Un proyecto de</p>
+                <p className='mb-4 text-xl'>Un proyecto de</p>
                 <div className="flex flex-wrap items-center justify-between sm:justify-normal gap-7">
                     <Image src={derLogo} width={2724} height={742} alt='Democracia en Red' className='w-[176px]' />
                     <Image src={odiaLogo} width={130.35} height={29.61} alt='Democracia en Red' className='w-[130px]' />

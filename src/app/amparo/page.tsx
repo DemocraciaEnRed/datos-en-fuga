@@ -15,7 +15,7 @@ const Amparo = () => {
           PRESENTAMOS UN AMPARO CONTRA EL <br /> ESTADO PARA PROTEGER NUESTROS DATOS <br /> PERSONALES EN UN AÑO DE ELECCIONES.
         </p>
       </header>
-      <section className='py-[3vh] px-5 h-4/6 bg-[#F1F1F1] text-black'>
+      <section className='py-[4vh] px-5 h-4/6 bg-[#F1F1F1] text-black'>
         <h2 className='md:w-[65%] mx-auto text-center text-2xl font-nippo font-bold sm:text-4xl'>
           PRESENTAMOS UN AMPARO PARA PROTEGER NUESTROS DATOS PERSONALES Y NUESTRA DEMOCRACIA
         </h2>
@@ -107,10 +107,10 @@ const Amparo = () => {
           />
         </div>
       </section>
-      <section className='py-[8vh] bg-der-black'>
+      <section className='py-[4vh] bg-der-black'>
         <h2 className='font-nippo text-4xl bg-[#006482] py-4 pl-14 pr-5 inline-block font-extrabold max-[466px]:text-2xl'>¿QUÉ PRESENTAMOS?
         </h2>
-        <div className='flex flex-col justify-center items-center w-[90vw] md:w-[70vw] max-w-[950px] bg-gray-100 text-black rounded-md mx-auto my-[3vw] p-6 gap-5'>
+        <div className='flex flex-col justify-center items-center w-[90vw] md:w-[75vw] max-w-[950px] bg-gray-100 text-black rounded-md mx-auto my-[3vw] p-6 gap-5'>
           <p className='text-2xl font-bold'>AMPARO</p>
           <Image
             alt="icon"
@@ -119,7 +119,7 @@ const Amparo = () => {
             width={96}
           />
           <p className='text-2xl font-nippo'>
-            Presentamos un amparo colectivo solicitando el pronunciamiento de inconstitucionalidad de la DA 431/2020 y de determinados artículos de Ley de Datos Personales y solicitando se dicte una medida cautelar que ordena la suspensión de lo que disponen.
+          Presentamos un amparo colectivo contra el Estado solicitando el pronunciamiento de inconstitucionalidad de la DA 431/2020 y de determinados artículos de Ley de Datos Personales (art. 5, inc. 2 ap. b - ley 25.326), y solicitando se dicte una medida cautelar que ordena la suspensión de lo que disponen. Estas normas habilitan la transferencia de los datos personales de los ciudadanos entre todas las dependencias de la Administración pública, sin contar con el consentimiento expreso de sus titulares para su tratamiento para evitar la transferencia y el mal uso de nuestros datos personales.
           </p>
           <div className='flex justify-center items-center gap-5 flex-wrap'>
             <a href="#" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
@@ -136,7 +136,7 @@ const Amparo = () => {
           <p className='font-extralight'>Ultima actualización: 21/11/2023</p>
         </div>
       </section>
-      <section className='bg-gray-950 w-[90vw] mx-auto'>
+      <section className='px-[5vw] mx-auto bg-der-black border-t-2 border-t-white'>
         <SiteMapFooter/>
       </section>
     </main>

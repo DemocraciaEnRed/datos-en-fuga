@@ -26,16 +26,16 @@ const ID = ({ params }: { params: { id: string } }) => {
         </h1>
         <div className="flex flex-row gap-4 text-lg my-3">
           <a href="#reporta" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 my-2 bg-[#CC4356] text-white w-[300px] text-center font-extrabold">
-            ¿CÓMO REPORTAR SEGURO?
+            ¿CÓMO REPORTAR?
           </a>
           <a href="#reporta" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 my-2 bg-[#2D2D2D] text-[#CC4356] w-[300px] text-center font-extrabold">
-            ¿CÓMO REPORTAR SEGURO?
+            CASOS
           </a>
         </div>
       </header>
 
       <section className='bg-[#F1F1F1] py-[3vh] h-4/6'>
-        <h2 className='font-nippo text-5xl bg-[#CC4356] py-4 pl-14 pr-5 inline-block font-extrabold'>ELLOS, NO LO SABÍAN</h2>
+        <h2 className='font-nippo text-5xl bg-[#CC4356] py-4 pl-14 pr-5 inline-block font-extrabold'>LLEGÓ TARDE PARA ELLOS</h2>
         <p className='font-nippo text-der-black text-xl pl-12 my-4 font-medium'>
           TE CONTAMOS QUIÉNES SON Y CUÁL ES SU HISTORIA
         </p>

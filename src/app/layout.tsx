@@ -76,11 +76,11 @@ export default function RootLayout({
 
   return (
     <html lang="es">
-      <body className={`${nippo.variable} ${raleway.variable} ${roboto.variable} ${lexendDeca.variable} ${openSans.className}`}>
+      <body className={`${nippo.variable} ${raleway.variable} ${roboto.variable} ${lexendDeca.variable} ${openSans.className} flex flex-col min-h-[100vh]`}>
         <NavBar />
         {children}
-        <ScrollTopButton/>
-        <Footer/>
+        <ScrollTopButton />
+        <Footer />
       </body>
     </html>
   )
