@@ -6,8 +6,8 @@ import Link from "next/link"
 const EventsCard = ({ story }: { story: ISbStoryData }) => {
     const formattedDate = format(new Date(story.created_at), "dd/MM/yyyy")
     return (
-        <Link href={`/eventos/${story.slug}`} className="rounded-lg overflow-hidden shadow-lg">
-            <div className="bg-white text-black h-auto max-w-full rounded-lg">
+        <Link href={`/eventos/${story.slug}`} className="bg-white rounded-lg overflow-hidden shadow-lg">
+            <div className="text-black h-auto max-w-full rounded-lg">
                 <Image alt={story.content.header?.name} src={story.content.header?.filename}
                     width={400} height={202} className="min-h-[150px] max-h-52 object-cover rounded-t-lg" />
                 <div className="p-5">

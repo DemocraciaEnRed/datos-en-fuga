@@ -1,4 +1,4 @@
-import amparo from "../../../public/shared/amparo.png"
+import amparo from "~/shared/amparo.png"
 
 export const subtopics = [
     {

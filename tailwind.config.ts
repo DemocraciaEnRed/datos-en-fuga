@@ -17,7 +17,8 @@ const config: Config = {
         nippo: ['var(--font-nippo)'],
         "open-sans": ['var(--font-open-sans)'],
         roboto: ['var(--font-roboto)'],
-        raleway: ['var(--font-raleway)']
+        raleway: ['var(--font-raleway)'],
+        "lexend-deca": ['var(--font-lexend-deca)']
       },
       listStyleType: {
         disc: 'disc'

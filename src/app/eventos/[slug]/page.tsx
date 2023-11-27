@@ -1,6 +1,8 @@
-import { ISbStoriesParams, getStoryblokApi, ISbStory, ISbStoryParams } from "@storyblok/react/rsc";
+import { ISbStoriesParams, ISbStory, ISbStoryParams, getStoryblokApi } from "@storyblok/react/rsc";
+import { format } from "date-fns";
 import { notFound } from "next/navigation";
 import Content from "./components/Content";
+import RelatedArticles from "./components/RelatedArticles";
 
 export async function generateStaticParams() {
     const news = await fetchData()
@@ -11,43 +13,50 @@ export async function generateStaticParams() {
 
 const EventosBySlug = async ({ params }: { params: { slug: string } }) => {
     const { data } = await fetchArticleBySlug(params.slug)
-
+    const { name, content, first_published_at, tag_list } = data.story
+    
     return (
-        <main className="bg-[#F1F1F1] text-[#212121] p-[3vw] md:p-[6vw] text-base flex flex-col-reverse justify-around md:flex-row">
-            <article>
-                <h1 className="text-3xl font-extrabold my-4">{data.story.name}</h1>
-                <p className="my-4 text-xl">Por <span className="uppercase">{mapAuthors(data.story.content.authors)}</span></p>
-                <Content document={data.story.content.body} />
-            </article>
-            <aside className="flex flex-col gap-5 text-center md:text-right">
-                <div>
-                    <p className="font-bold">Autor</p>
-                    {data.story.content.authors ?
-                        (data.story.content.authors.map((author: { name: string }) => {
-                            return <p className="text-sm" key={author.name}>{author.name}</p>
-                        }))
-                        :
-                        <p className="text-sm">Anónimo</p>
-                    }
-                </div>
-
-                <div>
-                    <p className="font-bold">Publicado</p>
-                    <p className="text-sm">23/11/2023</p>
-                </div>
-
-                <div className="flex flex-col gap-2">
-                    {
-                        data.story.tag_list.map((tag) => {
-                            return (
-                                <span className="text-white bg-[#008BB4] text-sm rounded-3xl font-roboto text-center py-2 whitespace-nowrap" key={tag}>
-                                    {tag}
-                                </span>
-                            )
-                        })
-                    }
-                </div>
-            </aside>
+        <main className="p-[4vw] bg-[#F1F1F1] text-[#212121] text-base font-lexend-deca">
+            <section className="flex flex-col-reverse md:flex-row flex-wrap md:flex-nowrap  md:w-[58vw] mx-auto gap-4 md:gap-9">
+                <article className="flex-grow">
+                    <h1 className="text-3xl font-bold mb-4">{name}</h1>
+                    <p className="mb-4 text-xl">Por <span className="uppercase">{content.authors ? mapAuthors(content.authors) : 'Anónimo'}</span></p>
+                    <Content document={content.body} />
+                </article>
+                <aside className="flex flex-col gap-6 text-right md:mt-10">
+                    <div>
+                        <p className="font-bold">Autor</p>
+                        {content.authors ?
+                            (content.authors.map((author: { name: string }) => {
+                                return <p className="text-sm" key={author.name}>{author.name}</p>
+                            }))
+                            :
+                            <p className="text-sm">Anónimo</p>
+                        }
+                    </div>
+                    <div>
+                        <p className="font-bold">Publicado</p>
+                        <p className="text-sm">{first_published_at ? formatDate(first_published_at) : 'Sin publicar'}</p>
+                    </div>
+                    <div className="self-end">
+                        <p className="font-bold">Etiquetas</p>
+                        <div className="flex flex-col items-end gap-2 md:w-[10vw]">
+                            {tag_list.length > 0 ? tag_list.map((tag) => {
+                                return (
+                                    <span className="md:max-w-[10vw] text-white bg-[#008BB4] text-[10px] rounded-3xl font-roboto font-bold text-center py-1 px-3 capitalize truncate hover:whitespace-normal" key={tag}>
+                                        {tag}
+                                    </span>
+                                )
+                            }) :
+                                <span className="md:max-w-[10vw]max-w-[10vw] text-sm">No hay etiquetas vinculadas</span>}
+                        </div>
+                    </div>
+                </aside>
+            </section>
+            {tag_list.length > 0 &&
+                <section className="mt-[4vw]">
+                    <RelatedArticles tags={tag_list} uid={content._uid!}/>
+                </section>}
         </main>
     )
 }
@@ -73,16 +82,15 @@ const fetchData = async () => {
     };
     return await storyblokApi.get(`cdn/stories`, sbParams);
 }
+
 const mapAuthors = (authors: any) => {
     let authorsString = ''
-    if (authors) {
-        authors.forEach((author: { name: string }, i: number) => {
-            if (authors.length > 1 && i + 1 < authors.length) authorsString = `${authorsString}${author.name}, `
-            else if (authors.length > 1) authorsString = `${authorsString}y ${author.name}`
-            else authorsString = `${authorsString}${author.name}`
-        })
-    } else {
-        authorsString = 'Anónimo'
-    }
+    authors.forEach((author: { name: string }, i: number) => {
+        if (authors.length > 1 && i + 1 < authors.length) authorsString = `${authorsString}${author.name}, `
+        else if (authors.length > 1) authorsString = `${authorsString}y ${author.name}`
+        else authorsString = `${authorsString}${author.name}`
+    })
     return authorsString
 }
+
+const formatDate = (date: string) => format(new Date(date), "dd/MM/yyyy") 
