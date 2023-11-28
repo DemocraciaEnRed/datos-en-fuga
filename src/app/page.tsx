@@ -79,7 +79,7 @@ export default function Home() {
 
         </div>
         <div className="w-full lg:w-[50%] py-2 my-11 px-11 max-lg:w-full">
-          <h2 className='text-4xl font-bold'>Acerca de</h2>
+          <h2 className='text-4xl font-bold text-[#4C4C4E]'>Acerca de</h2>
           <p className="text-sm">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae tenetur exercitationem quia velit inventore quas harum, deserunt, nam mollitia odit, ullam itaque. Obcaecati nulla eaque quisquam fugit culpa optio ea!
           </p>
