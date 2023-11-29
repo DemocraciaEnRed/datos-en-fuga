@@ -4,7 +4,7 @@ import EventsMasonry from "./components/EventsMasonry";
 const Eventos = async () => {
     const { data } = await fetchData();
     return (
-        <main className="bg-[#F1F1F1]">
+        <main className="bg-[#F1F1F1] flex flex-col flex-grow">
             <header className='bg-[#2D2D2D] px-[7vw] py-[4vw]'>
                 <h1 className='font-nippo text-4xl w-[800px] max-[810px]:w-[500px] max-[500px]:w-[250px] max-[500px]:text-3xl max-[375px]:text-3xl'>
                     EVENTOS
@@ -13,7 +13,7 @@ const Eventos = async () => {
                     QUE ACCIONES HEMOS LLEVADO A CABO EN EL PROYECTO
                 </p>
             </header>
-            <section className="p-[4vw]">
+            <section className="p-[4vw] flex-grow">
                 <EventsMasonry stories={data.stories} />
             </section>
         </main>
@@ -26,7 +26,7 @@ const fetchData = async () => {
 
     let sbParams: ISbStoriesParams = {
         version: 'draft',
-        starts_with: "news/",
+        starts_with: "events/",
         excluding_fields: 'body,_editable,_uid',
         sort_by: "created_at:desc"
     };

@@ -6,8 +6,8 @@ import RelatedArticles from "./components/RelatedArticles";
 import Link from "next/link";
 
 export async function generateStaticParams() {
-    const news = await fetchData()
-    return news.data.stories.map((article: any) => {
+    const events = await fetchData()
+    return events.data.stories.map((article: any) => {
         return { slug: article.slug }
     })
 }
@@ -45,7 +45,7 @@ const EventosBySlug = async ({ params }: { params: { slug: string } }) => {
                             <p className="font-bold">Autor</p>
                             {content.authors ?
                                 (content.authors.map((author: { name: string }) => {
-                                    return <p className="text-sm" key={author.name}>{author.name}</p>
+                                    return <p className="text-sm capitalize" key={author.name}>{author.name}</p>
                                 }))
                                 :
                                 <p className="text-sm">Anónimo</p>
@@ -84,7 +84,7 @@ const fetchArticleBySlug = async (slug: string): Promise<ISbStory> => {
     const storyblokApi = getStoryblokApi()
 
     let sbParams: ISbStoryParams = { version: 'draft' };
-    const article = await storyblokApi.get(`cdn/stories/news/${slug}`, sbParams);
+    const article = await storyblokApi.get(`cdn/stories/events/${slug}`, sbParams);
 
     if (!article) notFound()
     return article
@@ -95,7 +95,7 @@ const fetchData = async () => {
 
     let sbParams: ISbStoriesParams = {
         version: 'draft',
-        starts_with: "news/",
+        starts_with: "events/",
         excluding_fields: 'title,brief,body,header,_editable,_uid,component'
     };
     return await storyblokApi.get(`cdn/stories`, sbParams);
