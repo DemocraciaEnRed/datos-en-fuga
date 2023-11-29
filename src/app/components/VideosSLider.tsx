@@ -1,7 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
 import ChevronSVG from "./ChevronSVG";
-import Image from "next/image";
 import Spinner from "./Spinner";
 
 export interface IFrame {
@@ -31,10 +30,10 @@ const VideosSLider = ({ iframes }: { iframes: IFrame[] }) => {
     useEffect(() => { setFadeIn(false) }, [currentSlide]);
     return (
         <div className="h-[100%] relative">
-            <div className="absolute top-1/2 right-full z-10 cursor-pointer" onClick={nextSlide}>
+            <div className="absolute top-1/2 right-full z-10 cursor-pointer -translate-y-6" onClick={previousSlide}>
                 <ChevronSVG direction="left" />
             </div>
-            <div className="absolute top-1/2 left-full z-10 cursor-pointer" onClick={nextSlide}>
+            <div className="absolute top-1/2 left-full z-10 cursor-pointer -translate-y-6" onClick={nextSlide}>
                 <ChevronSVG direction="right" />
             </div>
             <div className={`flex justify-center items-center ${fadeIn ? '' : "hidden"}`}>
@@ -56,7 +55,7 @@ const VideosSLider = ({ iframes }: { iframes: IFrame[] }) => {
                 </div>
             }
             <div className="flex justify-center mt-3 z-20">
-                {iframes.map((item, i) => (<div key={i}
+                {iframes.map((_, i) => (<div key={i}
                     className={`rounded-lg w-3 h-3 mr-3 last:mr-0 select-none cursor-pointer ${currentSlide == i ? 'bg-gray-800' : 'bg-gray-300'}`}
                     onClick={() => manuallySelectSlide(i)}></div>))}
             </div>

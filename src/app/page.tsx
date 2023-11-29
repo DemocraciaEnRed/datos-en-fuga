@@ -1,18 +1,13 @@
 import Image from 'next/image'
-import Script from 'next/script'
 import SiteMapFooter from "./components/SiteMapFooter"
 import LandingFlourish from './components/LandingFlourish'
-
-
-
+import Link from 'next/link'
 
 export default function Home() {
-  const flourish = <div className="flourish-embed w-[60%] max-lg:w-full" data-src="story/1969359">
-    <Script src="https://public.flourish.studio/resources/embed.js" />
-  </div>
+
   return (
     <main>
-     <div className="relative text-black">
+      <div className="relative text-black">
         <video className='w-full' autoPlay loop muted>
           <source src="/home/background.mp4" type="video/mp4" className='w-full' />
         </video>
@@ -21,17 +16,17 @@ export default function Home() {
           <h2 className="font-nippo text-5xl max-md:text-3xl">¿QUÉ ESTÁ PASANDO EN ARGENTINA?</h2>
         </div>
       </div>
-      <h2 className='text-4xl font-extrabold my-12 text-center'>CIBERINCIDENTES EN ARGENTINA</h2>
+      <h2 className='text-4xl font-bold my-12 text-center'>CIBERINCIDENTES EN ARGENTINA</h2>
       <div className='pb-11 flex flex-row gap-14 w-[90vw] mx-auto max-lg: max-lg:flex-col max-lg:items-center'>
         <LandingFlourish />
         <div className='w-[40%] flex flex-col max-lg:w-full'>
           <h3 className='font-bold text-xl mb-11 text-center'>GLOSARIO Y REFERENCIAS</h3>
           <div className='grid grid-cols-1 items-center'>
-            <div className='flex justify-center items-center py-4 gap-10'>
-              <p className='w-[128px] text-center'>Término</p>
-              <p className='flex-grow text-center'>Definición</p>
+            <div className='flex justify-center items-center py-4 gap-5 md:gap-10'>
+              <p className='w-[128px] text-center font-bold'>Término</p>
+              <p className='flex-grow text-center font-bold'>Definición</p>
             </div>
-            <div className='flex justify-center items-center py-4 gap-10'>
+            <div className='flex justify-center items-center py-4 gap-5 md:gap-10'>
               <Image
                 alt="desconocido"
                 src="/home/desconocido.png"
@@ -41,7 +36,7 @@ export default function Home() {
               />
               <div className="flex-grow text-left">No se da suficiente información en el artículo para determinar el tipo de ataque.</div>
             </div>
-            <div className='flex justify-center items-center border-t-2 border-t-white py-4 gap-10'>
+            <div className='flex justify-center items-center border-t-2 border-t-white py-4 gap-5 md:gap-10'>
               <Image
                 className='w-[128px]'
                 alt="databreach"
@@ -51,7 +46,7 @@ export default function Home() {
               />
               <div className="flex-grow text-left">Incidente de seguridad en el que un externo accede de manera no autorizada a información confidencial.</div>
             </div>
-            <div className='flex justify-center items-center border-t-2 border-t-white py-4 gap-10'>
+            <div className='flex justify-center items-center border-t-2 border-t-white py-4 gap-5 md:gap-10'>
               <Image
                 className='w-[128px]'
                 alt="ransomware"
@@ -61,7 +56,7 @@ export default function Home() {
               />
               <div className="flex-grow text-left">Es un tipo de código malicioso que impide la utilización de los equipos o sistemas, secuestrando la información de las víctimas hasta que se pague un rescate.</div>
             </div>
-            <div className='flex justify-center items-center border-t-2 border-t-white py-4 gap-10'>
+            <div className='flex justify-center items-center border-t-2 border-t-white py-4 gap-5 md:gap-10'>
               <Image
                 className='w-[128px]'
                 alt="incidente"
@@ -80,17 +75,20 @@ export default function Home() {
         </div>
         <div className="w-full lg:w-[50%] py-2 my-11 px-11 max-lg:w-full">
           <h2 className='text-4xl font-bold text-[#4C4C4E]'>Acerca de</h2>
-          <p className="text-sm">
+          <p className="text-sm my-8">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae tenetur exercitationem quia velit inventore quas harum, deserunt, nam mollitia odit, ullam itaque. Obcaecati nulla eaque quisquam fugit culpa optio ea!
           </p>
-          <a href="#" type="button" className="border-full border-[#212121] rounded-full p-2 bg-[#212121] text-white w-[150px] text-center uppercase text-xs my-5">
-            Conocé más
-          </a>
+          <Link href="/about" type="button" className="border-full border-[#212121] rounded-full py-4 px-16 bg-[#212121] text-white w-auto text-center uppercase text-lg">
+            <span>Conocé más  </span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className=" align-text-bottom inline w-5 h-5">
+              <path fillRule="evenodd" d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z" clipRule="evenodd" />
+            </svg>
+          </Link>
         </div>
       </div>
       <div className="px-[5vw] mx-auto bg-der-black">
         <SiteMapFooter />
       </div>
-    </main>
+    </main >
   )
 }

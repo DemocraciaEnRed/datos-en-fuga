@@ -3,6 +3,7 @@ import { format } from "date-fns";
 import { notFound } from "next/navigation";
 import Content from "./components/Content";
 import RelatedArticles from "./components/RelatedArticles";
+import Link from "next/link";
 
 export async function generateStaticParams() {
     const news = await fetchData()
@@ -13,7 +14,7 @@ export async function generateStaticParams() {
 
 const EventosBySlug = async ({ params }: { params: { slug: string } }) => {
     const { data } = await fetchArticleBySlug(params.slug)
-    const { name, content, first_published_at, tag_list } = data.story
+    const { name, slug, content, first_published_at, tag_list } = data.story
     const bgColors = [
         '#006482',
         '#CC4356',
@@ -21,7 +22,7 @@ const EventosBySlug = async ({ params }: { params: { slug: string } }) => {
     ]
 
     const headerStyles = {
-        background: content.header.filename? `url(${content.header.filename})` : bgColors[Math.floor(Math.random() * 3)],
+        background: content.header.filename ? `url(${content.header.filename})` : bgColors[Math.floor(Math.random() * 3)],
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -30,7 +31,7 @@ const EventosBySlug = async ({ params }: { params: { slug: string } }) => {
     return (
         <main className="flex-grow bg-[#F1F1F1] text-[#212121] text-base font-lexend-deca">
             <header className="h-[25vh]" style={headerStyles}>
-                <p className="bg-gray-700 bg-opacity-80 px-7 py-3 text-white">Eventos &gt; {name}</p>
+                <p className="bg-gray-700 bg-opacity-80 px-7 py-3 text-white"><Link href={'/eventos'}>Eventos</Link> &gt; <Link href={`/eventos/${slug}`}>{name}</Link></p>
             </header>
             <section className="md:w-[58vw] mx-auto py-[4vw]">
                 <h1 className="text-3xl font-bold mb-4">{content.title}</h1>

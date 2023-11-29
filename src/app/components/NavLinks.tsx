@@ -26,7 +26,7 @@ const NavLinks = () => {
             {links.map((link, i) => {
                 return (
                     <li key={'navlink' + i}>
-                        <Link href={link.href} className={firstSegment(pathname) === link.href ? 'font-semibold' : ''}>{link.label}</Link>
+                        <Link href={link.href} className={firstSegment(pathname) === link.href ? 'font-bold' : ''}>{link.label}</Link>
                     </li>
                 )
             })}

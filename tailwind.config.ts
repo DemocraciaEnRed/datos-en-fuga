@@ -14,11 +14,12 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
+        inter: ['var(--font-inter)'],
         nippo: ['var(--font-nippo)'],
-        "open-sans": ['var(--font-open-sans)'],
         roboto: ['var(--font-roboto)'],
         raleway: ['var(--font-raleway)'],
-        "lexend-deca": ['var(--font-lexend-deca)']
+        "lexend-deca": ['var(--font-lexend-deca)'],
+        "open-sans": ['var(--font-open-sans)']
       },
       listStyleType: {
         disc: 'disc'

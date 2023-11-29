@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Lexend_Deca, Open_Sans, Raleway, Roboto } from 'next/font/google'
+import { Inter, Lexend_Deca, Open_Sans, Raleway, Roboto } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
 import NavBar from './components/NavBar'
@@ -13,6 +13,10 @@ storyblokInit({
   use: [apiPlugin]
 });
 
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter'
+})
 const lexendDeca = Lexend_Deca({
   subsets: ['latin'],
   variable: '--font-lexend-deca'
@@ -76,7 +80,7 @@ export default function RootLayout({
 
   return (
     <html lang="es">
-      <body className={`${nippo.variable} ${raleway.variable} ${roboto.variable} ${lexendDeca.variable} ${openSans.className} flex flex-col min-h-[100vh]`}>
+      <body className={`${nippo.variable} ${raleway.variable} ${roboto.variable} ${lexendDeca.variable} ${inter.variable} ${openSans.className} flex flex-col min-h-[100vh]`}>
         <NavBar />
         {children}
         <ScrollTopButton />
