@@ -1,6 +1,13 @@
+import type { Metadata } from 'next'
 import cases from "./_cases.js"
 import CaseSelector from './components/CaseSelector'
 import HowToReport from './components/HowToReport'
+
+
+export const metadata: Metadata = {
+  title: 'Casos | Datos en Fuga',
+  description: 'Conoce más sobre los casos y consecuencias de los #DatosEnFuga',
+}
 
 const Casos = () => {
   return (

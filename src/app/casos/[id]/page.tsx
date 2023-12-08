@@ -3,11 +3,24 @@ import CaseSelector from '../components/CaseSelector'
 import HowToReport from '../components/HowToReport'
 import CasesDescription from '../components/CasesDescriptions'
 import { notFound } from "next/navigation"
+import { Metadata, ResolvingMetadata } from "next"
 
 export async function generateStaticParams() {
   return cases.map((caso) => {
     return { id: caso.id }
   })
+}
+
+export async function generateMetadata(
+  { params }: { params: { id: string } },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const id = params.id
+  const caso = getCaso(id)
+  return {
+    title: `Caso ${caso?.name} | Datos en Fuga`,
+    description: caso?.description
+  }
 }
 
 const getCaso = (id: string) => cases.find((c) => c.id === id)

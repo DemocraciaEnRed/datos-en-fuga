@@ -24,22 +24,7 @@ export const subtopics = [
         }]
     },
 ]
-export const resources = [
-    {
-        title: 'amparo',
-        img: amparo,
-        description: <>Este amparo pretende la <strong className="font-bold">derogación del decreto DA 410/18052</strong>, por que <strong className="font-bold">atenta contra la ley de datos personales</strong> hoy vigente en la <strong className="font-bold">export constitución</strong>.</>,
-        btnLabel: 'descargar amparo',
-        url: '#'
-    },
-    {
-        title: 'amparo',
-        img: amparo,
-        description: 'Gacetilla de prensa sobre la presentación del amparo.',
-        btnLabel: 'descargar amparo',
-        url: '#'
-    }
-]
+
 export const items = [{ title: 'item 1' }, { title: 'item 2' }, { title: 'item 3' }, { title: 'item 4' }, { title: 'item 5' }]
 export const iframes = [
     {

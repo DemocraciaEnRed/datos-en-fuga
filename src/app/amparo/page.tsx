@@ -3,6 +3,12 @@ import Image from 'next/image'
 import { cartoons } from '../../../public/amparo'
 import amparoIcon from '../../../public/shared/amparo.png'
 import SiteMapFooter from '../components/SiteMapFooter'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Amparo | Datos en Fuga',
+  description: 'Presentamos un amparo contra el Estado para proteger nuestros datos personales en un año de elecciones.',
+}
 
 const Amparo = () => {
   return (
@@ -20,7 +26,7 @@ const Amparo = () => {
           PRESENTAMOS UN AMPARO PARA PROTEGER NUESTROS DATOS PERSONALES Y NUESTRA DEMOCRACIA
         </h2>
         <div className='my-10'>
-          <div className='flex flex-col overflow-scroll overflow-y-hidden w-full'>
+          <div className='flex flex-col overflow-auto overflow-y-hidden w-full'>
             <Image
               alt="amparo"
               src={cartoons.desktop1}
@@ -88,7 +94,7 @@ const Amparo = () => {
           />
         </div>
         <p className='text-2xl font-extrabold font-nippo mx-auto text-center md:w-[65%] my-6 sm:text-4xl'>PERO, ADEMÁS, EL USO DE DATOS PERSONALES TAMBIÉN AMENAZA LA DEMOCRACIA Y TIENE GRANDES ANTECEDENTES…</p>
-        <div className='flex flex-col overflow-scroll overflow-y-hidden w-full my-5'>
+        <div className='flex flex-col overflow-auto overflow-y-hidden w-full my-5'>
           <Image
             alt="amparo"
             src={cartoons.desktop7}
@@ -97,7 +103,7 @@ const Amparo = () => {
             className='w-auto h-96 max-w-none self-start md:h-auto md:w-full md:max-w-[1600px] md:self-center'
           />
         </div>
-        <div className='flex flex-col overflow-scroll overflow-y-hidden w-full'>
+        <div className='flex flex-col overflow-auto overflow-y-hidden w-full'>
           <Image
             alt="amparo"
             src={cartoons.desktop8}

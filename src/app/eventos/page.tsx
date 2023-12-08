@@ -1,5 +1,12 @@
 import { ISbStoriesParams, getStoryblokApi } from "@storyblok/react/rsc";
 import EventsMasonry from "./components/EventsMasonry";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'Eventos',
+    description: 'Eventos',
+    keywords: 'debate, presentaciones, seguridad informática, ciberseguridad, justicia'
+}
 
 const Eventos = async () => {
     const { data } = await fetchData();

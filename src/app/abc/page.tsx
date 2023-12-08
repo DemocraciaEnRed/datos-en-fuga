@@ -1,4 +1,4 @@
-import { subtopics, resources, iframes, items } from './_data'
+import { subtopics, iframes, items } from './_data'
 import VideosSLider from "../components/VideosSLider"
 // import Resource from "./components/Resource"
 import amparoIcon from '../../../public/shared/amparo.png'
@@ -41,12 +41,7 @@ const page = () => {
                     <p className='text-lg mb-3'>El amparo colectivo se presento el 18 de abril de 2023 y radica en el juzgado Contencioso Administrativo Federal N 8, a cargo de la Jueza Dra. María Cecilia GILARDI MADARIAGA de NEGRE. Luego de 5 meses, el 07/09/2023, la Sra. Jueza se pronuncio sobre la medida cautelar solicitada por nosotros y rechazo la misma. Este rechazo fue apelado por nosotros y  desde el 11 de septiembre aguardamos que la Sala V del mismo fuero revise la decisión del Juzgado de origen y nos conceda la medida cautelar.</p>
                     <p className='font-extralight'>Ultima actualización: 21/11/2023</p>
                 </div>
-                {/* <div className={`grid grid-cols-1 md:grid-cols-2 ${resources.length > 2 && 'lg:grid-cols-3'} gap-5 mb-5 mt-[6vw] md:mt-[3vw]`}>
-                    {resources.map((resource, i) =>
-                        <Resource key={'resrc' + i} resource={resource} />
-                    )}
-                </div> */}
-                <div className={`grid grid-cols-1 md:grid-cols-2 ${resources.length > 2 && 'lg:grid-cols-3'} gap-5`}>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     {items.map((item, i) =>
                         <button key={'iList' + i} className="bg-white shadow-md rounded-lg overflow-hidden">
                             <p className="border-l-8 border-red-600 py-2 pl-4 text-left uppercase" >{item.title}</p>
