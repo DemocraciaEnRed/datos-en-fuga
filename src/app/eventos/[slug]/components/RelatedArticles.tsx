@@ -42,7 +42,7 @@ const fetchData = async (uid: string, tags: string[]) => {
 
         let sbParams: ISbStoriesParams = {
             version: 'draft',
-            starts_with: "news/",
+            starts_with: "events/",
             excluding_fields: 'body,_editable,component',
             with_tag: tags.join(),
             filter_query: {
