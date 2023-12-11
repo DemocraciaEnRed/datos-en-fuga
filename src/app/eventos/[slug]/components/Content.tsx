@@ -66,6 +66,19 @@ const Content = ({ document }: { document: ISbStoryData }) => {
                     if (!alt) { alt = 'alternative image description not available' }
                     return <Image className="object-contain m-3" src={src ? src : emptyImg} alt={alt} title={title} width={500} height={500} />
                 }
+            },
+            blokResolvers: {
+                ['Youtube']: (props) => {
+                    
+                    console.log(props);
+                    return <iframe
+                    src={''}
+                    title={''}
+                    className="w-full h-full rounded-sm shadow"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                />
+                }
             }
         })}
     </>;
