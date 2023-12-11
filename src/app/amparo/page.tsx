@@ -1,26 +1,35 @@
 import React from 'react'
 import Image from 'next/image'
+import { cartoons } from '../../../public/amparo'
+import amparoIcon from '../../../public/shared/amparo.png'
+import SiteMapFooter from '../components/SiteMapFooter'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Amparo | Datos en Fuga',
+  description: 'Presentamos un amparo contra el Estado para proteger nuestros datos personales en un año de elecciones.',
+}
 
 const Amparo = () => {
   return (
-    <section>
-      <div className='bg-[#2D2D2D] py-[8vh] px-[3vw] md:px-[6vw]'>
+    <main>
+      <header className='bg-[#2D2D2D] py-[8vh] px-[3vw] md:px-[6vw]'>
         <h1 className='font-nippo text-[29px] max-[810px]:w-[500px] max-[500px]:w-[250px] sm:text-[40px]'>
           <span className="font-extrabold">#CON</span>MIS<span className='font-extrabold'>DATOS</span>NO
         </h1>
         <p className='text-2xl max-[810px]:w-[500px] max-[500px]:w-[250px] sm:text-4xl'>
           PRESENTAMOS UN AMPARO CONTRA EL <br /> ESTADO PARA PROTEGER NUESTROS DATOS <br /> PERSONALES EN UN AÑO DE ELECCIONES.
         </p>
-      </div>
-      <div className='py-[3vh] px-5 h-4/6 bg-[#F1F1F1] text-black'>
+      </header>
+      <section className='py-[4vh] px-5 h-4/6 bg-[#F1F1F1] text-black'>
         <h2 className='md:w-[65%] mx-auto text-center text-2xl font-nippo font-bold sm:text-4xl'>
           PRESENTAMOS UN AMPARO PARA PROTEGER NUESTROS DATOS PERSONALES Y NUESTRA DEMOCRACIA
         </h2>
         <div className='my-10'>
-          <div className='flex flex-col overflow-scroll overflow-y-hidden w-full'>
+          <div className='flex flex-col overflow-auto overflow-y-hidden w-full'>
             <Image
               alt="amparo"
-              src="/amparo/desktop/desktop1.png"
+              src={cartoons.desktop1}
               width={1600}
               height={621}
               className='w-auto h-96 max-w-none self-start md:h-auto md:w-full md:max-w-[1600px] md:self-center'
@@ -29,17 +38,17 @@ const Amparo = () => {
           <div className='flex justify-center items-center'>
             <Image
               alt="amparo"
-              src="/amparo/desktop/desktop2.png"
+              src={cartoons.desktop2}
               width={1600}
               height={621}
-              className='hidden md:block w-full max-w-[1600px]'
+              className='hidden md:block w-full h-auto max-w-[1600px]'
             />
             <Image
               alt="amparo"
-              src="/amparo/mobile/mobile2.png"
+              src={cartoons.mobile2}
               width={535}
               height={456}
-              className='block md:hidden w-full max-w-[535px]'
+              className='block md:hidden w-full h-auto max-w-[535px]'
             />
 
           </div>
@@ -48,87 +57,95 @@ const Amparo = () => {
         <div className='my-7 flex flex-row flex-wrap gap-5 items-center justify-center mx-auto'>
           <Image
             alt="amparo"
-            src="/amparo/desktop/desktop3.png"
+            src={cartoons.desktop3}
             width={535}
             height={456}
-            className='w-full max-w-[522px]'
+            className='w-full h-auto max-w-[522px]'
           />
           <Image
             alt="amparo"
-            src="/amparo/desktop/desktop4.png"
+            src={cartoons.desktop4}
             width={535}
             height={456}
-            className='w-full max-w-[522px]'
+            className='w-full h-auto max-w-[522px]'
           />
           <Image
             alt="amparo"
-            src="/amparo/desktop/desktop5.png"
+            src={cartoons.desktop5}
             width={535}
             height={456}
-            className='w-full max-w-[522px]'
+            className='w-full h-auto max-w-[522px]'
           />
         </div>
         <div className='flex flex-col justify-center items-center'>
           <Image
             alt="amparo"
-            src="/amparo/desktop/desktop6.png"
+            src={cartoons.desktop6}
             width={1600}
             height={420}
             className='hidden md:block'
           />
           <Image
             alt="amparo"
-            src="/amparo/mobile/mobile6.png"
+            src={cartoons.mobile6}
             width={300}
             height={334}
-            className='block md:hidden w-full max-w-[535px]'
+            className='block md:hidden w-full h-auto max-w-[535px]'
           />
         </div>
         <p className='text-2xl font-extrabold font-nippo mx-auto text-center md:w-[65%] my-6 sm:text-4xl'>PERO, ADEMÁS, EL USO DE DATOS PERSONALES TAMBIÉN AMENAZA LA DEMOCRACIA Y TIENE GRANDES ANTECEDENTES…</p>
-        <div className='flex flex-col overflow-scroll overflow-y-hidden w-full my-5'>
+        <div className='flex flex-col overflow-auto overflow-y-hidden w-full my-5'>
           <Image
             alt="amparo"
-            src="/amparo/desktop/desktop8.png"
+            src={cartoons.desktop7}
             width={1600}
             height={420}
             className='w-auto h-96 max-w-none self-start md:h-auto md:w-full md:max-w-[1600px] md:self-center'
           />
         </div>
-        <div className='flex flex-col overflow-scroll overflow-y-hidden w-full'>
+        <div className='flex flex-col overflow-auto overflow-y-hidden w-full'>
           <Image
             alt="amparo"
-            src="/amparo/desktop/desktop9.png"
+            src={cartoons.desktop8}
             width={1600}
             height={420}
             className='w-auto h-96 max-w-none self-start md:h-auto md:w-full md:max-w-[1600px] md:self-center'
           />
         </div>
-      </div>
-      <div className='py-[8vh] bg-[#2D2D2D]'>
+      </section>
+      <section className='py-[4vh] bg-der-black'>
         <h2 className='font-nippo text-4xl bg-[#006482] py-4 pl-14 pr-5 inline-block font-extrabold max-[466px]:text-2xl'>¿QUÉ PRESENTAMOS?
         </h2>
-        <div className='my-10 flex flex-row justify-center'>
-          <div className='w-[610px] h-[360px] px-10 bg-[#F1F1F1] flex flex-col justify-around items-center text-black sm:w-[350px] max-[328px]:w-[200px]'>
-            <p className='text-2xl font-extrabold'>AMPARO</p>
-            <Image
-              alt="icon"
-              src="/amparo/icon.png"
-              height={96}
-              width={96}
-            />
-            <p className='text-lg'>
-              Este amparo pretende la derogación del decreto DA 410/18052, por que atenta contra la ley de datos personales hoy vigente en la constitución.
-            </p>
-            <a href="#reporta" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 my-2 bg-[#CC4356] text-white w-[300px] text-center font-extrabold">
-              DESCARGA EL COSO
+        <div className='flex flex-col justify-center items-center w-[90vw] md:w-[75vw] max-w-[950px] bg-gray-100 text-black rounded-md mx-auto my-[3vw] p-6 gap-5'>
+          <p className='text-2xl font-bold'>AMPARO</p>
+          <Image
+            alt="icon"
+            src={amparoIcon}
+            height={96}
+            width={96}
+          />
+          <p className='text-2xl font-nippo'>
+          Presentamos un amparo colectivo contra el Estado solicitando el pronunciamiento de inconstitucionalidad de la DA 431/2020 y de determinados artículos de Ley de Datos Personales (art. 5, inc. 2 ap. b - ley 25.326), y solicitando se dicte una medida cautelar que ordena la suspensión de lo que disponen. Estas normas habilitan la transferencia de los datos personales de los ciudadanos entre todas las dependencias de la Administración pública, sin contar con el consentimiento expreso de sus titulares para su tratamiento para evitar la transferencia y el mal uso de nuestros datos personales.
+          </p>
+          <div className='flex justify-center items-center gap-5 flex-wrap'>
+            <a href="#" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
+              descargar amparo
+            </a>
+            <a href="#" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
+              descargar gacetilla
             </a>
           </div>
         </div>
-        <p className='text-white text-center py-10 text-lg'>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius accusamus quo repellat, incidunt voluptatem quam cupiditate expedita repudiandae et, hic dolor eligendi suscipit odit, atque saepe veniam aliquam explicabo id.
-        </p>
-      </div>
-    </section>
+        <div className='text-lg font-nippo w-[90vw] mx-auto'>
+          <h3 className='font-bold underline uppercase mb-3'>estado:</h3>
+          <p className='text-white text-lg mb-3'>El amparo colectivo se presento el 18 de abril de 2023 y radica en el juzgado Contencioso Administrativo Federal N 8, a cargo de la Jueza Dra. María Cecilia GILARDI MADARIAGA de NEGRE. Luego de 5 meses, el 07/09/2023, la Sra. Jueza se pronuncio sobre la medida cautelar solicitada por nosotros y rechazo la misma. Este rechazo fue apelado por nosotros y  desde el 11 de septiembre aguardamos que la Sala V del mismo fuero revise la decisión del Juzgado de origen y nos conceda la medida cautelar.</p>
+          <p className='font-extralight'>Ultima actualización: 21/11/2023</p>
+        </div>
+      </section>
+      <section className='px-[5vw] mx-auto bg-der-black border-t-2 border-t-white'>
+        <SiteMapFooter/>
+      </section>
+    </main>
   )
 }
 

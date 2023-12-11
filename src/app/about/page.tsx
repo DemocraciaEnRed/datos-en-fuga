@@ -2,7 +2,6 @@ import VideosSLider from "../components/VideosSLider"
 import ActionsList from "./components/ActionsList"
 import Quienes from "./components/Quienes"
 
-
 const About = () => {
     const iframes = [
         {
@@ -28,12 +27,13 @@ const About = () => {
                     <VideosSLider iframes={iframes} />
                 </div>
             </section>
-            <section className="p-[6vw] md:p-[3vw] bg-der-black text-white">
+            {/* <section className="p-[6vw] md:p-[3vw] bg-der-black text-white">
                 <ActionsList />
-            </section>
+            </section> */}
             <section className="p-[6vw] md:p-[3vw] ">
                 <h2 className="font-nippo text-4xl font-bold uppercase mb-7">¿quiénes somos?</h2>
-                <p className="mb-7 text-xl w-[70vw]">Descripcion breve: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p className="mb-7 text-xl w-[70vw]">Somos varias organizaciones de la sociedad civil que buscan que el Estado asegure estándares de ciberseguridad y que atienda a las alarmas que suenan por todos lados. 
+                </p>
                 <div>
                     <Quienes />
                 </div>

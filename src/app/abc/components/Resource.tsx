@@ -1,9 +1,10 @@
 import Image, { StaticImageData } from "next/image"
+import { ReactNode } from "react"
 
 interface Resource {
     title: string,
     img: StaticImageData,
-    description: string,
+    description: ReactNode,
     btnLabel: string,
     url: string
 }

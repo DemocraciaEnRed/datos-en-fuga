@@ -1,17 +1,36 @@
 import type { Metadata } from 'next'
-import { Inter, Open_Sans } from 'next/font/google'
+import { Inter, Lexend_Deca, Open_Sans, Raleway, Roboto } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
 import NavBar from './components/NavBar'
 
 import { storyblokInit, apiPlugin } from "@storyblok/react";
- 
+import ScrollTopButton from './components/ScrollTopButton'
+import Footer from './components/Footer'
+
 storyblokInit({
   accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
   use: [apiPlugin]
 });
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter'
+})
+const lexendDeca = Lexend_Deca({
+  subsets: ['latin'],
+  variable: '--font-lexend-deca'
+})
+const raleway = Raleway({
+  subsets: ['latin'],
+  variable: '--font-raleway'
+})
+const roboto = Roboto({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  variable: '--font-roboto'
+})
 const openSans = Open_Sans({
   subsets: ['latin'],
   variable: '--font-open-sans'
@@ -61,9 +80,11 @@ export default function RootLayout({
 
   return (
     <html lang="es">
-      <body className={`${nippo.variable} ${openSans.className} ${inter.className}`}>
+      <body className={`${nippo.variable} ${raleway.variable} ${roboto.variable} ${lexendDeca.variable} ${inter.variable} ${openSans.className} flex flex-col min-h-[100vh]`}>
         <NavBar />
         {children}
+        <ScrollTopButton />
+        <Footer />
       </body>
     </html>
   )

@@ -1,94 +1,94 @@
 import Image from 'next/image'
-import Script from 'next/script'
+import SiteMapFooter from "./components/SiteMapFooter"
+import LandingFlourish from './components/LandingFlourish'
+import Link from 'next/link'
 
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-
-      <div className="relative flex place-items-center ">
-        <Image
-          className="relative"
-          src="/gifCanilla.gif"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+    <main>
+      <div className="relative text-black">
+        <video className='w-full' autoPlay loop muted>
+          <source src="/home/background.mp4" type="video/mp4" className='w-full' />
+        </video>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center">
+          <h1 className="text-6xl font-extrabold mb-4 max-md:text-4xl">#DATOSENFUGA</h1>
+          <h2 className="font-nippo text-5xl max-md:text-3xl">¿QUÉ ESTÁ PASANDO EN ARGENTINA?</h2>
+        </div>
       </div>
-
-      <div className="flourish-embed w-[750px]" data-src="story/1969359">
-        <Script src="https://public.flourish.studio/resources/embed.js" />
+      <h2 className='text-4xl font-bold my-12 text-center'>CIBERINCIDENTES EN ARGENTINA</h2>
+      <div className='pb-11 flex flex-row gap-14 w-[90vw] mx-auto max-lg: max-lg:flex-col max-lg:items-center'>
+        <LandingFlourish />
+        <div className='w-[40%] flex flex-col max-lg:w-full'>
+          <h3 className='font-bold text-xl mb-11 text-center'>GLOSARIO Y REFERENCIAS</h3>
+          <div className='grid grid-cols-1 items-center'>
+            <div className='flex justify-center items-center py-4 gap-5 md:gap-10'>
+              <p className='w-[128px] text-center font-bold'>Término</p>
+              <p className='flex-grow text-center font-bold'>Definición</p>
+            </div>
+            <div className='flex justify-center items-center py-4 gap-5 md:gap-10'>
+              <Image
+                alt="desconocido"
+                src="/home/desconocido.png"
+                className='w-[128px]'
+                width={106}
+                height={64}
+              />
+              <div className="flex-grow text-left">No se da suficiente información en el artículo para determinar el tipo de ataque.</div>
+            </div>
+            <div className='flex justify-center items-center border-t-2 border-t-white py-4 gap-5 md:gap-10'>
+              <Image
+                className='w-[128px]'
+                alt="databreach"
+                src="/home/databreach.png"
+                width={106}
+                height={64}
+              />
+              <div className="flex-grow text-left">Incidente de seguridad en el que un externo accede de manera no autorizada a información confidencial.</div>
+            </div>
+            <div className='flex justify-center items-center border-t-2 border-t-white py-4 gap-5 md:gap-10'>
+              <Image
+                className='w-[128px]'
+                alt="ransomware"
+                src="/home/ransomware.png"
+                width={128}
+                height={78}
+              />
+              <div className="flex-grow text-left">Es un tipo de código malicioso que impide la utilización de los equipos o sistemas, secuestrando la información de las víctimas hasta que se pague un rescate.</div>
+            </div>
+            <div className='flex justify-center items-center border-t-2 border-t-white py-4 gap-5 md:gap-10'>
+              <Image
+                className='w-[128px]'
+                alt="incidente"
+                src="/home/incidente.png"
+                width={106}
+                height={64}
+              />
+              <div className="flex-grow text-left">Cualquier situación o comportamiento adverso de un software informático</div>
+            </div>
+          </div>
+        </div>
       </div>
+      <div className="flex flex-row bg-[#FAFAFA] text-[#212121] h-[600px] max-lg:flex-col">
+        <div className="w-1/2 h-full bg-[url('/home/DER.png')] bg-center bg-no-repeat bg-cover max-lg:w-full" >
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Hola{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+        </div>
+        <div className="w-full lg:w-[50%] py-2 my-11 px-11 max-lg:w-full">
+          <h2 className='text-4xl font-bold text-[#4C4C4E]'>Acerca de</h2>
+          <p className="text-sm my-8">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae tenetur exercitationem quia velit inventore quas harum, deserunt, nam mollitia odit, ullam itaque. Obcaecati nulla eaque quisquam fugit culpa optio ea!
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Gera{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Nico{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Todo listo pa desarrollar{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <Link href="/about" type="button" className="border-full border-[#212121] rounded-full py-4 px-16 bg-[#212121] text-white w-auto text-center uppercase text-lg">
+            <span>Conocé más  </span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className=" align-text-bottom inline w-5 h-5">
+              <path fillRule="evenodd" d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z" clipRule="evenodd" />
+            </svg>
+          </Link>
+        </div>
       </div>
-    </main>
+      <div className="px-[5vw] mx-auto bg-der-black">
+        <SiteMapFooter />
+      </div>
+    </main >
   )
 }
