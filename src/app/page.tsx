@@ -2,7 +2,7 @@ import Image from 'next/image'
 import SiteMapFooter from "./components/SiteMapFooter"
 import LandingFlourish from './components/LandingFlourish'
 import Link from 'next/link'
-import desconocido from "/home/desconocido.png"
+import desconocido from "~/home/desconocido.png"
 
 export default function Home() {
 
