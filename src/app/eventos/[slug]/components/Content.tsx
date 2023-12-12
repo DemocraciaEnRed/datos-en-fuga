@@ -1,12 +1,12 @@
-import { ISbStoryData } from "@storyblok/react";
+import { ISbStory, ISbStoryData } from "@storyblok/react";
 import { LinkCustomAttributes, MARK_BOLD, MARK_LINK, MARK_STYLED, MARK_UNDERLINE, NODE_HEADING, NODE_HR, NODE_IMAGE, NODE_LI, NODE_OL, NODE_PARAGRAPH, NODE_QUOTE, NODE_UL, render } from "storyblok-rich-text-react-renderer";
 import { ReactNode, createElement } from "react";
 import Image from "next/image";
 import emptyImg from "~/shared/not-available.png"
 import Link from "next/link";
+import YTVideo from "./YTVideo";
 
 const Content = ({ document }: { document: ISbStoryData }) => {
-
     return <>
         {render(document, {
             markResolvers: {
@@ -68,17 +68,7 @@ const Content = ({ document }: { document: ISbStoryData }) => {
                 }
             },
             blokResolvers: {
-                ['Youtube']: (props) => {
-                    
-                    console.log(props);
-                    return <iframe
-                    src={''}
-                    title={''}
-                    className="w-full h-full rounded-sm shadow"
-                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                />
-                }
+                ['Youtube']: (props: any) => <YTVideo {...props} />
             }
         })}
     </>;

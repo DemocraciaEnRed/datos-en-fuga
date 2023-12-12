@@ -33,16 +33,16 @@ const EventosBySlug = async ({ params }: { params: { slug: string } }) => {
             <header className="h-[25vh]" style={headerStyles}>
                 <p className="bg-gray-700 bg-opacity-80 px-7 py-3 text-white"><Link href={'/eventos'}>Eventos</Link> &gt; <Link href={`/eventos/${slug}`}>{name}</Link></p>
             </header>
-            <section className="md:w-[58vw] mx-auto py-[4vw]">
+            <section className="w-[90vw] md:w-[58vw] mx-auto py-[4vw]">
                 <h1 className="text-3xl font-bold mb-4">{content.title}</h1>
-                <p className="mb-4 text-xl">Por <span className="uppercase">{content.authors ? mapAuthors(content.authors) : 'Anónimo'}</span></p>
+                <p className="mb-4 text-xl md:mr-[13vw]">Por <span className="uppercase">{content.authors ? mapAuthors(content.authors) : 'Anónimo'}</span></p>
                 <div className="flex flex-col-reverse md:flex-row flex-wrap md:flex-nowrap gap-4 md:gap-9">
                     <article className="flex-grow w-full md:w-auto">
                         <Content document={content.body} />
                     </article>
                     <aside className="flex flex-col gap-6 text-right md:-translate-y-10 w-full md:w-auto">
                         <div>
-                            <p className="font-bold">Autor</p>
+                            <p className="font-bold">{content.authors?.length > 1 ? 'Autores' : 'Autor'}</p>
                             {content.authors ?
                                 (content.authors.map((author: { name: string }) => {
                                     return <p className="text-sm capitalize" key={author.name}>{author.name}</p>
@@ -104,7 +104,8 @@ const fetchData = async () => {
 const mapAuthors = (authors: any) => {
     let authorsString = ''
     authors.forEach((author: { name: string }, i: number) => {
-        if (authors.length > 1 && i + 1 < authors.length) authorsString = `${authorsString}${author.name}, `
+        if (authors.length > 1 && i + 2 < authors.length) authorsString = `${authorsString}${author.name}, `
+        else if (authors.length > 1 && i + 1 < authors.length) authorsString = `${authorsString}${author.name} `
         else if (authors.length > 1) authorsString = `${authorsString}y ${author.name}`
         else authorsString = `${authorsString}${author.name}`
     })

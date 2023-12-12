@@ -4,12 +4,6 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { sharedImages } from "~/shared/index"
 
-
-
-
-
-type Color = 'black'
-
 const darkThemeSegments = ['about', 'abc', 'eventos']
 const isDarkTheme = (path: string) => darkThemeSegments.some(segment => segment === path.split('/')[1])
 
@@ -46,7 +40,7 @@ const Footer = () => {
         <Link href="https://twitter.com/fundacionDER" target="_blank">
           <Image
             alt="Twitter"
-            src={`${darkTheme ? sharedImages.twitter : sharedImages.twittern}`}
+            src={darkTheme ? sharedImages.twitter : sharedImages.twittern}
             width={23}
             height={16}
             priority
@@ -56,7 +50,7 @@ const Footer = () => {
         <Link href="https://www.instagram.com/democraciaenred/" target="_blank">
           <Image
             alt="Instagram"
-            src={`${darkTheme ? sharedImages.instagram : sharedImages.instagramn}`}
+            src={darkTheme ? sharedImages.instagram : sharedImages.instagramn}
             width={23}
             height={16}
             priority
@@ -66,7 +60,7 @@ const Footer = () => {
         <Link href="https://www.youtube.com/channel/UCm5n0zxmfWN0pMuMPxk7psw" target="_blank">
           <Image
             alt="Youtube"
-            src={`${darkTheme ? sharedImages.youtube : sharedImages.youtuben}`}
+            src={darkTheme ? sharedImages.youtube : sharedImages.youtuben}
             width={23}
             height={16}
             priority

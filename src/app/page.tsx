@@ -10,7 +10,7 @@ export default function Home() {
     <main>
       <div className="relative text-black">
         <video className='w-full' autoPlay loop muted>
-          <source src="/home/background.mp4" type="video/mp4" className='w-full' />
+          <source src="https://democraciaenred.github.io/datosenfuga-next/home/background.mp4" type="video/mp4" className='w-full' />
         </video>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center">
           <h1 className="text-6xl font-extrabold mb-4 max-md:text-4xl">#DATOSENFUGA</h1>
