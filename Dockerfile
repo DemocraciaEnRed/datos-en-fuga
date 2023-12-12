@@ -12,4 +12,4 @@ RUN npm run build
 
 EXPOSE 3000
 
-CMD [ "npm", "start" ]
+CMD [ "npx", "serve@14.2.1", "out"]
