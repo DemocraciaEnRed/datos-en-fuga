@@ -2,6 +2,7 @@ import Image from 'next/image'
 import SiteMapFooter from "./components/SiteMapFooter"
 import LandingFlourish from './components/LandingFlourish'
 import Link from 'next/link'
+import desconocido from "/home/desconocido.png"
 
 export default function Home() {
 
@@ -29,7 +30,7 @@ export default function Home() {
             <div className='flex justify-center items-center py-4 gap-5 md:gap-10'>
               <Image
                 alt="desconocido"
-                src="/home/desconocido.png"
+                src={desconocido}
                 className='w-[128px]'
                 width={106}
                 height={64}
