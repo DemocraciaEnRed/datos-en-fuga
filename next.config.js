@@ -6,8 +6,9 @@ const nextConfig = {
             {
                 protocol: 'https',
                 hostname: '**.storyblok.com',
-            },
-        ]
+            }
+        ],
+        unoptimized: true
     },
 }
 
