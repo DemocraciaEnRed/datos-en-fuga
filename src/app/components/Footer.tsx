@@ -2,6 +2,11 @@
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { sharedImages } from "~/shared/index"
+
+
+
+
 
 type Color = 'black'
 
@@ -21,14 +26,14 @@ const Footer = () => {
             darkTheme ?
               <Image
                 alt="DER Logo"
-                src="/shared/der.png"
+                src={sharedImages.der}
                 width={300}
                 height={54}
                 priority
               /> :
               <Image
                 alt="DER Logo"
-                src="/shared/dern.png"
+                src={sharedImages.dern}
                 width={300}
                 height={54}
                 priority
@@ -41,7 +46,7 @@ const Footer = () => {
         <Link href="https://twitter.com/fundacionDER" target="_blank">
           <Image
             alt="Twitter"
-            src={`${darkTheme ? "/shared/twitter.png" : "/shared/twittern.png"}`}
+            src={`${darkTheme ? sharedImages.twitter : sharedImages.twittern}`}
             width={23}
             height={16}
             priority
@@ -51,7 +56,7 @@ const Footer = () => {
         <Link href="https://www.instagram.com/democraciaenred/" target="_blank">
           <Image
             alt="Instagram"
-            src={`${darkTheme ? "/shared/instagram.png" : "/shared/instagramn.png"}`}
+            src={`${darkTheme ? sharedImages.instagram : sharedImages.instagramn}`}
             width={23}
             height={16}
             priority
@@ -61,7 +66,7 @@ const Footer = () => {
         <Link href="https://www.youtube.com/channel/UCm5n0zxmfWN0pMuMPxk7psw" target="_blank">
           <Image
             alt="Youtube"
-            src={`${darkTheme ? "/shared/youtube.png" : "/shared/youtuben.png"}`}
+            src={`${darkTheme ? sharedImages.youtube : sharedImages.youtuben}`}
             width={23}
             height={16}
             priority

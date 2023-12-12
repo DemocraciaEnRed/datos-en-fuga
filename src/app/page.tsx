@@ -2,6 +2,7 @@ import Image from 'next/image'
 import SiteMapFooter from "./components/SiteMapFooter"
 import LandingFlourish from './components/LandingFlourish'
 import Link from 'next/link'
+import { flourishImages } from "~/home/index"
 
 export default function Home() {
 
@@ -29,7 +30,7 @@ export default function Home() {
             <div className='flex justify-center items-center py-4 gap-5 md:gap-10'>
               <Image
                 alt="desconocido"
-                src="/home/desconocido.png"
+                src={flourishImages.desconocido}
                 className='w-[128px]'
                 width={106}
                 height={64}
@@ -40,7 +41,7 @@ export default function Home() {
               <Image
                 className='w-[128px]'
                 alt="databreach"
-                src="/home/databreach.png"
+                src={flourishImages.databreach}
                 width={106}
                 height={64}
               />
@@ -50,7 +51,7 @@ export default function Home() {
               <Image
                 className='w-[128px]'
                 alt="ransomware"
-                src="/home/ransomware.png"
+                src={flourishImages.ransomware}
                 width={128}
                 height={78}
               />
@@ -60,7 +61,7 @@ export default function Home() {
               <Image
                 className='w-[128px]'
                 alt="incidente"
-                src="/home/incidente.png"
+                src={flourishImages.incidente}
                 width={106}
                 height={64}
               />
