@@ -1,26 +1,32 @@
+'use client'
 import Link from "next/link";
+import { usePathname } from 'next/navigation'
 type Navlink = {
     href: string,
     label: string
 }
 
 const links: Navlink[] = [
-    { href: "/", label: "INICIO" },
-    { href: "/amparo", label: "AMPARO" },
-    { href: "/casos", label: "CASOS" },
-    { href: "/reporta", label: "REPORTÁ" },
-    { href: "/eventos", label: "EVENTOS" },
-    { href: "/abc", label: "ABC" },
-    { href: "/about", label: "ACERCA DE" }
+    { href: "/", label: "inicio" },
+    { href: "/amparo", label: "amparo" },
+    { href: "/casos", label: "casos" },
+    { href: "/reporta", label: "reportá" },
+    { href: "/eventos", label: "eventos" },
+    { href: "/about", label: "acerca de" },
+    { href: "/abc", label: "ABC" }
 ]
+const firstSegment = (path: string) => `/${path.split('/')[1]}`
+
 
 const NavLinks = () => {
+    const pathname = usePathname()
+
     return (
         <>
             {links.map((link, i) => {
                 return (
-                    <li key={'navlink' + i} className="mx-2 first:ml-0 last:mr-0 font-bold">
-                        <Link href={link.href}>{link.label}</Link>
+                    <li key={'navlink' + i}>
+                        <Link href={link.href} className={firstSegment(pathname) === link.href ? 'font-bold' : ''}>{link.label}</Link>
                     </li>
                 )
             })}

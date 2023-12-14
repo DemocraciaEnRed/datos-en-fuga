@@ -7,7 +7,7 @@ const Subtopic = ({ subtopic }: { subtopic: SubtopicIF }) => {
             <div className="mx-auto">
                 {subtopic?.details.map((detail, i) => {
                     return (
-                        <details key={'details' + i} className="group my-5 select-none">
+                        <details key={'details' + i} className="group my-5">
                             <summary className="flex cursor-pointer bg-black rounded-lg p-2 uppercase shadow-md text-white">
                                 {detail.q}
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
@@ -18,7 +18,7 @@ const Subtopic = ({ subtopic }: { subtopic: SubtopicIF }) => {
                             {detail.a.map((answer, i2) => {
                                 return (
                                     <p key={`'a${i}${i2}`}
-                                        className="p-2 mx-2 bg-white shadow-md last:rounded-b-lg">
+                                        className="p-4 mx-2 bg-white shadow-md last:rounded-b-lg tracking-wide">
                                         {answer}
                                     </p>
                                 )
