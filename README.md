@@ -2,7 +2,7 @@
 
 # Datos en Fuga - Web
 
-[![GitHub license](https://img.shields.io/github/license/DemocraciaEnRed/leyesabiertas-notifier)](https://github.com/DemocraciaEnRed/leyesabiertas-notifier/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/DemocraciaEnRed/datosenfuga-next)](https://github.com/DemocraciaEnRed/datosenfuga-next/blob/master/LICENSE)
 
 ---
 
