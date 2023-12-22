@@ -77,7 +77,7 @@ export default function Home() {
         <div className="w-full lg:w-[50%] py-2 my-11 px-11 max-lg:w-full">
           <h2 className='text-4xl font-bold text-[#4C4C4E]'>Acerca de</h2>
           <p className="text-sm my-8">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae tenetur exercitationem quia velit inventore quas harum, deserunt, nam mollitia odit, ullam itaque. Obcaecati nulla eaque quisquam fugit culpa optio ea!
+          Queremos que el Estado asegure estándares de ciberseguridad y que atienda a las alarmas que suenan por todos lados. Queremos que el Estado deje de perseguir penalmente a quienes identifican, denuncian y reportan vulnerabilidades informáticas.
           </p>
           <Link href="/about" type="button" className="border-full border-[#212121] rounded-full py-4 px-16 bg-[#212121] text-white w-auto text-center uppercase text-lg">
             <span>Conocé más  </span>
