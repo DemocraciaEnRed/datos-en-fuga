@@ -1,4 +1,4 @@
-import { ISbStory, ISbStoryData } from "@storyblok/react";
+import { ISbStoryData } from "@storyblok/react";
 import { LinkCustomAttributes, MARK_BOLD, MARK_LINK, MARK_STYLED, MARK_UNDERLINE, NODE_HEADING, NODE_HR, NODE_IMAGE, NODE_LI, NODE_OL, NODE_PARAGRAPH, NODE_QUOTE, NODE_UL, render } from "storyblok-rich-text-react-renderer";
 import { ReactNode, createElement } from "react";
 import Image from "next/image";
