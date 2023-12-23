@@ -17,6 +17,21 @@ export default function Home() {
           <h2 className="font-nippo text-5xl max-md:text-3xl">¿QUÉ ESTÁ PASANDO EN ARGENTINA?</h2>
         </div>
       </div>
+      <div className='bg-white text-black text-center flex flex-col items-center justify-center py-12 w-full'>
+        <h2 className='font-bold text-4xl'>¿QUÉ ES #DATOSENFUGA</h2>
+        <p className='uppercase'>Cuidar tus datos no solo depende de que tengas una contraseña segura</p>
+        <div className='flex flex-row  flex-wrap justify-around gap-4 my-12 text-white text-3xl font-bold w-1/2'>
+          <div className="h-[260px] w-[389px] bg-[#CC4356] flex flex-col justify-center rounded-md max-[584px]:min-w-[300px]">
+            <p className='uppercase'>Ley de datos personales</p>
+          </div>
+          <div className="h-[260px] w-[389px] bg-[#008BB4] flex flex-col justify-center rounded-md max-[584px]:min-w-[300px]">
+            <p className='uppercase'>CIBERSEGURIDAD</p>
+          </div>
+          <div className="h-[260px] w-[389px] bg-[#00D79E] flex flex-col justify-center rounded-md max-[584px]:min-w-[300px]">
+            <p className='uppercase'>REPORTES DE VULNERABILIDADES</p>
+          </div>
+        </div>
+      </div>
       <h2 className='text-4xl font-bold my-12 text-center'>CIBERINCIDENTES EN ARGENTINA</h2>
       <div className='pb-11 flex flex-row gap-14 w-[90vw] mx-auto max-lg: max-lg:flex-col max-lg:items-center'>
         <LandingFlourish />
