@@ -27,10 +27,7 @@ const LandingArticles = async () => {
                 <>
                     <h2 className="text-center text-4xl text-der-black mb-5 uppercase font-bold">Novedades</h2>
                     <div className="flex gap-4 [&_a]:max-w-[374px] justify-center flex-wrap">
-                        {articles.length > 0 ?
-                            articles.map((story: ISbStoryData) => <EventsCard key={story.id} story={story} />) :
-                            <p>No hay nuevos artículos</p>
-                        }
+                        {articles.map((story: ISbStoryData) => <EventsCard key={story.id} story={story} />)}
                     </div>
                     <Link href="/eventos" type="button" className="block border-full border-[#CC4356] rounded-full py-4 px-16 bg-[#CC4356] text-white w-fit text-center uppercase text-lg mx-auto mt-[4vw]">
                         <span className="uppercase">conocé todas las novedades</span>
