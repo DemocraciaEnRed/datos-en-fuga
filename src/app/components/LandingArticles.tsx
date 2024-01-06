@@ -1,5 +1,5 @@
 import { ISbStoriesParams, ISbStoryData, StoryblokComponentType, getStoryblokApi } from "@storyblok/react";
-import EventsCard from "../eventos/components/EventsCard";
+import EventsCard from "../novedades/components/EventsCard";
 import Link from "next/link";
 
 const fetchLatestArticles = async () => {
@@ -29,7 +29,7 @@ const LandingArticles = async () => {
                     <div className="flex gap-4 [&_a]:max-w-[374px] justify-center flex-wrap">
                         {articles.map((story: ISbStoryData) => <EventsCard key={story.id} story={story} />)}
                     </div>
-                    <Link href="/eventos" type="button" className="block border-full border-[#CC4356] rounded-full py-4 px-16 bg-[#CC4356] text-white w-fit text-center uppercase text-lg mx-auto mt-[4vw]">
+                    <Link href="/novedades" type="button" className="block border-full border-[#CC4356] rounded-full py-4 px-16 bg-[#CC4356] text-white w-fit text-center uppercase text-lg mx-auto mt-[4vw]">
                         <span className="uppercase">conocé todas las novedades</span>
                     </Link>
                 </>)

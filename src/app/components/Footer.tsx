@@ -4,7 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { sharedImages } from "~/shared/index"
 
-const darkThemeSegments = ['about', 'abc', 'eventos']
+const darkThemeSegments = ['about', 'abc', 'novedades']
 const isDarkTheme = (path: string) => darkThemeSegments.some(segment => segment === path.split('/')[1])
 
 const Footer = () => {
