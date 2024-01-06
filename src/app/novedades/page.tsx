@@ -3,8 +3,8 @@ import EventsMasonry from "./components/EventsMasonry";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: 'Eventos',
-    description: 'Eventos',
+    title: 'Novedades',
+    description: 'Novedades',
     keywords: 'debate, presentaciones, seguridad informática, ciberseguridad, justicia'
 }
 
