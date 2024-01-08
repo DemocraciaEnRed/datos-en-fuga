@@ -2,10 +2,7 @@
 
 # Datos en Fuga - Web
 
-[![GitHub license](https://img.shields.io/github/license/DemocraciaEnRed/leyesabiertas-notifier)](https://github.com/DemocraciaEnRed/leyesabiertas-notifier/blob/master/LICENSE)
-
-Este es uno de los cuatros modulos que se requieren descargar, hacer setup e instalar cada uno de los repositorios para poder utilizar Leyes Abiertas.
-Para saber mas del conjunto de modulos que compone leyes abiertas, hace [click aqui](https://github.com/DemocraciaEnRed/leyesabiertas) 
+[![GitHub license](https://img.shields.io/github/license/DemocraciaEnRed/datosenfuga-next)](https://github.com/DemocraciaEnRed/datosenfuga-next/blob/master/LICENSE)
 
 ---
 

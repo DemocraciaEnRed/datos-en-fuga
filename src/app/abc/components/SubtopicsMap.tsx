@@ -7,7 +7,8 @@ export interface SubtopicIF {
 
 export interface Detail {
     q: string,
-    a: string[]
+    a: string[],
+    videoKey?: string
 }
 
 const SubtopicsMap = ({ subtopics }: { subtopics: SubtopicIF[] }) => {

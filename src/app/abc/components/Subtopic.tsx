@@ -1,3 +1,4 @@
+import SubtopicVideo from "./SubtopicVideo"
 import { SubtopicIF } from "./SubtopicsMap"
 
 const Subtopic = ({ subtopic }: { subtopic: SubtopicIF }) => {
@@ -15,14 +16,16 @@ const Subtopic = ({ subtopic }: { subtopic: SubtopicIF }) => {
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                 </svg>
                             </summary>
-                            {detail.a.map((answer, i2) => {
-                                return (
-                                    <p key={`'a${i}${i2}`}
-                                        className="p-4 mx-2 bg-white shadow-md last:rounded-b-lg tracking-wide">
-                                        {answer}
-                                    </p>
-                                )
-                            })}
+                            <div className="p-4 mx-2 bg-white shadow-md last:rounded-b-lg tracking-wide">
+                                {detail.videoKey && <SubtopicVideo videoKey={detail.videoKey} />}
+                                {detail.a.map((answer, i2) => {
+                                    return (
+                                        <p key={`'a${i}${i2}`}>
+                                            {answer}
+                                        </p>
+                                    )
+                                })}
+                            </div>
                         </details>
                     )
                 })}

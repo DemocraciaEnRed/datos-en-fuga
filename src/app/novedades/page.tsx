@@ -3,8 +3,8 @@ import EventsMasonry from "./components/EventsMasonry";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: 'Eventos',
-    description: 'Eventos',
+    title: 'Novedades',
+    description: 'Novedades',
     keywords: 'debate, presentaciones, seguridad informática, ciberseguridad, justicia'
 }
 
@@ -14,7 +14,7 @@ const Eventos = async () => {
         <main className="bg-[#F1F1F1] flex flex-col flex-grow">
             <header className='bg-[#2D2D2D] px-[7vw] py-[4vw]'>
                 <h1 className='font-nippo text-4xl w-[800px] max-[810px]:w-[500px] max-[500px]:w-[250px] max-[500px]:text-3xl max-[375px]:text-3xl'>
-                    EVENTOS
+                    NOVEDADES
                 </h1>
                 <p className='font-nippo text-5xl font-bold max-[810px]:w-[500px] max-[500px]:w-[250px] sm:text-4xl'>
                     QUE ACCIONES HEMOS LLEVADO A CABO EN EL PROYECTO
