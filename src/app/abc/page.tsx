@@ -49,12 +49,12 @@ const page = () => {
                     )}
                 </div>
             </section>
-            <section className="p-[6vw] md:p-[3vw] bg-gray-100 text-der-black text-lg">
+            {/* <section className="p-[6vw] md:p-[3vw] bg-gray-100 text-der-black text-lg">
                 <h2 className="font-nippo text-5xl font-bold uppercase">videos informativos</h2>
                 <div className="py-[6vw] md:py-[3vw]">
                     <VideosSLider iframes={iframes} />
                 </div>
-            </section>
+            </section> */}
         </main >
     )
 }

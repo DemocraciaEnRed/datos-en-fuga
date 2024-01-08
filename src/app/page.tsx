@@ -3,8 +3,11 @@ import SiteMapFooter from "./components/SiteMapFooter"
 import LandingFlourish from './components/LandingFlourish'
 import Link from 'next/link'
 import { flourishImages } from "~/home/index"
+import LandingArticles from './components/LandingArticles'
+import LandingTopics from './components/LandingTopics'
 
 export default function Home() {
+
 
   return (
     <main>
@@ -17,6 +20,7 @@ export default function Home() {
           <h2 className="font-nippo text-5xl max-md:text-3xl">¿QUÉ ESTÁ PASANDO EN ARGENTINA?</h2>
         </div>
       </div>
+      <LandingTopics />
       <h2 className='text-4xl font-bold my-12 text-center'>CIBERINCIDENTES EN ARGENTINA</h2>
       <div className='pb-11 flex flex-row gap-14 w-[90vw] mx-auto max-lg: max-lg:flex-col max-lg:items-center'>
         <LandingFlourish />
@@ -70,6 +74,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <section className="bg-[#F1F1F1] py-[4vw] px-2">
+        <LandingArticles />
+      </section>
       <div className="flex flex-row bg-[#FAFAFA] text-[#212121] h-[600px] max-lg:flex-col">
         <div className="w-1/2 h-full bg-[url('/home/DER.png')] bg-center bg-no-repeat bg-cover max-lg:w-full" >
 
@@ -77,9 +84,9 @@ export default function Home() {
         <div className="w-full lg:w-[50%] py-2 my-11 px-11 max-lg:w-full">
           <h2 className='text-4xl font-bold text-[#4C4C4E]'>Acerca de</h2>
           <p className="text-sm my-8">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae tenetur exercitationem quia velit inventore quas harum, deserunt, nam mollitia odit, ullam itaque. Obcaecati nulla eaque quisquam fugit culpa optio ea!
+            Queremos que el Estado asegure estándares de ciberseguridad y que atienda a las alarmas que suenan por todos lados. Queremos que el Estado deje de perseguir penalmente a quienes identifican, denuncian y reportan vulnerabilidades informáticas.
           </p>
-          <Link href="/about" type="button" className="border-full border-[#212121] rounded-full py-4 px-16 bg-[#212121] text-white w-auto text-center uppercase text-lg">
+          <Link href="/about" type="button" className="border-full border-[#CC4356] rounded-full py-4 px-16 bg-[#CC4356] text-white w-auto text-center uppercase text-lg">
             <span>Conocé más  </span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className=" align-text-bottom inline w-5 h-5">
               <path fillRule="evenodd" d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z" clipRule="evenodd" />
