@@ -6,7 +6,8 @@ const Card = ({ backgroundColor, title, description }: { backgroundColor: string
 
   return (
     <div
-      className={`h-[260px] w-[389px] bg-[${backgroundColor}] flex flex-col justify-center items-center rounded-md max-[584px]:min-w-[300px] relative overflow-hidden`}
+      className={`h-[260px] w-[389px] flex flex-col justify-center items-center rounded-md max-[584px]:min-w-[300px] relative overflow-hidden`}
+      style={{ backgroundColor }}
       onMouseEnter={() => setShowText(false)}
       onMouseLeave={() => setShowText(true)}
     >
