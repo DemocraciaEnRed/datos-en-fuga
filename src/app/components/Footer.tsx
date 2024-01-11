@@ -70,7 +70,7 @@ const Footer = () => {
 
       <div className="flex flex-row justify-center items-center">
         <Link href="mailto:contacto@democraciaenred.com" target="_blank">
-          <p className="font-raleway">contacto@democraciaenred.com</p>
+          <p className="font-raleway">contacto@democraciaenred.org</p>
         </Link>
       </div>
     </footer>

@@ -2,18 +2,19 @@ import Image from 'next/image'
 import SiteMapFooter from "./components/SiteMapFooter"
 import LandingFlourish from './components/LandingFlourish'
 import Link from 'next/link'
-import { flourishImages } from "~/home/index"
 import LandingArticles from './components/LandingArticles'
 import LandingTopics from './components/LandingTopics'
+import { flourishImages } from "~/home/index"
+import derAboutImg from "~/home/DER.png"
 
 export default function Home() {
 
 
   return (
-    <main>
+    <main className='bg-der-black'>
       <div className="relative text-black">
         <video className='w-full' autoPlay loop muted>
-          <source src="https://democraciaenred.github.io/datosenfuga-next/home/background.mp4" type="video/mp4" className='w-full' />
+          <source src={`https://democraciaenred.github.io/datosenfuga-next/home/background.mp4`} type="video/mp4" className='w-full' />
         </video>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center">
           <h1 className="text-6xl font-extrabold mb-4 max-md:text-4xl">#DATOSENFUGA</h1>
@@ -78,7 +79,7 @@ export default function Home() {
         <LandingArticles />
       </section>
       <div className="flex flex-row bg-[#FAFAFA] text-[#212121] h-[600px] max-lg:flex-col">
-        <div className="w-1/2 h-full bg-[url('/home/DER.png')] bg-center bg-no-repeat bg-cover max-lg:w-full" >
+        <div className="w-1/2 h-full bg-center bg-no-repeat bg-cover max-lg:w-full"  style={{ backgroundImage: `url(https://democraciaenred.github.io/datosenfuga-next/home/DER.png)`}}>
 
         </div>
         <div className="w-full lg:w-[50%] py-2 my-11 px-11 max-lg:w-full">
