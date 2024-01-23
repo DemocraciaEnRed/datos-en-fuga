@@ -38,18 +38,18 @@ const ID = ({ params }: { params: { id: string } }) => {
           ¿SABÍAS QUE EN ARGENTINA <br /> <span className="font-bold">HAY UNA MANERA SEGURA DE REPORTAR VULNERABILIDADES INFORMÁTICAS?</span>
         </h1>
         <div className="flex flex-row gap-4 text-lg my-3">
-          <a href="#reporta" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 my-2 bg-[#CC4356] text-white w-[300px] text-center font-extrabold">
-            ¿CÓMO REPORTAR?
+          <a href="#reporta" type="button" className="flex items-center justify-center border-2 border-[#CC4356] rounded-xl p-2 my-2 bg-[#CC4356] text-white w-[300px] text-center font-extrabold">
+            <p>¿QUÉ Y CÓMO REPORTAR?</p>
           </a>
-          <a href="#reporta" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 my-2 bg-[#2D2D2D] text-[#CC4356] w-[300px] text-center font-extrabold">
-            CASOS
+          <a href="#casos" type="button" className="flex items-center justify-center border-2 border-[#CC4356] rounded-xl p-2 my-2 bg-[#2D2D2D] text-[#CC4356] w-[300px] text-center font-extrabold">
+            <p>CASOS</p>
           </a>
         </div>
       </header>
 
       <section className='bg-[#F1F1F1] py-[3vh] h-4/6'>
-        <h2 className='font-nippo text-5xl bg-[#CC4356] py-4 pl-14 pr-5 inline-block font-extrabold'>LLEGÓ TARDE PARA ELLOS</h2>
-        <p className='font-nippo text-der-black text-xl pl-12 my-4 font-medium'>
+        <h2 className='font-nippo text-5xl bg-[#CC4356] py-4 pl-10 sm:pl-14 pr-5 inline-block font-extrabold text-white'>LLEGÓ TARDE PARA ELLOS</h2>
+        <p className='font-nippo text-der-black text-xl px-10 sm:pl-12 my-4 font-medium'>
           TE CONTAMOS QUIÉNES SON Y CUÁL ES SU HISTORIA
         </p>
         <CaseSelector cases={cases} id={id} />
