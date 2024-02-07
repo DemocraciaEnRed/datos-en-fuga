@@ -13,29 +13,26 @@ const Footer = () => {
   const darkTheme = isDarkTheme(pathname)
 
   return (
-    <footer className={`${darkTheme ? 'bg-[#212121] text-white' : 'bg-[#F1F1F1] text-black'} flex flex-row justify-around flex-wrap gap-y-5 py-3 max-[425px]:flex-col max-[425px]:items-center`}>
-      <div>
-        <Link href="https://democraciaenred.org" target="_blank">
+    <footer className={`${darkTheme ? 'bg-[#212121] text-white' : 'bg-[#F1F1F1] text-black'} flex flex-row justify-around flex-wrap gap-y-5 py-3 max-[780px]:flex-col max-[780px]:items-center`}>
+      <Link href="https://democraciaenred.org" target="_blank">
+        <div className="w-full max-w-[300px] h-[54px] flex">
           {
             darkTheme ?
               <Image
                 alt="DER Logo"
                 src={sharedImages.der}
-                width={300}
-                height={54}
+                className="m-auto"
                 priority
               /> :
               <Image
                 alt="DER Logo"
                 src={sharedImages.dern}
-                width={300}
-                height={54}
+                className="m-auto"
                 priority
               />
           }
-        </Link>
-      </div>
-
+        </div>
+      </Link>
       <div className="flex flex-row gap-5 justify-center items-center content-center">
         <Link href="https://twitter.com/fundacionDER" target="_blank">
           <Image

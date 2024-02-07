@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { cartoons } from '../../../public/amparo'
 import amparoIcon from '../../../public/shared/amparo.png'
-import SiteMapFooter from '../components/SiteMapFooter'
+// import SiteMapFooter from '../components/SiteMapFooter'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -143,7 +143,7 @@ const Amparo = () => {
         </div>
       </section>
       <section className='px-[5vw] mx-auto bg-der-black border-t-2 border-t-white'>
-        <SiteMapFooter/>
+        {/* <SiteMapFooter/> */}
       </section>
     </main>
   )

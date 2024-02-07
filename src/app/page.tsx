@@ -12,9 +12,9 @@ export default function Home() {
 
   return (
     <main className='bg-der-black'>
-      <div className="relative text-black">
-        <video className='w-full' autoPlay loop muted>
-          <source src={`https://democraciaenred.github.io/datosenfuga-next/home/background.mp4`} type="video/mp4" className='w-full' />
+      <div className="relative text-black h-[80vh]">
+        <video className='object-cover object-center w-full h-full' autoPlay loop muted>
+          <source src={`https://democraciaenred.github.io/datosenfuga-next/home/background.mp4`} type="video/mp4" />
         </video>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center">
           <h1 className="text-6xl font-extrabold mb-4 max-md:text-4xl">#DATOSENFUGA</h1>
@@ -82,12 +82,12 @@ export default function Home() {
         <div className="w-1/2 h-full bg-center bg-no-repeat bg-cover max-lg:w-full"  style={{ backgroundImage: `url(https://democraciaenred.github.io/datosenfuga-next/home/DER.png)`}}>
 
         </div>
-        <div className="w-full lg:w-[50%] py-2 my-11 px-11 max-lg:w-full">
+        <div className="flex flex-col justify-center gap-[2vw] w-full lg:w-[50%] max-lg:w-full p-[2vw]">
           <h2 className='text-4xl font-bold text-[#4C4C4E]'>Acerca de</h2>
-          <p className="text-sm my-8">
+          <p className="text-sm">
             Queremos que el Estado asegure estándares de ciberseguridad y que atienda a las alarmas que suenan por todos lados. Queremos que el Estado deje de perseguir penalmente a quienes identifican, denuncian y reportan vulnerabilidades informáticas.
           </p>
-          <Link href="/about" type="button" className="border-full border-[#CC4356] rounded-full py-4 px-16 bg-[#CC4356] text-white w-auto text-center uppercase text-lg">
+          <Link href="/about" type="button" className="self-start border-full border-[#CC4356] rounded-full py-4 px-16 bg-[#CC4356] text-white w-auto text-center uppercase text-lg">
             <span>Conocé más  </span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className=" align-text-bottom inline w-5 h-5">
               <path fillRule="evenodd" d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z" clipRule="evenodd" />

@@ -30,7 +30,7 @@ const LandingArticles = async () => {
                         {articles.map((story: ISbStoryData) => <EventsCard key={story.id} story={story} />)}
                     </div>
                     <Link href="/novedades" type="button" className="block border-full border-[#CC4356] rounded-full py-4 px-16 bg-[#CC4356] text-white w-fit text-center uppercase text-lg mx-auto mt-[4vw]">
-                        <span className="uppercase">conocé todas las novedades</span>
+                        <span className="uppercase">Más novedades</span>
                     </Link>
                 </>)
             }
