@@ -14,18 +14,18 @@ const CaseSelector = ({ id, cases }: { id?: string, cases: any }) => {
   // }, [id])
 
   return (
-    <div className="flex flex-row flex-wrap justify-center">
+    <div className="flex flex-row flex-wrap justify-center" id="casos">
       {
         cases.map((c: any) => {
           return (
             <Link href={`/casos/${c.id}`} key={c.id} scroll={false} className={`grayscale hover:grayscale-0 ${id === c.id ? 'grayscale-0' : ''} m-2 shadow-lg rounded-lg overflow-hidden`}>
-              <div className="relative w-[385px] max-[390px]:w-[95%] ">
-                <p className='max-w-[385px] font-nippo z-10 absolute bottom-4 mx-5 text-3xl font-extrabold'>{c.name}</p>
+              <div className="relative w-[385px] max-[390px]:w-[88vw]">
+                <p className='flex justify-center absolute w-full font-nippo z-10 bottom-4 text-3xl font-extrabold text-center text-white'>{c.name}</p>
                 <Image
                   alt={c.name}
                   src={c.avatar}
                   placeholder="blur"
-                  className='min-h-full min-w-full'
+                  className='min-h-full min-w-full object-cover'
                 />
               </div>
             </Link>

@@ -28,10 +28,10 @@ const Card = ({ backgroundColor, title, description }: { backgroundColor: string
 
 const LandingTopics = () => {
   return (
-    <div className='bg-white text-black text-center flex flex-col items-center justify-center py-12 w-full'>
+    <div className='bg-white text-black text-center flex flex-col items-center justify-center py-12 w-full border-t-[#CC4356] border-t-4'>
       <h2 className='font-bold text-4xl'>¿QUÉ ES #DATOSENFUGA?</h2>
       <p className='uppercase'>Cuidar tus datos no solo depende de que tengas una contraseña segura</p>
-      <div className='flex flex-row flex-wrap justify-around gap-4 my-12 text-white w-1/2'>
+      <div className='flex flex-row flex-wrap justify-around gap-4 my-12 text-white'>
         <div className="h-[260px] w-[389px]">
           <Card
             backgroundColor="#CC4356"
