@@ -95,9 +95,9 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="px-[5vw] mx-auto bg-der-black">
+      {/* <div className="px-[5vw] mx-auto bg-der-black">
         <SiteMapFooter />
-      </div>
+      </div> */}
     </main >
   )
 }

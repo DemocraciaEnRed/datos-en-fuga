@@ -142,9 +142,9 @@ const Amparo = () => {
           <p className='font-extralight'>Ultima actualización: 21/11/2023</p>
         </div>
       </section>
-      <section className='px-[5vw] mx-auto bg-der-black border-t-2 border-t-white'>
-        {/* <SiteMapFooter/> */}
-      </section>
+      {/* <section className='px-[5vw] mx-auto bg-der-black border-t-2 border-t-white'>
+        <SiteMapFooter/>
+      </section> */}
     </main>
   )
 }
