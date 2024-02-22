@@ -5,7 +5,7 @@ const HowToReport = () => {
     return (
         <section className='bg-[#2D2D2D] py-[3vh] h-4/6'id='reporta'>
             <h2 className='font-nippo text-5xl bg-[#008BB4] py-4 px-5 sm:pl-14 inline-block font-extrabold w-[90%] max-[375px]:text-3xl lg:w-auto mb-12'>ENTONCES, <br />
-                ¿QUÉ Y CÓMO PUEDO REPORTAR?
+                ¿QUÉ Y CÓMO PUEDE REPORTAR?
             </h2>
 
             <div className="flex flex-col justify-center items-center">

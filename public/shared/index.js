@@ -1,7 +1,6 @@
 import amparo from "./amparo.png" 
-import der from "./der.png" 
+import der from "./logoDerPastel.png" 
 import der2 from "./der2.png" 
-import dern from "./dern.png" 
 import instagram from "./instagram.png" 
 import instagramn from "./instagramn.png" 
 import notAvailable from "./not-available.png" 
@@ -15,7 +14,6 @@ export const sharedImages = {
     amparo,
     der,
     der2,
-    dern,
     instagram,
     instagramn,
     notAvailable,

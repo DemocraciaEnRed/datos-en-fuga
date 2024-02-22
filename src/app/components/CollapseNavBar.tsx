@@ -12,7 +12,7 @@ const CollapseNavBar = () => {
     const navElemsSize = "w-8 h-8"
 
     if (!showMenu) burgerMenuClass = 'hidden opacity-0'
-    else burgerMenuClass = 'flex flex-col items-center content-center z-20 fixed top-0 left-0 bg-der-black w-full h-[100vh] opacity-100'
+    else burgerMenuClass = 'flex flex-col items-center content-center z-20 fixed top-0 left-0 bg-der-black w-full h-full opacity-100'
 
     return (
         <>
