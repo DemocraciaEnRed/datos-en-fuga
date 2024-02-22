@@ -9,7 +9,7 @@ const Reportes = () => {
         <main>
             <header className="p-[5vw] flex flex-col flex-wrap justify-center justify-items-center items-center bg-[#f1f1f1] h-4/5 text-center">
                 <Image
-                    className="relative"
+                    className="relative w-full max-w-[440px]"
                     src={otherLogos.qant}
                     alt="QANT logo"
                     width={550}
