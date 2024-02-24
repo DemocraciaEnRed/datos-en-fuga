@@ -8,14 +8,14 @@ import Image from 'next/image'
 const page = () => {
     return (
         <main>
-            <header className="p-[6vw] md:p-[3vw] bg-der-black">
-                <h1 className="font-nippo text-5xl font-bold uppercase">Lo que siempre quisiste saber del tema y no te animaste a preguntar</h1>
+            <header className="py-[6vw] md:py-[3vw] px-8 sm:px-[65px] md:px-[130px] bg-der-black">
+                <h1 className="font-nippo text-3xl sm:text-4xl font-bold uppercase">Lo que siempre quisiste saber del tema y no te animaste a preguntar</h1>
             </header>
-            <section className="p-[6vw] md:p-[3vw] bg-gray-100 text-der-black">
+            <section className="py-[6vw] md:py-[3vw] px-8 sm:px-[65px] md:px-[130px] bg-gray-100 text-der-black">
                 <SubtopicsMap subtopics={subtopics} />
             </section>
-            <section className="p-[6vw] md:p-[3vw] bg-gray-100 text-der-black text-lg">
-                <h2 className="font-nippo text-3xl md:text-4xl font-bold uppercase">recursos útiles</h2>
+            <section className="py-[6vw] md:py-[3vw] px-8 sm:px-[65px] md:px-[130px] bg-gray-100 text-der-black text-lg">
+                <h2 className="font-nippo text-2xl sm:text-3xl font-bold uppercase">recursos útiles</h2>
                 <div className='flex flex-col justify-center items-center bg-white text-black shadow-md rounded-lg my-[3vw] p-6 gap-5'>
                     <p className='text-xl font-bold'>AMPARO</p>
                     <Image

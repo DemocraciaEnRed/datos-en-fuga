@@ -1,7 +1,7 @@
 
 type Direction = 'left' | 'right' | 'up' | 'down';
 type Size = 8 | 11 | 14 //default 6
-type Color = 'red'
+type Color = 'red' | 'black'
 
 const ChevronSVG = (
     { direction, color, size }:
@@ -14,7 +14,7 @@ const ChevronSVG = (
         down: 'M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z'
     }
     const sizes = { 8: 'w-8 h-8', 11: 'w-11 h-11', 14: 'w-14 h-14' }
-    const colors = { 'red': 'text-[#CC4356] stroke-[#CC4356]' }
+    const colors = { 'red': 'text-[#CC4356] stroke-[#CC4356]', 'black': 'text-black stroke-black' }
 
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={`w-${size ? sizes[size] : 'w-6 h-6'}

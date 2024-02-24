@@ -35,8 +35,9 @@ const Footer = () => {
           <Image
             alt="Twitter"
             src={darkTheme ? sharedImages.twitter : sharedImages.twittern}
-            width={23}
-            height={16}
+            className="w-[23px]"
+            width={41}
+            height={34}
             priority
           />
         </Link>
@@ -45,8 +46,9 @@ const Footer = () => {
           <Image
             alt="Instagram"
             src={darkTheme ? sharedImages.instagram : sharedImages.instagramn}
-            width={23}
-            height={16}
+            className="w-[23px]"
+            width={40}
+            height={39}
             priority
           />
         </Link>
@@ -55,8 +57,9 @@ const Footer = () => {
           <Image
             alt="Youtube"
             src={darkTheme ? sharedImages.youtube : sharedImages.youtuben}
-            width={23}
-            height={16}
+            className="w-[23px]"
+            width={48}
+            height={34}
             priority
           />
         </Link>
