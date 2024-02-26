@@ -8,23 +8,23 @@ import Image from 'next/image'
 const page = () => {
     return (
         <main>
-            <header className="p-[6vw] md:p-[3vw] bg-der-black">
-                <h1 className="font-nippo text-5xl font-bold uppercase">Lo que siempre quisiste saber del tema y no te animaste a preguntar</h1>
+            <header className="py-[6vw] md:py-[3vw] px-8 sm:px-[65px] md:px-[130px] bg-der-black">
+                <h1 className="font-nippo text-3xl sm:text-4xl font-bold uppercase">Lo que siempre quisiste saber del tema y no te animaste a preguntar</h1>
             </header>
-            <section className="p-[6vw] md:p-[3vw] bg-gray-100 text-der-black">
+            <section className="py-[6vw] md:py-[3vw] px-8 sm:px-[65px] md:px-[130px] bg-gray-100 text-der-black">
                 <SubtopicsMap subtopics={subtopics} />
             </section>
-            <section className="p-[6vw] md:p-[3vw] bg-gray-100 text-der-black text-lg">
-                <h2 className="font-nippo text-5xl font-bold uppercase">recursos útiles</h2>
+            <section className="py-[6vw] md:py-[3vw] px-8 sm:px-[65px] md:px-[130px] bg-gray-100 text-der-black text-lg">
+                <h2 className="font-nippo text-2xl sm:text-3xl font-bold uppercase">recursos útiles</h2>
                 <div className='flex flex-col justify-center items-center bg-white text-black shadow-md rounded-lg my-[3vw] p-6 gap-5'>
-                    <p className='text-2xl font-bold'>AMPARO</p>
+                    <p className='text-xl font-bold'>AMPARO</p>
                     <Image
                         alt="icon"
                         src={amparoIcon}
                         height={96}
                         width={96}
                     />
-                    <p className='text-2xl font-nippo'>
+                    <p className='text-xl font-nippo'>
                         Presentamos un amparo colectivo solicitando el pronunciamiento de inconstitucionalidad de la DA 431/2020 y de determinados artículos de Ley de Datos Personales (art. 5, inc. 2 ap. b - ley 25.326) y solicitando se dicte una medida cautelar que ordena la suspensión de lo que disponen. Estas normas habilitan la transferencia de los datos personales de los ciudadanos entre todas las dependencias de la Administración pública, sin contar con el consentimiento expreso de sus titulares para su tratamiento.
                     </p>
                     <div className='flex justify-center items-center gap-5 flex-wrap'>

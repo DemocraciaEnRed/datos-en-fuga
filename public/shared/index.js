@@ -1,9 +1,9 @@
 import amparo from "./amparo.png" 
-import der from "./der.png" 
+import der from "./logoDerPastel.png" 
 import der2 from "./der2.png" 
-import dern from "./dern.png" 
 import instagram from "./instagram.png" 
-import instagramn from "./instagramn.png" 
+import instagramn from "./instagramn.png"
+import navIcon from "./nav-icon.png"
 import notAvailable from "./not-available.png" 
 import odia from "./odia.svg" 
 import twitter from "./twitter.png" 
@@ -15,9 +15,9 @@ export const sharedImages = {
     amparo,
     der,
     der2,
-    dern,
     instagram,
     instagramn,
+    navIcon,
     notAvailable,
     odia,
     twitter,

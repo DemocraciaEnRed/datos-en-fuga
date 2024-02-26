@@ -15,22 +15,19 @@ const Footer = () => {
   return (
     <footer className={`${darkTheme ? 'bg-[#212121] text-white' : 'bg-[#F1F1F1] text-black'} flex flex-row justify-around flex-wrap gap-y-5 py-3 max-[780px]:flex-col max-[780px]:items-center`}>
       <Link href="https://democraciaenred.org" target="_blank">
-        <div className="w-full max-w-[300px] h-[54px] flex">
-          {
-            darkTheme ?
-              <Image
-                alt="DER Logo"
-                src={sharedImages.der}
-                className="m-auto"
-                priority
-              /> :
-              <Image
-                alt="DER Logo"
-                src={sharedImages.dern}
-                className="m-auto"
-                priority
-              />
-          }
+        <div className="max-w-[300px] h-[54px] flex items-center gap-2">
+          <Image
+            alt="DER Logo"
+            src={sharedImages.der}
+            className="block h-2/3 w-auto"
+            priority
+          />
+          <div className="font-raleway text-sm">
+            <span>Desarrolado por</span>
+            <span className="block">
+              <strong className="font-semibold">Democracia en Red</strong>
+            </span>
+          </div>
         </div>
       </Link>
       <div className="flex flex-row gap-5 justify-center items-center content-center">
@@ -38,8 +35,9 @@ const Footer = () => {
           <Image
             alt="Twitter"
             src={darkTheme ? sharedImages.twitter : sharedImages.twittern}
-            width={23}
-            height={16}
+            className="w-[23px]"
+            width={41}
+            height={34}
             priority
           />
         </Link>
@@ -48,8 +46,9 @@ const Footer = () => {
           <Image
             alt="Instagram"
             src={darkTheme ? sharedImages.instagram : sharedImages.instagramn}
-            width={23}
-            height={16}
+            className="w-[23px]"
+            width={40}
+            height={39}
             priority
           />
         </Link>
@@ -58,8 +57,9 @@ const Footer = () => {
           <Image
             alt="Youtube"
             src={darkTheme ? sharedImages.youtube : sharedImages.youtuben}
-            width={23}
-            height={16}
+            className="w-[23px]"
+            width={48}
+            height={34}
             priority
           />
         </Link>

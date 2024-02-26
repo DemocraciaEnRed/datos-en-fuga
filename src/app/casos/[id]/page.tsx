@@ -4,6 +4,7 @@ import HowToReport from '../components/HowToReport'
 import CasesDescription from '../components/CasesDescriptions'
 import { notFound } from "next/navigation"
 import { Metadata, ResolvingMetadata } from "next"
+import CasesHeader from "../components/CasesHeader"
 
 export async function generateStaticParams() {
   return cases.map((caso) => {
@@ -33,23 +34,10 @@ const ID = ({ params }: { params: { id: string } }) => {
 
   return (
     <main>
-      <header className='bg-[#2D2D2D] py-[8vh] px-10 h-4/6'>
-        <h1 className='font-nippo text-5xl w-[800px] max-[810px]:w-[500px] max-[500px]:w-[250px] max-[500px]:text-3xl max-[375px]:text-2xl'>
-          ¿SABÍAS QUE EN ARGENTINA <br /> <span className="font-bold">HAY UNA MANERA SEGURA DE REPORTAR VULNERABILIDADES INFORMÁTICAS?</span>
-        </h1>
-        <div className="flex flex-row gap-4 text-lg my-3">
-          <a href="#reporta" type="button" className="flex items-center justify-center border-2 border-[#CC4356] rounded-xl p-2 my-2 bg-[#CC4356] text-white w-[300px] text-center font-extrabold">
-            <p>¿QUÉ Y CÓMO REPORTAR?</p>
-          </a>
-          <a href="#casos" type="button" className="flex items-center justify-center border-2 border-[#CC4356] rounded-xl p-2 my-2 bg-[#2D2D2D] text-[#CC4356] w-[300px] text-center font-extrabold">
-            <p>CASOS</p>
-          </a>
-        </div>
-      </header>
-
+      <CasesHeader/>
       <section className='bg-[#F1F1F1] py-[3vh] h-4/6'>
-        <h2 className='font-nippo text-5xl bg-[#CC4356] py-4 pl-10 sm:pl-14 pr-5 inline-block font-extrabold text-white'>LLEGÓ TARDE PARA ELLOS</h2>
-        <p className='font-nippo text-der-black text-xl px-10 sm:pl-12 my-4 font-medium'>
+        <h2 className='font-nippo text-2xl sm:text-4xl bg-[#CC4356] py-4 pl-8 sm:pl-[65px] md:pl-[130px] pr-5 inline-block font-extrabold text-white'>LLEGÓ TARDE PARA ELLOS</h2>
+        <p className='font-nippo text-der-black text-xl pl-8 sm:pl-[65px] md:pl-[130px] my-4 font-medium'>
           TE CONTAMOS QUIÉNES SON Y CUÁL ES SU HISTORIA
         </p>
         <CaseSelector cases={cases} id={id} />

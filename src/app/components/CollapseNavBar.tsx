@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import NavLinks from "./NavLinks"
-import der from "~/shared/logoDerPastel.png"
+import { sharedImages } from "~/shared"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -12,13 +12,13 @@ const CollapseNavBar = () => {
     const navElemsSize = "w-8 h-8"
 
     if (!showMenu) burgerMenuClass = 'hidden opacity-0'
-    else burgerMenuClass = 'flex flex-col items-center content-center z-20 fixed top-0 left-0 bg-der-black w-full h-[100vh] opacity-100'
+    else burgerMenuClass = 'flex flex-col items-center content-center z-20 fixed top-0 left-0 bg-der-black w-full h-full opacity-100'
 
     return (
         <>
             <nav className="flex justify-between sm:hidden bg-black p-4">
                 <Link href={"/"} className={navElemsSize}>
-                    <Image src={der} alt="Inicio" />
+                    <Image src={sharedImages.navIcon} alt="Inicio" />
                 </Link>
                 <button onClick={() => setShowMenu(prev => !prev)}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={navElemsSize}>

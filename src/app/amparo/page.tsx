@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const Amparo = () => {
   return (
     <main>
-      <header className='bg-[#2D2D2D] py-[8vh] px-[3vw] md:px-[6vw]'>
+      <header className='bg-[#2D2D2D] py-[8vh] px-8 sm:px-[65px] md:px-[130px]'>
         <h1 className='font-nippo text-[29px] max-[810px]:w-[500px] max-[500px]:w-[250px] sm:text-[40px]'>
           <span className="font-extrabold">#CON</span>MIS<span className='font-extrabold'>DATOS</span>NO
         </h1>
@@ -21,7 +21,7 @@ const Amparo = () => {
           PRESENTAMOS UN AMPARO CONTRA EL <br /> ESTADO PARA PROTEGER NUESTROS DATOS <br /> PERSONALES EN UN AÑO DE ELECCIONES.
         </p>
       </header>
-      <section className='py-[4vh] px-5 h-4/6 bg-[#F1F1F1] text-black'>
+      <section className='py-[4vh] px-8 sm:px-[65px] md:px-[130px] h-4/6 bg-[#F1F1F1] text-black'>
         <h2 className='md:w-[65%] mx-auto text-center text-2xl font-nippo font-bold sm:text-4xl'>
           PRESENTAMOS UN AMPARO PARA PROTEGER NUESTROS DATOS PERSONALES Y NUESTRA DEMOCRACIA
         </h2>
@@ -114,7 +114,7 @@ const Amparo = () => {
         </div>
       </section>
       <section className='py-[4vh] bg-der-black'>
-        <h2 className='font-nippo text-4xl bg-[#006482] py-4 pl-14 pr-5 inline-block font-extrabold max-[466px]:text-2xl'>¿QUÉ PRESENTAMOS?
+        <h2 className='font-nippo text-4xl bg-[#006482] py-4 pl-8 sm:pl-[65px] md:pl-[130px] pr-5 inline-block font-extrabold max-[466px]:text-2xl'>¿QUÉ PRESENTAMOS?
         </h2>
         <div className='flex flex-col justify-center items-center w-[90vw] md:w-[75vw] max-w-[950px] bg-gray-100 text-black rounded-md mx-auto my-[3vw] p-6 gap-5'>
           <p className='text-2xl font-bold'>AMPARO</p>
@@ -136,15 +136,15 @@ const Amparo = () => {
             </a>
           </div>
         </div>
-        <div className='text-lg font-nippo w-[90vw] mx-auto'>
+        <div className='text-lg font-nippo mx-8 sm:mx-[65px] md:mx-[130px]'>
           <h3 className='font-bold underline uppercase mb-3'>estado:</h3>
           <p className='text-white text-lg mb-3'>El amparo colectivo se presento el 18 de abril de 2023 y radica en el juzgado Contencioso Administrativo Federal N 8, a cargo de la Jueza Dra. María Cecilia GILARDI MADARIAGA de NEGRE. Luego de 5 meses, el 07/09/2023, la Sra. Jueza se pronuncio sobre la medida cautelar solicitada por nosotros y rechazo la misma. Este rechazo fue apelado por nosotros y  desde el 11 de septiembre aguardamos que la Sala V del mismo fuero revise la decisión del Juzgado de origen y nos conceda la medida cautelar.</p>
           <p className='font-extralight'>Ultima actualización: 21/11/2023</p>
         </div>
       </section>
-      <section className='px-[5vw] mx-auto bg-der-black border-t-2 border-t-white'>
-        {/* <SiteMapFooter/> */}
-      </section>
+      {/* <section className='px-[5vw] mx-auto bg-der-black border-t-2 border-t-white'>
+        <SiteMapFooter/>
+      </section> */}
     </main>
   )
 }
