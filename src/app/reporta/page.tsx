@@ -9,7 +9,7 @@ const Reportes = () => {
         <main>
             <header className="p-[5vw] flex flex-col flex-wrap justify-center justify-items-center items-center bg-[#f1f1f1] h-4/5 text-center">
                 <Image
-                    className="relative"
+                    className="relative w-full max-w-[440px]"
                     src={otherLogos.qant}
                     alt="QANT logo"
                     width={550}
@@ -22,7 +22,7 @@ const Reportes = () => {
                 </a>
             </header>
             <section className="text-center bg-[#212121]" id="reporta">
-                <div className="w-[85vw] mx-auto py-6 sm:py-[3vw]">
+                <div className="w-[85vw] mx-auto py-10 sm:py-[4vw]">
                     <p className="text-lg text-center max-w-[1000px] mx-auto">
                         El sitio desarrollado por <span className="font-extrabold">Fundación Via Libre</span> con un sistema basado en <span className="font-extrabold">GlobalLeaks</span>, permite informar de forma anónima y protegida sobre fallas en <span className="font-extrabold">sistemas informáticos</span> que afecten los derechos de las personas. Podés reportarlas acá para que sean reparadas.
                     </p>
@@ -82,7 +82,7 @@ const Reportes = () => {
                             )
                         })}
                     </div>
-                    <div className="w-[75vw] sm:w-[85vw] mx-auto text-start text-xl my-6">
+                    <div className="w-[75vw] sm:w-[85vw] mx-auto text-start text-xl mt-10">
                         <ul className="list-disc">
                             <li>
                                 Aunque no conservemos datos identificatorios, <span className="font-extrabold">se recomienda encarecidamente usar el</span> <span className="font-extrabold underline">navegador TOR</span> <span className="font-extrabold">y acceder al sitio a través del URL dot-onion</span> para mayor anonimato.
@@ -110,7 +110,7 @@ const Reportes = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="bg-[#D9D9D9] text-der-black py-6 sm:py-[3vw]">
+                <div className="bg-[#D9D9D9] text-der-black py-10 sm:py-[4vw]">
                     <div className="w-[85vw] mx-auto">
                         <h2 className="mb-5 text-3xl font-extrabold uppercase">Entonces, ¿Qué y cómo reportar?</h2>
                         <p className="text-left text-xl">
@@ -134,7 +134,7 @@ const Reportes = () => {
                             HACÉ TU REPORTE ANÓNIMO
                         </a>
 
-                        <hr className="border-black border-0.5 my-6" />
+                        <hr className="border-black border-0.5 my-10 md:my-[4vw]" />
 
                         <h2 className="mb-5 text-3xl font-extrabold">¿QUÉ SE HACE CON TUS REPORTES?</h2>
                         <p className="text-xl text-left w-[85vw] mx-auto">
@@ -142,7 +142,7 @@ const Reportes = () => {
                         </p>
                     </div>
                 </div>
-                <div className="bg-[#212121] py-6 sm:py-[3vw]">
+                <div className="bg-[#212121] py-10 sm:py-[4vw]">
                     <h2 className="mb-5 text-3xl font-extrabold">SOBRE EL PROYECTO</h2>
                     <p className="text-xl text-left w-[85vw] mx-auto">
                         Desde Fundación Vía Libre, ODIA y Democracia en Red realizamos todos los esfuerzos técnicos para no conservar datos personales a través de los reportes recibidos. Tal como se puede consultar en la sección “¿Cómo te protegemos?”, la información que envíes es absolutamente anónima para nosotros: la plataforma está diseñada de forma tal que únicamente conserva el contenido presentado en la denuncia y genera en consecuencia un código único para identificarla, sin quedar asociada a quien la realiza. No accedemos a ni conservamos registros que permitan individualizar o identificar a quienes completan el formulario: no empleamos ningún mecanismo para trazar tu conexión ni guardamos registro de las direcciones de red desde las que te hayas conectado o cualquier otro metadato que pueda identificarte. De todas formas, recomendamos como precaución general no incluir información personal y, en lo posible, acceder a través del navegador TOR.

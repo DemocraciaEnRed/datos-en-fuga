@@ -24,7 +24,7 @@ const EventsMasonry = ({ stories }: { stories: ISbStoryData[] }) => {
     }
     return (
         <>
-            <div className="hidden lg:grid lg:grid-cols-3 gap-4 max-w-[1152px] mx-auto">
+            <div className="hidden lg:grid lg:grid-cols-3 gap-4 max-w-[1152px] mx-auto justify-items-center">
                 {eventsArray(rowsOnThreeCols, 3).map((col, i) => {
                     return (
                         <div key={'col' + i} className="grid gap-4 h-min max-w-sm">

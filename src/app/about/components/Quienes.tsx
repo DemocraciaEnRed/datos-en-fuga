@@ -20,7 +20,7 @@ const Quienes = () => {
         }
     ]
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-3">
+        <div className="flex justify-evenly flex-wrap">
             {npo.map((org, i) => {
                 return (
                     <div key={'aboutorgs' + i} className="flex flex-col justify-between text-center items-center gap-5 p-5">
@@ -32,9 +32,6 @@ const Quienes = () => {
                     </div>
                 )
             })}
-            <div>
-
-            </div>
         </div>
     )
 }

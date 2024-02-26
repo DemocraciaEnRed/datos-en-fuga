@@ -11,7 +11,7 @@ const CasesDescription = ({ caso }: { caso: any }) => {
   } else return
 
   return (
-    <div className='my-6 text-black mx-14'>
+    <div className='my-6 text-black mx-8 sm:mx-[65px] md:mx-[130px]'>
       <h3 className='font-extrabold text-2xl'>{caso.name}</h3>
       <div className='flex flex-row justify-between'>
         <p className='text-xl'>{caso.occupation}</p>
