@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export"
+    "export": "next export",
+    "serveOut": "npx serve@latest out" 
   },
   "dependencies": {
     "@storyblok/react": "^2.4.7",

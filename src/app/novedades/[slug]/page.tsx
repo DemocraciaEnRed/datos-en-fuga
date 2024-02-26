@@ -94,7 +94,7 @@ const fetchData = async () => {
     const storyblokApi = getStoryblokApi()
 
     let sbParams: ISbStoriesParams = {
-        version: 'draft',
+        version: 'published',
         starts_with: "events/",
         excluding_fields: 'title,brief,body,header,_editable,_uid,component'
     };
