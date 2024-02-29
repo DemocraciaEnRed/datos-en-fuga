@@ -27,7 +27,7 @@ const CasesDescription = ({ caso }: { caso: any }) => {
         <div className='flex flex-row flex-wrap gap-2 my-6'>
           {caso?.buttons?.map((b: Button) => {
             return (
-              <a href="#reporta" type="button" className="border-2 border-black rounded-xl p-2 bg-[#212121] text-white w-[350px] text-center flex flex-row justify-between items-center" key={b.id}>
+              <a href={b.url} type="button" className="border-2 border-black rounded-xl p-2 bg-[#212121] text-white w-[350px] text-center flex flex-row justify-between items-center" key={b.id}>
                 <Image
                   alt="icon"
                   src={b.icon}
@@ -51,4 +51,5 @@ export interface Button {
   id: number;
   icon: StaticImageData;
   text: string;
+  url: string;
 }

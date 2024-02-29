@@ -64,17 +64,20 @@ const cases = [
       {
         id: 1,
         icon: casesImages.podcast,
-        text: 'ESCUCHÁ EL PODCAST'
+        text: 'ESCUCHÁ EL PODCAST',
+        url: 'https://open.spotify.com/episode/1PhH3TtC4YqydxmDDW49YN?si=I0RuIERwQsy5-uDyECD-tA&nd=1'
       },
       {
         id: 2,
         icon: casesImages.podcast,
-        text: 'BLOG DE JAVIER'
+        text: 'BLOG DE JAVIER',
+        url: 'https://blog.smaldone.com.ar/2021/12/08/sobreseido-y-aca-no-ha-pasado-nada/'
       },
       {
         id: 3,
         icon: casesImages.podcast,
-        text: 'NOTA PERIODÍSTICA'
+        text: 'NOTA PERIODÍSTICA',
+        url: 'https://www.lanacion.com.ar/tecnologia/varios-detenidos-robo-datos-del-sistema-informatico-nid2295293/'
       }
     ]
   }
