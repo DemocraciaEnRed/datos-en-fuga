@@ -29,7 +29,7 @@ const EventosBySlug = async ({ params }: { params: { slug: string } }) => {
     }
 
     return (
-        <main className="flex-grow bg-[#F1F1F1] text-[#212121] text-base font-lexend-deca">
+        <main className="flex-grow bg-[#F1F1F1] text-[#212121] text-base">
             <header className="h-[25vh]" style={headerStyles}>
                 <p className="bg-gray-700 bg-opacity-80 px-7 py-3 text-white"><Link href={'/novedades'}>Novedades</Link> &gt; <Link href={`/novedades/${slug}`}>{name}</Link></p>
             </header>

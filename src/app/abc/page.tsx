@@ -45,7 +45,7 @@ const page = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     {resources.map((rsrc, i) =>
                         <Link key={'rList' + i} href={rsrc.link} className="bg-white shadow-md rounded-lg overflow-hidden">
-                            <p className="border-l-8 border-red-600 py-2 pl-4 text-left uppercase" >{rsrc.title}</p>
+                            <p className="h-full border-l-8 border-red-600 py-2 pl-4 text-left uppercase" >{rsrc.title}</p>
                         </Link>
                     )}
                 </div>
