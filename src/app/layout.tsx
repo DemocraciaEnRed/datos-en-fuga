@@ -84,7 +84,7 @@ export default function RootLayout({
         <NavBar />
         {children}
         <ScrollTopButton />
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   )

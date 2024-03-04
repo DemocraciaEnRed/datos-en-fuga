@@ -17,7 +17,7 @@ const Eventos = async () => {
                     NOVEDADES
                 </h1>
                 <p className='font-nippo text-3xl sm:text-4xl font-bold'>
-                    QUE ACCIONES HEMOS LLEVADO A CABO EN EL PROYECTO
+                    QUÉ ACCIONES HEMOS LLEVADO A CABO EN EL PROYECTO
                 </p>
             </header>
             <section className="py-[4vw] px-8 sm:px-[65px] md:px-[130px] flex-grow">

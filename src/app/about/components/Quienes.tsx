@@ -6,17 +6,17 @@ const Quienes = () => {
         {
             name: 'Democracia en Red',
             img: logosNPO.DER,
-            url: ''
+            url: 'https://democraciaenred.org/'
         },
         {
             name: 'O.D.I.A',
             img: logosNPO.ODIA,
-            url: ''
+            url: 'https://odia.legal/'
         },
         {
             name: 'Vía Libre',
             img: logosNPO.VL,
-            url: ''
+            url: 'https://www.vialibre.org.ar/'
         }
     ]
     return (

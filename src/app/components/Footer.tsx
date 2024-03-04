@@ -13,7 +13,7 @@ const Footer = () => {
   const darkTheme = isDarkTheme(pathname)
 
   return (
-    <footer className={`${darkTheme ? 'bg-[#212121] text-white' : 'bg-[#F1F1F1] text-black'} flex flex-row justify-around flex-wrap gap-y-5 py-3 max-[780px]:flex-col max-[780px]:items-center`}>
+    <footer className={`${darkTheme ? 'bg-[#212121] text-white' : 'bg-[#F1F1F1] text-black'} flex flex-row justify-around flex-wrap gap-y-5 py-3 max-[780px]:flex-col max-[780px]:items-center h-[54px]`}>
       <Link href="https://democraciaenred.org" target="_blank">
         <div className="max-w-[300px] h-[54px] flex items-center gap-2">
           <Image
@@ -23,7 +23,7 @@ const Footer = () => {
             priority
           />
           <div className="font-raleway text-sm">
-            <span>Desarrolado por</span>
+            <span>Desarrollado por</span>
             <span className="block">
               <strong className="font-semibold">Democracia en Red</strong>
             </span>

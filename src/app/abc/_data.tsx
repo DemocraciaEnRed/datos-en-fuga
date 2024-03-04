@@ -29,7 +29,56 @@ export const subtopics = [
     },
 ]
 
-export const items = [{ title: 'item 1' }, { title: 'item 2' }, { title: 'item 3' }, { title: 'item 4' }, { title: 'item 5' }]
+export const resources = [
+    {
+        "title": "CÓDIGO PENAL (ART. 153 BIS, 157 BIS Y 183)",
+        "link": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/140000-144999/141790/norma.htm"
+    },
+    {
+        "title": "EKOPARTY",
+        "link": "https://ekoparty.org/"
+    },
+    {
+        "title": "CSIRT",
+        "link": "https://www.welivesecurity.com/la-es/2015/05/18/que-es-como-trabaja-csirt-respuesta-incidentes/"
+    },
+    {
+        "title": "POLÍTICA DE CIBERSEGURIDAD CHILENA",
+        "link": "https://digital.gob.cl/biblioteca/estrategias/politica-nacional-de-ciberseguridad-2017-2022/"
+    },
+    {
+        "title": "ISO 27.001",
+        "link": "https://www.normas-iso.com/iso-27001/"
+    },
+    {
+        "title": "ISO 27.002",
+        "link": "https://www.normas-iso.com/?s=27002"
+    },
+    {
+        "title": "ESTÁNDARES NIST",
+        "link": "https://www.nist.gov/standards"
+    },
+    {
+        "title": "CIS CONTROL",
+        "link": "https://www.cisecurity.org/controls"
+    },
+    {
+        "title": "RESOLUCIÓN 720/2020",
+        "link": "https://www.boletinoficial.gob.ar/detalleAviso/primera/274655/20221031"
+    },
+    {
+        "title": "RESOLUCIÓN 144/2020",
+        "link": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%83%C2%B3n-144-2020-338229"
+    },
+    {
+        "title": "CÓDIGO PROCESAL PENAL DE CORRIENTES",
+        "link": "http://www.saij.gob.ar/2945-local-corrientes-codigo-procesal-penal-para-provincia-corrientes-lpw0002945-1971-02-19/123456789-0abc-defg-549-2000wvorpyel"
+    },
+    {
+        "title": "ART. 18, 28, 43 Y 212 DEL CÓDIGO PROCESAL PENAL",
+        "link": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/235000-239999/239340/norma.htm"
+    }
+]
 export const iframes = [
     {
         key: "FIMkE6u9pqs",
