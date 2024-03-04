@@ -30,7 +30,7 @@ const CaseSelector = ({ id, cases }: { id: string, cases: any[] }) => {
           return (
             <>
               <Link href={`/casos/${c.id}`} key={c.id} scroll={false} className={`grayscale hover:grayscale-0 ${id === c.id ? 'grayscale-0' : 'hidden xl:block'} m-2 shadow-lg rounded-lg overflow-hidden`}>
-                <div className="relative w-[385px] max-[390px]:w-[88vw]">
+                <div className="relative w-[385px] max-[390px]:w-[88vw] max-[1460px]:w-[320px]">
                   <p className='flex justify-center absolute w-full font-nippo z-10 bottom-4 text-3xl font-extrabold text-center text-white'>{c.name}</p>
                   <Image
                     alt={c.name}

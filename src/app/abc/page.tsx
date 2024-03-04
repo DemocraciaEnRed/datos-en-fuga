@@ -1,9 +1,10 @@
-import { subtopics, iframes, items } from './_data'
+import { subtopics, iframes, resources } from './_data'
 import VideosSLider from "../components/VideosSLider"
 // import Resource from "./components/Resource"
 import amparoIcon from '../../../public/shared/amparo.png'
 import SubtopicsMap from "./components/SubtopicsMap"
 import Image from 'next/image'
+import Link from 'next/link'
 
 const page = () => {
     return (
@@ -28,10 +29,10 @@ const page = () => {
                         Presentamos un amparo colectivo solicitando el pronunciamiento de inconstitucionalidad de la DA 431/2020 y de determinados artículos de Ley de Datos Personales (art. 5, inc. 2 ap. b - ley 25.326) y solicitando se dicte una medida cautelar que ordena la suspensión de lo que disponen. Estas normas habilitan la transferencia de los datos personales de los ciudadanos entre todas las dependencias de la Administración pública, sin contar con el consentimiento expreso de sus titulares para su tratamiento.
                     </p>
                     <div className='flex justify-center items-center gap-5 flex-wrap'>
-                        <a href="#" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
+                        <a href="https://drive.google.com/file/d/1E98MIeIvUPRuz2jz_EODQy4TKd3Xahnw/view" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
                             descargar amparo
                         </a>
-                        <a href="#" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
+                        <a href="https://drive.google.com/file/d/1kw6bYhov5m9-YloW4B5_d8OiasdJzIwO/view" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
                             descargar gacetilla
                         </a>
                     </div>
@@ -42,10 +43,10 @@ const page = () => {
                     <p className='font-extralight'>Ultima actualización: 21/11/2023</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    {items.map((item, i) =>
-                        <button key={'iList' + i} className="bg-white shadow-md rounded-lg overflow-hidden">
-                            <p className="border-l-8 border-red-600 py-2 pl-4 text-left uppercase" >{item.title}</p>
-                        </button>
+                    {resources.map((rsrc, i) =>
+                        <Link key={'rList' + i} href={rsrc.link} className="bg-white shadow-md rounded-lg overflow-hidden">
+                            <p className="h-full border-l-8 border-red-600 py-2 pl-4 text-left uppercase" >{rsrc.title}</p>
+                        </Link>
                     )}
                 </div>
             </section>
