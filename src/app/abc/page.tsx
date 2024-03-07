@@ -1,5 +1,5 @@
 import { subtopics, iframes, resources } from './_data'
-import VideosSLider from "../components/VideosSLider"
+// import VideosSLider from "../components/VideosSLider"
 // import Resource from "./components/Resource"
 import amparoIcon from '../../../public/shared/amparo.png'
 import SubtopicsMap from "./components/SubtopicsMap"
