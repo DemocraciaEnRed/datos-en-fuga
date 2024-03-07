@@ -5,6 +5,19 @@ import amparoIcon from '../../../public/shared/amparo.png'
 import SubtopicsMap from "./components/SubtopicsMap"
 import Image from 'next/image'
 import Link from 'next/link'
+import { Metadata } from 'next'
+
+const metaTitle = 'ABC | Datos en Fuga'
+// const metaDescription = 'Conoce más sobre los casos y consecuencias de los #DatosEnFuga'
+
+export const metadata: Metadata = {
+  title: metaTitle,
+//   description: metaDescription,
+  openGraph: {
+    title: metaTitle,
+    // description: metaDescription
+  }
+}
 
 const page = () => {
     return (
