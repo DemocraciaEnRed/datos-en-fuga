@@ -1,6 +1,19 @@
+import { Metadata } from "next"
 import VideosSLider from "../components/VideosSLider"
 import ActionsList from "./components/ActionsList"
 import Quienes from "./components/Quienes"
+
+const metaTitle = '¿Qué queremos? | Datos en Fuga'
+const metaDescription = 'Queremos que el Estado asegure estándares de ciberseguridad y que atienda a las alarmas que suenan por todos lados. Queremos que el Estado deje de perseguir penalmente a quienes identifican, denuncian y reportan vulnerabilidades informáticas.'
+
+export const metadata: Metadata = {
+  title: metaTitle,
+  description: metaDescription,
+  openGraph: {
+    title: metaTitle,
+    description: metaDescription
+  }
+}
 
 const About = () => {
     const iframes = [
