@@ -2,10 +2,17 @@ import { ISbStoriesParams, getStoryblokApi } from "@storyblok/react/rsc";
 import EventsMasonry from "./components/EventsMasonry";
 import { Metadata } from "next";
 
+const metaTitle = 'Novedades'
+const metaDescription = 'Novedades'
+
 export const metadata: Metadata = {
-    title: 'Novedades',
-    description: 'Novedades',
-    keywords: 'debate, presentaciones, seguridad informática, ciberseguridad, justicia'
+  title: metaTitle,
+  description: metaDescription,
+  keywords: 'debate, presentaciones, seguridad informática, ciberseguridad, justicia',
+  openGraph: {
+    title: metaTitle,
+    description: metaDescription
+  }
 }
 
 const Eventos = async () => {

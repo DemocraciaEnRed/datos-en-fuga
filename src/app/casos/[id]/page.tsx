@@ -18,9 +18,15 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const id = params.id
   const caso = getCaso(id)
+  const metaTitle = `Caso ${caso?.name} | Datos en Fuga`;
+  const metaDescription = caso?.description
   return {
-    title: `Caso ${caso?.name} | Datos en Fuga`,
-    description: caso?.description
+    title: metaTitle,
+    description: metaDescription,
+    openGraph: {
+      title: metaTitle,
+      description: metaDescription
+    }
   }
 }
 
@@ -34,7 +40,7 @@ const ID = ({ params }: { params: { id: string } }) => {
 
   return (
     <main>
-      <CasesHeader/>
+      <CasesHeader />
       <section className='bg-[#F1F1F1] py-[3vh] h-4/6'>
         <h2 className='font-nippo text-2xl sm:text-4xl bg-[#CC4356] py-4 pl-8 sm:pl-[65px] md:pl-[130px] pr-5 inline-block font-extrabold text-white'>LLEGÓ TARDE PARA ELLOS</h2>
         <p className='font-nippo text-der-black text-xl pl-8 sm:pl-[65px] md:pl-[130px] my-4 font-medium'>
