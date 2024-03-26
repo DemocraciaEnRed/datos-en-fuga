@@ -38,7 +38,7 @@ const page = () => {
                         height={96}
                         width={96}
                     />
-                    <p className='text-xl font-nippo'>
+                    <p className='text-center text-xl font-nippo'>
                         Presentamos un amparo colectivo solicitando el pronunciamiento de inconstitucionalidad de la DA 431/2020 y de determinados artículos de Ley de Datos Personales (art. 5, inc. 2 ap. b - ley 25.326) y solicitando se dicte una medida cautelar que ordena la suspensión de lo que disponen. Estas normas habilitan la transferencia de los datos personales de los ciudadanos entre todas las dependencias de la Administración pública, sin contar con el consentimiento expreso de sus titulares para su tratamiento.
                     </p>
                     <div className='flex justify-center items-center gap-5 flex-wrap'>

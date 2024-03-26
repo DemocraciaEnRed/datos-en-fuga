@@ -131,7 +131,7 @@ const Amparo = () => {
             height={96}
             width={96}
           />
-          <p className='text-2xl font-nippo'>
+          <p className='text-center text-2xl font-nippo'>
             Presentamos un amparo colectivo contra el Estado solicitando el pronunciamiento de inconstitucionalidad de la DA 431/2020 y de determinados artículos de Ley de Datos Personales, y solicitando se dicte una medida cautelar que ordena la suspensión de lo que disponen para evitar la transferencia y el mal uso de nuestros datos personales.
           </p>
           <div className='flex justify-center items-center gap-5 flex-wrap'>

@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 
-const Card = ({ backgroundColor, title, description }: { backgroundColor: string, title: string, description: string }) => {
+const Card = ({ backgroundColor, title, description, size }: { backgroundColor: string, title: string, description: string, size:string }) => {
   const [showText, setShowText] = useState(true);
 
   return (
@@ -19,7 +19,7 @@ const Card = ({ backgroundColor, title, description }: { backgroundColor: string
           <p className='uppercase text-2xl xl:text-3xl font-bold'>{title}</p>
         </div>
         <div className={`transition-all duration-500 ease-in-out ${showText ? 'translate-y-[100%] opacity-0' : 'translate-y-0 opacity-100'}`}>
-          <p className='uppercase text-sm my-2 mx-2'>{description}</p>
+          <p className={`uppercase my-2 mx-2 ${size} `}>{description}</p>
         </div>
       </div>
     </div>
@@ -36,16 +36,19 @@ const LandingTopics = () => {
             backgroundColor="#CC4356"
             title="Ley de datos personales"
             description="La Ley  25.326 establece normas para el tratamiento de información personal, garantizando que los ciudadanos tengan derechos de privacidad y control sobre sus datos personales, tanto en manos del sector público como privado. "
+            size="text-sm"
           />
           <Card
             backgroundColor="#008BB4"
             title="Ciberseguridad"
             description="Es el conjunto de medidas y prácticas destinadas a proteger la integridad de la información en entornos digitales. Se busca prevenir y responder a amenazas, garantizando la seguridad de sistemas, redes, datos y la privacidad de los usuarios."
+            size="text-sm"
           />
           <Card
             backgroundColor="#00D79E"
             title="Reportes de vulnerabilidades"
             description="Es el acto de informar sobre fallos de seguridad o debilidades en sistemas informáticos, aplicaciones o redes, a las autoridades competentes, empresas u organizaciones responsables, con el objetivo principal de mejorar la ciberseguridad al  al corregir riesgos antes de su explotación."
+            size="text-xs"
           />
       </div>
     </div>
