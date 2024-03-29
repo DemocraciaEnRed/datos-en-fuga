@@ -83,7 +83,7 @@ export default EventosBySlug
 const fetchArticleBySlug = async (slug: string): Promise<ISbStory> => {
     const storyblokApi = getStoryblokApi()
 
-    let sbParams: ISbStoryParams = { version: 'draft' };
+    let sbParams: ISbStoryParams = { version: 'published' };
     const article = await storyblokApi.get(`cdn/stories/events/${slug}`, sbParams);
 
     if (!article) notFound()
