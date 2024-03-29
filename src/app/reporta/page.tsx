@@ -2,6 +2,7 @@ import Image from "next/image"
 import squaresData from "./_dataReporta.js"
 import squaresData2 from "./_dataProteger.js"
 import { otherLogos } from "../../../public/reporta/index.js"
+import Link from "next/link.js"
 
 const Reportes = () => {
     return (
@@ -16,9 +17,9 @@ const Reportes = () => {
                     priority
                 />
                 <h1 className="text-3xl font-extrabold text-der-black my-5">¿ENCONTRASTE UNA FALLA DE SEGURIDAD Y TEMÉS REPORTARLA?</h1>
-                <a href="#reporta" type="button" target="_blank" rel="noopener noreferrer" className="border-2 border-black rounded-xl p-2 my-2 bg-[#212121] text-white w-full max-w-[270px] text-center">
+                <Link href="#reporta" className="border-2 border-black rounded-xl p-2 my-2 bg-[#212121] text-white w-full max-w-[270px] text-center">
                     ¿CÓMO REPORTAR SEGURO?
-                </a>
+                </Link>
             </header>
             <section className="text-center bg-[#212121]" id="reporta">
                 <div className="w-[85vw] mx-auto py-10 sm:py-[4vw]">

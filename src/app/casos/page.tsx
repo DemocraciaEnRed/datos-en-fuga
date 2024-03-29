@@ -9,9 +9,18 @@ import CasesDescription from './components/CasesDescriptions'
 const metaTitle = 'Casos | Datos en Fuga'
 const metaDescription = 'Conoce más sobre los casos y consecuencias de los #DatosEnFuga'
 
+const allKeywords = cases
+  .map(c => [c.name, c.year, ...c.keywords])
+  .reduce((acc, currentArray) => {
+    return acc.concat(currentArray);
+  }, []);
+
+const keywords = Array.from(new Set([...allKeywords,'Ciberseguridad']))
+
 export const metadata: Metadata = {
   title: metaTitle,
   description: metaDescription,
+  keywords: keywords || 'Ciberseguridad',
   openGraph: {
     title: metaTitle,
     description: metaDescription

@@ -5,7 +5,12 @@ import Link from 'next/link'
 import LandingArticles from './components/LandingArticles'
 import LandingTopics from './components/LandingTopics'
 import { flourishImages } from "~/home/index"
-import derAboutImg from "~/home/DER.png"
+import { Metadata } from 'next'
+// import derAboutImg from "~/home/DER.png"
+
+export const metadata: Metadata = {
+  keywords: "Hacker, ciberseguridad, Observatorio de Derecho Informático Argentina, Fundación vía libre, ley de datos personales, ley penal argentina, Javier Smaldone, Incidentes, ciberseguridad, filtración de datos"
+}
 
 export default function Home() {
 
