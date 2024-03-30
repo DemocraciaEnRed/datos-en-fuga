@@ -42,10 +42,10 @@ const page = () => {
                         Presentamos un amparo colectivo solicitando el pronunciamiento de inconstitucionalidad de la DA 431/2020 y de determinados artículos de Ley de Datos Personales (art. 5, inc. 2 ap. b - ley 25.326) y solicitando se dicte una medida cautelar que ordena la suspensión de lo que disponen. Estas normas habilitan la transferencia de los datos personales de los ciudadanos entre todas las dependencias de la Administración pública, sin contar con el consentimiento expreso de sus titulares para su tratamiento.
                     </p>
                     <div className='flex justify-center items-center gap-5 flex-wrap'>
-                        <a href="https://drive.google.com/file/d/1E98MIeIvUPRuz2jz_EODQy4TKd3Xahnw/view" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
+                        <a href="https://drive.google.com/file/d/1E98MIeIvUPRuz2jz_EODQy4TKd3Xahnw/view" type="button" target='_blank' className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
                             descargar amparo
                         </a>
-                        <a href="https://drive.google.com/file/d/1kw6bYhov5m9-YloW4B5_d8OiasdJzIwO/view" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
+                        <a href="https://drive.google.com/file/d/1kw6bYhov5m9-YloW4B5_d8OiasdJzIwO/view" type="button" target='_blank' className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
                             descargar gacetilla
                         </a>
                     </div>
