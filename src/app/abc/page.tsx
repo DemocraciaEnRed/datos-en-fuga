@@ -30,7 +30,7 @@ const page = () => {
             </section>
             <section className="py-[6vw] md:py-[3vw] px-8 sm:px-[65px] md:px-[130px] bg-gray-100 text-der-black text-lg">
                 <h2 className="font-nippo text-2xl sm:text-3xl font-bold uppercase">recursos útiles</h2>
-                <div className='flex flex-col justify-center items-center bg-white text-black shadow-md rounded-lg my-[3vw] p-6 gap-5'>
+                <div className='flex flex-col justify-center items-center bg-white text-black shadow-xl rounded-lg my-[3vw] p-6 gap-5'>
                     <p className='text-xl font-bold'>AMPARO</p>
                     <Image
                         alt="icon"
