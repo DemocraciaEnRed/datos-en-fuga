@@ -40,8 +40,8 @@ const EventosBySlug = async ({ params }: { params: { slug: string } }) => {
                     <article className="flex-grow w-full md:w-auto">
                         <Content document={content.body} />
                     </article>
-                    <aside className="flex flex-col gap-6 text-right md:-translate-y-10 w-full md:w-auto">
-                        <div>
+                    <aside className="flex flex-col gap-6 text-right md:-translate-y-10 w-full md:w-auto max-sm:flex-row max-sm:flex-wrap max-sm:justify-around max-sm:mt-2">
+                        <div className="max-sm:w-[1/2]">
                             <p className="font-bold">{content.authors?.length > 1 ? 'Autores' : 'Autor'}</p>
                             {content.authors ?
                                 (content.authors.map((author: { name: string }) => {
@@ -51,13 +51,13 @@ const EventosBySlug = async ({ params }: { params: { slug: string } }) => {
                                 <p className="text-sm">Anónimo</p>
                             }
                         </div>
-                        <div>
+                        <div className="max-sm:w-[1/2]">
                             <p className="font-bold">Publicado</p>
                             <p className="text-sm">{first_published_at ? formatDate(first_published_at) : 'Sin publicar'}</p>
                         </div>
-                        <div className="self-end">
-                            <p className="font-bold">Etiquetas</p>
-                            <div className="flex flex-col items-end gap-2 md:w-[10vw]">
+                        <div className="self-end max-sm:w-full">
+                            <p className="font-bold max-sm:text-center max-sm:my-3">Etiquetas</p>
+                            <div className="flex flex-col items-end gap-2 md:w-[10vw] max-sm:flex-row max-sm:py-2 max-sm:justify-center max-sm:flex-wrap">
                                 {tag_list.length > 0 ? tag_list.map((tag) => {
                                     return (
                                         <span className="md:max-w-[10vw] text-white bg-[#008BB4] text-[10px] rounded-3xl font-roboto font-bold text-center py-1 px-3 capitalize truncate hover:whitespace-normal" key={tag}>
