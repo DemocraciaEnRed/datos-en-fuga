@@ -30,7 +30,7 @@ const page = () => {
             </section>
             <section className="py-[6vw] md:py-[3vw] px-8 sm:px-[65px] md:px-[130px] bg-gray-100 text-der-black text-lg">
                 <h2 className="font-nippo text-2xl sm:text-3xl font-bold uppercase">recursos útiles</h2>
-                <div className='flex flex-col justify-center items-center bg-white text-black shadow-md rounded-lg my-[3vw] p-6 gap-5'>
+                <div className='flex flex-col justify-center items-center bg-white text-black shadow-xl rounded-lg my-[3vw] p-6 gap-5'>
                     <p className='text-xl font-bold'>AMPARO</p>
                     <Image
                         alt="icon"
@@ -38,14 +38,14 @@ const page = () => {
                         height={96}
                         width={96}
                     />
-                    <p className='text-xl font-nippo'>
+                    <p className='text-center text-xl font-nippo'>
                         Presentamos un amparo colectivo solicitando el pronunciamiento de inconstitucionalidad de la DA 431/2020 y de determinados artículos de Ley de Datos Personales (art. 5, inc. 2 ap. b - ley 25.326) y solicitando se dicte una medida cautelar que ordena la suspensión de lo que disponen. Estas normas habilitan la transferencia de los datos personales de los ciudadanos entre todas las dependencias de la Administración pública, sin contar con el consentimiento expreso de sus titulares para su tratamiento.
                     </p>
                     <div className='flex justify-center items-center gap-5 flex-wrap'>
-                        <a href="https://drive.google.com/file/d/1E98MIeIvUPRuz2jz_EODQy4TKd3Xahnw/view" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
+                        <a href="https://drive.google.com/file/d/1E98MIeIvUPRuz2jz_EODQy4TKd3Xahnw/view" type="button" target='_blank' className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
                             descargar amparo
                         </a>
-                        <a href="https://drive.google.com/file/d/1kw6bYhov5m9-YloW4B5_d8OiasdJzIwO/view" type="button" className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
+                        <a href="https://drive.google.com/file/d/1kw6bYhov5m9-YloW4B5_d8OiasdJzIwO/view" type="button" target='_blank' className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
                             descargar gacetilla
                         </a>
                     </div>

@@ -23,6 +23,7 @@ export async function generateMetadata(
   return {
     title: metaTitle,
     description: metaDescription,
+    keywords: `${caso?.name}, ${caso?.year}, ciberseguridad, ${caso?.keywords.join(', ')}`,
     openGraph: {
       title: metaTitle,
       description: metaDescription
