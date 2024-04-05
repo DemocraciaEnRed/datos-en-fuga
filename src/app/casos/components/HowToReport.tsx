@@ -4,8 +4,7 @@ import { otherLogos } from '~/reporta/'
 const HowToReport = () => {
     return (
         <section className='bg-[#2D2D2D] py-[3vh] h-4/6' id='reporta'>
-            <h2 className='font-nippo text-2xl sm:text-4xl bg-[#008BB4] py-4 pr-5 pl-8 sm:pl-[65px] md:pl-[130px] inline-block font-extrabold w-[90%] max-[375px]:text-3xl lg:w-auto mb-12'>ENTONCES, <br />
-                ¿QUÉ Y CÓMO PUEDE REPORTAR?
+            <h2 className='font-nippo text-2xl sm:text-4xl bg-[#008BB4] py-4 pr-5 pl-8 sm:pl-[65px] md:pl-[130px] inline-block font-extrabold w-[90%] max-[375px]:text-3xl lg:w-auto mb-12'>¿QUÉ Y CÓMO REPORTAR?
             </h2>
 
             <div className="flex flex-col justify-center items-center">
