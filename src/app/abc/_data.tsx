@@ -31,6 +31,21 @@ export const subtopics = [
 
 export const resources = [
     {
+        "title": "PAPER 1: REPORTANTES DE VULNERABILIDADES EN SISTEMAS DIGITALES ANTE LA LEY PENAL ARGENTINA",
+        "link": "https://drive.google.com/file/d/1D-W5_UvRbZnlbdSA49k_ohScvPFMPXNP/view?usp=drive_link",
+        is2Cols: true
+    },
+    {
+        "title": "PAPER 2: PANORAMA GENERAL SOBRE LA SEGURIDAD DE LA INFORMACIÓN, LAS VULNERABILIDADES Y LOS INCIDENTES EN ARGENTINA",
+        "link": "https://drive.google.com/file/d/1y5ruA9d_HOeIN42rx03bmUkt6NIW3jt0/view?usp=drive_link",
+        is2Cols: true
+    },
+    {
+        "title": "PROTECCIÓN DE DATOS: UN ANÁLISIS COMPARATIVO EN 9 PAÍSES",
+        "link": "https://drive.google.com/file/d/1wKnUwL3oh7TidAxaGZY0hpAFCoKYiSV9/view?usp=drive_link",
+        is2Cols: true
+    },
+    {
         "title": "CÓDIGO PENAL (ART. 153 BIS, 157 BIS Y 183)",
         "link": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/140000-144999/141790/norma.htm"
     },
