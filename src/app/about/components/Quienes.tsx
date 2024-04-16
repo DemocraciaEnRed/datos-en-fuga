@@ -6,21 +6,21 @@ const Quienes = () => {
         {
             name: 'Democracia en Red',
             img: logosNPO.DER,
-            url: ''
+            url: 'https://democraciaenred.org/'
         },
         {
             name: 'O.D.I.A',
             img: logosNPO.ODIA,
-            url: ''
+            url: 'https://odia.legal/'
         },
         {
             name: 'Vía Libre',
             img: logosNPO.VL,
-            url: ''
+            url: 'https://www.vialibre.org.ar/'
         }
     ]
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-3">
+        <div className="flex justify-evenly flex-wrap">
             {npo.map((org, i) => {
                 return (
                     <div key={'aboutorgs' + i} className="flex flex-col justify-between text-center items-center gap-5 p-5">
@@ -32,9 +32,6 @@ const Quienes = () => {
                     </div>
                 )
             })}
-            <div>
-
-            </div>
         </div>
     )
 }

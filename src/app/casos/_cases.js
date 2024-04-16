@@ -17,7 +17,8 @@ const cases = [
       <p className="mb-4">
         Dos días antes de las elecciones, <b>la división de cibercrimen de la Policía Metropolitana allanó su casa</b> y le secuestró una computadora, cuatro discos rígidos, pendrives y memorias. <b>Lo acusaron de ingresar al sistema de la empresa para “causar daño”</b>, es decir, <b>con intenciones de generar fallas en la transparencia electoral</b>. En 2016, un año después, <a href="https://www.lanacion.com.ar/tecnologia/sobreseyeron-al-programador-que-revelo-fallas-en-el-sistema-de-boleta-unica-electronica-nid1924088/" target="_blank" rel="noopener noreferrer">Sorianello fue sobreseído del proceso judicial</a> porque <b>se determinó que había entrado al sistema, pero no de manera indebida ni causando daño alguno, sino que actuó con la (buena) intención de alertar sobre la facilidad de ejecutar un fraude informático.</b>
       </p>
-    </>
+    </>,
+    keywords: ["sistema de votación", "Boleta Única Electrónica", "vulnerabilidades", "reportar"]
   },
   {
     id: 'gaspar-ariel-ortmann',
@@ -39,7 +40,8 @@ const cases = [
       <p>
         Además, no fueron detectadas transferencias de dinero u otro tipo de operaciones que impidieran el recupero de los fondos, así como tampoco la adopción de ningún otro tipo de maniobra que tuviera por objeto encubrir, enmascarar y/o dificultar el rastreo de la procedencia y origen de dichas operaciones.
       </p>
-    </>
+    </>,
+    keywords: ['homebanking', 'Banco de la Nación Argentina', 'vulnerabilidades', 'identificar']
   },
   {
     id: 'javier-smaldone',
@@ -64,19 +66,23 @@ const cases = [
       {
         id: 1,
         icon: casesImages.podcast,
-        text: 'ESCUCHÁ EL PODCAST'
+        text: 'ESCUCHÁ EL PODCAST',
+        url: 'https://open.spotify.com/episode/1PhH3TtC4YqydxmDDW49YN?si=I0RuIERwQsy5-uDyECD-tA&nd=1'
       },
       {
         id: 2,
         icon: casesImages.podcast,
-        text: 'BLOG DE JAVIER'
+        text: 'BLOG DE JAVIER',
+        url: 'https://blog.smaldone.com.ar/2021/12/08/sobreseido-y-aca-no-ha-pasado-nada/'
       },
       {
         id: 3,
         icon: casesImages.podcast,
-        text: 'NOTA PERIODÍSTICA'
+        text: 'NOTA PERIODÍSTICA',
+        url: 'https://www.lanacion.com.ar/tecnologia/varios-detenidos-robo-datos-del-sistema-informatico-nid2295293/'
       }
-    ]
+    ],
+    keywords: ['sistema de Boleta unica electronica', 'fallas', 'denuncias', '#LaGorraLeaks']
   }
 ]
 

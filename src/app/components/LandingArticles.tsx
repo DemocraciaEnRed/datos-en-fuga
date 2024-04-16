@@ -6,7 +6,7 @@ const fetchLatestArticles = async () => {
     const storyblokApi = getStoryblokApi()
 
     let sbParams: ISbStoriesParams = {
-        version: 'draft',
+        version: 'published',
         starts_with: "events/",
         excluding_fields: 'body,_editable,_uid',
         sort_by: "created_at:desc",
@@ -29,8 +29,8 @@ const LandingArticles = async () => {
                     <div className="flex gap-4 [&_a]:max-w-[374px] justify-center flex-wrap">
                         {articles.map((story: ISbStoryData) => <EventsCard key={story.id} story={story} />)}
                     </div>
-                    <Link href="/novedades" type="button" className="block border-full border-[#CC4356] rounded-full py-4 px-16 bg-[#CC4356] text-white w-fit text-center uppercase text-lg mx-auto mt-[4vw]">
-                        <span className="uppercase">conocé todas las novedades</span>
+                    <Link href="/novedades" type="button" className="block border-full border-[#CC4356] rounded-full py-3 px-10 md:py-4 md:px-16 bg-[#CC4356] text-white w-fit text-center uppercase text-lg mx-auto mt-[4vw]">
+                        <span className="uppercase">Más novedades</span>
                     </Link>
                 </>)
             }

@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const LandingFlourish = () => {
     return (
-        <div className="w-[60%] max-lg:w-full">
+        <div className="w-[60%] max-lg:w-full bg-der-black">
             <iframe src='https://flo.uri.sh/story/1969359/embed'
                 title='Interactive or visual content'
                 className='flourish-embed-iframe w-full h-[600px]'

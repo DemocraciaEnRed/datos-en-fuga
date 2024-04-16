@@ -6,7 +6,8 @@ import NavBar from './components/NavBar'
 
 import { storyblokInit, apiPlugin } from "@storyblok/react";
 import ScrollTopButton from './components/ScrollTopButton'
-import Footer from './components/Footer'
+// import Footer from './components/Footer'
+import GoogleAnalytics from './components/GoogleAnalytics'
 
 storyblokInit({
   accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
@@ -67,9 +68,18 @@ const nippo = localFont({
   display: 'swap'
 })
 
+const metaTitle = 'Datos en Fuga | ¿Tu información está segura?'
+const metaDescription = 'Queremos que el Estado asegure estándares de ciberseguridad y que  deje de perseguir hackers que realizan denuncias.'
+
 export const metadata: Metadata = {
-  title: 'Datos en Fuga | ¿Tu información está segura?',
-  description: 'Queremos que el Estado asegure estándares de ciberseguridad y que  deje de perseguir hackers que realizan denuncias.',
+  metadataBase: new URL(process.env.GITHUB_PAGES_ROOT || 'https://democraciaenred.github.io/datosenfuga-next/'),
+  title: metaTitle,
+  description: metaDescription,
+  colorScheme: 'dark',
+  openGraph:{
+    title: metaTitle,
+    description: metaDescription
+  }
 }
 
 export default function RootLayout({
@@ -80,11 +90,12 @@ export default function RootLayout({
 
   return (
     <html lang="es">
-      <body className={`${nippo.variable} ${raleway.variable} ${roboto.variable} ${lexendDeca.variable} ${inter.variable} ${openSans.className} flex flex-col min-h-[100vh]`}>
+      <GoogleAnalytics />
+      <body className={`${nippo.variable} ${raleway.variable} ${roboto.variable} ${lexendDeca.variable} ${inter.variable} ${openSans.className} flex flex-col min-h-[100vh] text-white`}>
         <NavBar />
         {children}
         <ScrollTopButton />
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   )
