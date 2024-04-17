@@ -1,0 +1,28 @@
+name: Merge to Deploy on Release
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  merge_to_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set git user and email
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+
+      - name: Fetch latest changes
+        run: git fetch --prune --unshallow
+
+      - name: Checkout deploy branch
+        run: git checkout deploy
+
+      - name: Merge main into deploy
+        run: |
+          git merge origin/main --no-ff --no-edit
+          git push origin deploy
