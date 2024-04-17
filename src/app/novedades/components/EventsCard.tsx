@@ -5,7 +5,7 @@ import Link from "next/link"
 import EventsCardImage from "./EventsCardImage"
 
 const EventsCard = ({ story }: { story: ISbStoryData }) => {
-    const formattedDate = format(new Date(story.created_at), "dd/MM/yyyy")
+    const formattedDate = story.first_published_at ? format(new Date(story.first_published_at), "dd/MM/yyyy") : ''
     return (
         <Link href={`/novedades/${story.slug}`} className="bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="text-black h-auto max-w-full rounded-lg">

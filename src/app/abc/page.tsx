@@ -6,17 +6,18 @@ import SubtopicsMap from "./components/SubtopicsMap"
 import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
+import ResourcesListItem from './components/ResourcesListItem'
 
 const metaTitle = 'ABC | Datos en Fuga'
 // const metaDescription = 'Conoce más sobre los casos y consecuencias de los #DatosEnFuga'
 
 export const metadata: Metadata = {
-  title: metaTitle,
-//   description: metaDescription,
-  openGraph: {
     title: metaTitle,
-    // description: metaDescription
-  }
+    //   description: metaDescription,
+    openGraph: {
+        title: metaTitle,
+        // description: metaDescription
+    }
 }
 
 const page = () => {
@@ -56,11 +57,7 @@ const page = () => {
                     <p className='font-extralight'>Ultima actualización: 21/11/2023</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    {resources.map((rsrc, i) =>
-                        <Link key={'rList' + i} href={rsrc.link} className="bg-white shadow-md rounded-lg overflow-hidden">
-                            <p className="h-full border-l-8 border-red-600 py-2 pl-4 text-left uppercase" >{rsrc.title}</p>
-                        </Link>
-                    )}
+                    {resources.map((rsrc, i) => <ResourcesListItem key={'rsrcList' + i} rsrc={rsrc} />)}
                 </div>
             </section>
             {/* <section className="p-[6vw] md:p-[3vw] bg-gray-100 text-der-black text-lg">
