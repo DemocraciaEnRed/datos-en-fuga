@@ -19,5 +19,5 @@ jobs:
 
       - name: Merge main into deploy
         run: |
-          git merge main --no-ff --no-edit
+          git merge origin/main --no-ff --no-edit
           git push origin deploy
