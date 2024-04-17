@@ -11,8 +11,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Fetch latest changes
+        run: git fetch --prune --unshallow
+
+      - name: Checkout deploy branch
+        run: git checkout deploy
+
       - name: Merge main into deploy
         run: |
-          git checkout deploy
           git merge main --no-ff --no-edit
           git push origin deploy
