@@ -89,7 +89,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col justify-center gap-[2vw] w-full lg:w-[50%] max-lg:w-full p-8 lg:p-[3vw]">
           <h2 className='text-4xl font-bold text-[#4C4C4E]'>Acerca de</h2>
-          <p className="text-sm">
+          <p className="text-lg">
             Queremos que el Estado asegure estándares de ciberseguridad y que atienda a las alarmas que suenan por todos lados. Queremos que el Estado deje de perseguir penalmente a quienes identifican, denuncian y reportan vulnerabilidades informáticas.
           </p>
           <Link href="/about" type="button" className="self-start border-full border-[#CC4356] rounded-full py-2 px-8 bg-[#CC4356] text-white w-auto text-center uppercase text-lg">
