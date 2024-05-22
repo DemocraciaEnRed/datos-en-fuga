@@ -55,8 +55,8 @@ const About = () => {
             </section>
             <section className="p-[6vw] md:p-[3vw] mx-[10%]">
                 <h2 className="font-nippo text-4xl font-bold uppercase mb-7">¿quiénes somos?</h2>
-                <p className="mb-7 text-xl w-[70vw]">Somos varias organizaciones de la sociedad civil que buscan que el Estado asegure estándares de ciberseguridad y que atienda a las alarmas que suenan por todos lados. 
-                </p>
+                {/* <p className="mb-7 text-xl w-[70vw]">Somos varias organizaciones de la sociedad civil que buscan que el Estado asegure estándares de ciberseguridad y que atienda a las alarmas que suenan por todos lados. 
+                </p> */}
                 <div>
                     <Quienes />
                 </div>
