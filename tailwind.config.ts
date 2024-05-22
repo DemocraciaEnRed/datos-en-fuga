@@ -19,7 +19,10 @@ const config: Config = {
         roboto: ['var(--font-roboto)'],
         raleway: ['var(--font-raleway)'],
         "lexend-deca": ['var(--font-lexend-deca)'],
-        "open-sans": ['var(--font-open-sans)']
+        "open-sans": ['var(--font-open-sans)'],
+        monda: ['var(--font-monda)'],
+        mada: ['var(--font-mada)'],
+        kanit: ['var(--font-kanit)']
       },
       listStyleType: {
         disc: 'disc'

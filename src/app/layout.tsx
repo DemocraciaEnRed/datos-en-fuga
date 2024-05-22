@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Lexend_Deca, Open_Sans, Raleway, Roboto } from 'next/font/google'
+import { Inter, Lexend_Deca, Open_Sans, Raleway, Roboto, Monda, Mada, Kanit } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
 import NavBar from './components/NavBar'
@@ -36,6 +36,22 @@ const openSans = Open_Sans({
   subsets: ['latin'],
   variable: '--font-open-sans'
 })
+const monda = Monda({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-monda'
+})
+const mada = Mada({
+  subsets: ['latin'],
+  weight: ['300', '400', '700'],
+  variable: '--font-mada'
+})
+const kanit = Kanit({
+  subsets: ['latin'],
+  weight: ['600'],
+  variable: '--font-kanit'
+})
+
 const nippo = localFont({
   src: [
     {
@@ -91,7 +107,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <GoogleAnalytics />
-      <body className={`${nippo.variable} ${raleway.variable} ${roboto.variable} ${lexendDeca.variable} ${inter.variable} ${openSans.className} flex flex-col min-h-[100vh] text-white`}>
+      <body className={`${nippo.variable} ${raleway.variable} ${roboto.variable} ${lexendDeca.variable} ${inter.variable} ${openSans.className} ${monda.variable} ${mada.variable} ${kanit.variable} flex flex-col min-h-[100vh] text-white`}>
         <NavBar />
         {children}
         <ScrollTopButton />
