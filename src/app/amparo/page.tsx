@@ -22,7 +22,7 @@ const Amparo = () => {
     <main>
       <header className='bg-[#2D2D2D] py-[8vh] px-8 sm:px-[65px] md:px-[130px]'>
         <h1 className='font-nippo text-[29px] max-[810px]:w-[500px] max-[500px]:w-[250px] sm:text-[40px]'>
-          <span className="font-extrabold">#CON</span>MIS<span className='font-extrabold'>DATOS</span>NO
+          <span className="font-extrabold">#Con</span>Mis<span className='font-extrabold'>Datos</span>No
         </h1>
         <p className='text-2xl max-[810px]:w-[500px] max-[500px]:w-[250px] sm:text-4xl'>
           PRESENTAMOS UN AMPARO CONTRA EL <br /> ESTADO PARA PROTEGER NUESTROS DATOS <br /> PERSONALES EN UN AÑO DE ELECCIONES.

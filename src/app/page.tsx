@@ -22,7 +22,7 @@ export default function Home() {
           <source src={`https://democraciaenred.github.io/datosenfuga-next/home/background.mp4`} type="video/mp4" />
         </video>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center">
-          <h1 className="text-6xl font-extrabold mb-4 max-md:text-4xl">#DATOSENFUGA</h1>
+          <h1 className="text-6xl font-extrabold mb-4 max-md:text-4xl">#DatosEnFuga</h1>
           <h2 className="font-nippo text-5xl max-md:text-3xl">¿QUÉ ESTÁ PASANDO EN ARGENTINA?</h2>
         </div>
       </div>

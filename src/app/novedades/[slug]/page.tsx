@@ -31,7 +31,7 @@ const EventosBySlug = async ({ params }: { params: { slug: string } }) => {
     return (
         <main className="flex-grow bg-[#F1F1F1] text-[#212121] text-base">
             <header className="h-[25vh]" style={headerStyles}>
-                <p className="bg-gray-700 bg-opacity-80 px-7 py-3 text-white"><Link href={'/novedades'}>Novedades</Link> &gt; <Link href={`/novedades/${slug}`}>{name}</Link></p>
+                <p className="bg-gray-700 bg-opacity-80 px-7 py-3 text-white"><Link href={'/blog'}>Blog</Link> &gt; <Link href={`/blog/${slug}`}>{name}</Link></p>
             </header>
             <section className="w-[90vw] md:w-[58vw] mx-auto py-[4vw]">
                 <h1 className="text-3xl font-bold mb-4">{content.title}</h1>

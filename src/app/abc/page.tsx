@@ -24,7 +24,7 @@ const page = () => {
     return (
         <main>
             <header className="py-[6vw] md:py-[3vw] px-8 sm:px-[65px] md:px-[130px] bg-der-black">
-                <h1 className="font-nippo text-3xl sm:text-4xl font-bold uppercase">Lo que siempre quisiste saber del tema y no te animaste a preguntar</h1>
+                <h1 className="font-nippo text-3xl sm:text-4xl font-bold uppercase">La ciberseguridad no es un tema tabú</h1>
             </header>
             <section className="py-[6vw] md:py-[3vw] px-8 sm:px-[65px] md:px-[130px] bg-gray-100 text-der-black">
                 <SubtopicsMap subtopics={subtopics} />

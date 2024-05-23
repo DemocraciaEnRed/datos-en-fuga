@@ -7,7 +7,7 @@ import EventsCardImage from "./EventsCardImage"
 const EventsCard = ({ story }: { story: ISbStoryData }) => {
     const formattedDate = story.first_published_at ? format(new Date(story.first_published_at), "dd/MM/yyyy") : ''
     return (
-        <Link href={`/novedades/${story.slug}`} className="bg-white rounded-lg overflow-hidden shadow-lg">
+        <Link href={`/blog/${story.slug}`} className="bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="text-black h-auto max-w-full rounded-lg">
                 <EventsCardImage alter={story.content.header?.name || story.content.title} sourceImg={story.content.header?.filename} />
                 <div className="p-5">

@@ -14,7 +14,7 @@ const links: Navlink[] = [
     { href: "/amparo", label: "amparo" },
     { href: "/casos", label: "casos" },
     { href: "/reporta", label: "reportá" },
-    { href: "/novedades", label: "novedades" },
+    { href: "/blog", label: "blog" },
     { href: "/about", label: "acerca de" },
     { href: "/abc", label: "ABC" }
 ]

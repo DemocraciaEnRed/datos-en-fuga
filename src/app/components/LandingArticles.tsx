@@ -25,11 +25,11 @@ const LandingArticles = async () => {
         <>
             {articles.length > 0 && (
                 <>
-                    <h2 className="text-center text-4xl text-der-black mb-5 uppercase font-bold">Novedades</h2>
+                    <h2 className="text-center text-4xl text-der-black mb-5 uppercase font-bold">Blog</h2>
                     <div className="flex gap-4 [&_a]:max-w-[374px] justify-center flex-wrap">
                         {articles.map((story: ISbStoryData) => <EventsCard key={story.id} story={story} />)}
                     </div>
-                    <Link href="/novedades" type="button" className="block border-full border-[#CC4356] rounded-full py-3 px-10 md:py-4 md:px-16 bg-[#CC4356] text-white w-fit text-center uppercase text-lg mx-auto mt-[4vw]">
+                    <Link href="/blog" type="button" className="block border-full border-[#CC4356] rounded-full py-3 px-10 md:py-4 md:px-16 bg-[#CC4356] text-white w-fit text-center uppercase text-lg mx-auto mt-[4vw]">
                         <span className="uppercase">Más novedades</span>
                     </Link>
                 </>)
