@@ -1,5 +1,5 @@
 import { ISbStoriesParams, ISbStoryData, StoryblokComponentType, getStoryblokApi } from "@storyblok/react";
-import EventsCard from "../novedades/components/EventsCard";
+import EventsCard from "../blog/components/EventsCard";
 import Link from "next/link";
 
 const fetchLatestArticles = async () => {

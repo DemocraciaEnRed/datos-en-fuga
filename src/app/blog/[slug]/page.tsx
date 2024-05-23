@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Content from "./components/Content";
 import RelatedArticles from "./components/RelatedArticles";
 import Link from "next/link";
+import { mapAuthors } from "../components/MapAuthors";
 
 export async function generateStaticParams() {
     const events = await fetchData()
@@ -101,15 +102,15 @@ const fetchData = async () => {
     return await storyblokApi.get(`cdn/stories`, sbParams);
 }
 
-const mapAuthors = (authors: any) => {
-    let authorsString = ''
-    authors.forEach((author: { name: string }, i: number) => {
-        if (authors.length > 1 && i + 2 < authors.length) authorsString = `${authorsString}${author.name}, `
-        else if (authors.length > 1 && i + 1 < authors.length) authorsString = `${authorsString}${author.name} `
-        else if (authors.length > 1) authorsString = `${authorsString}y ${author.name}`
-        else authorsString = `${authorsString}${author.name}`
-    })
-    return authorsString
-}
+// const mapAuthors = (authors: any) => {
+//     let authorsString = ''
+//     authors.forEach((author: { name: string }, i: number) => {
+//         if (authors.length > 1 && i + 2 < authors.length) authorsString = `${authorsString}${author.name}, `
+//         else if (authors.length > 1 && i + 1 < authors.length) authorsString = `${authorsString}${author.name} `
+//         else if (authors.length > 1) authorsString = `${authorsString}y ${author.name}`
+//         else authorsString = `${authorsString}${author.name}`
+//     })
+//     return authorsString
+// }
 
 const formatDate = (date: string) => format(new Date(date), "dd/MM/yyyy") 
