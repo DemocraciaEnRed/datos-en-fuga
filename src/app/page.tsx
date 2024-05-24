@@ -22,12 +22,12 @@ export default function Home() {
           <source src={`https://democraciaenred.github.io/datosenfuga-next/home/background.mp4`} type="video/mp4" />
         </video>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center">
-          <h1 className="text-6xl font-extrabold mb-4 max-md:text-4xl">#DatosEnFuga</h1>
-          <h2 className="font-nippo text-5xl max-md:text-3xl">¿QUÉ ESTÁ PASANDO EN ARGENTINA?</h2>
+          <h1 className="font-kanit text-6xl font-extrabold mb-4 max-md:text-4xl">#DatosEnFuga</h1>
+          <h2 className="font-kanit text-5xl max-md:text-3xl">¿QUÉ ESTÁ PASANDO EN ARGENTINA?</h2>
         </div>
       </div>
       <LandingTopics />
-      <h2 className='text-4xl font-bold my-12 text-center'>CIBERINCIDENTES EN ARGENTINA</h2>
+      <h2 className='font-kanit text-4xl font-bold my-12 text-center'>CIBERINCIDENTES EN ARGENTINA</h2>
       <div className='pb-11 flex flex-row gap-14 w-[90vw] mx-auto max-lg: max-lg:flex-col max-lg:items-center'>
         <LandingFlourish />
         <div className='w-[40%] flex flex-col max-lg:w-full'>
@@ -88,7 +88,7 @@ export default function Home() {
           style={{ backgroundImage: `url(https://democraciaenred.github.io/datosenfuga-next/home/DER.png)` }}>
         </div>
         <div className="flex flex-col justify-center gap-[2vw] w-full lg:w-[50%] max-lg:w-full p-8 lg:p-[3vw]">
-          <h2 className='text-4xl font-bold text-[#FAFAFA]'>Acerca de</h2>
+          <h2 className='font-kanit text-4xl font-bold text-[#FAFAFA]'>Acerca de</h2>
           <p className="text-lg">
             Queremos que el Estado asegure estándares de ciberseguridad y que atienda a las alarmas que suenan por todos lados. Queremos que el Estado deje de perseguir penalmente a quienes identifican, denuncian y reportan vulnerabilidades informáticas.
           </p>

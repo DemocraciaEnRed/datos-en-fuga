@@ -29,7 +29,7 @@ const Card = ({ backgroundColor, title, description, size }: { backgroundColor: 
 const LandingTopics = () => {
   return (
     <div className='bg-white text-black text-center flex flex-col items-center justify-center p-12 w-full border-t-[#CC4356] border-t-4'>
-      <h2 className='font-bold text-4xl'>¿QUÉ ES #DatosEnFuga?</h2>
+      <h2 className='font-kanit font-bold text-4xl'>¿QUÉ ES #DatosEnFuga?</h2>
       <p className='uppercase'>Cuidar tus datos no solo depende de que tengas una contraseña segura</p>
       <div className='flex flex-col lg:flex-row flex-wrap justify-around gap-4 my-12 text-white'>
           <Card

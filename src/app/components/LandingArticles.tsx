@@ -25,7 +25,7 @@ const LandingArticles = async () => {
         <>
             {articles.length > 0 && (
                 <>
-                    <h2 className="text-center text-4xl text-der-black mb-5 uppercase font-bold">Blog</h2>
+                    <h2 className="font-kanit text-center text-4xl text-der-black mb-5 uppercase font-bold">Blog</h2>
                     <div className="flex gap-4 [&_a]:max-w-[374px] justify-center flex-wrap">
                         {articles.map((story: ISbStoryData) => <EventsCard key={story.id} story={story} />)}
                     </div>

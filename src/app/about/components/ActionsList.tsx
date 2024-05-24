@@ -1,7 +1,7 @@
 const ActionsList = () => {
     return (
         <>
-            <h2 className="mb-7 font-nippo text-4xl font-bold uppercase ">¿que hicimos?</h2>
+            <h2 className="mb-7 font-kanit text-4xl font-bold uppercase ">¿que hicimos?</h2>
             <p className="mb-7 w-[70vw]">Estas son algunas de las acciones que hemos llevado a acabo en el proyecto, en nuestro objetivo de aumentar al conciencia sobre la importancia de la ciberseguridad, la inversión del estado en este campo y la concienciación de la ciudadanía.</p>
             <ol className="text-xl list-decimal [&_li]:mb-4 ml-[10vw] md:ml-[7vw] w-[60vw]">
                 <li>

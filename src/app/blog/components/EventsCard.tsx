@@ -14,17 +14,17 @@ const EventsCard = ({ story }: { story: ISbStoryData }) => {
                 <div className="p-5">
                     <p className={`${story.content?.category ? "flex justify-between" : "text-right"} mb-1`}>{
                         story.content?.category &&
-                        <span className="text-black bg-[#DFDFDF] rounded-3xl font-roboto text-center px-3 py-1 whitespace-nowrap max-[408px]:text-sm">
+                        <span className="text-black bg-[#DFDFDF] rounded-3xl font-monda text-center px-3 py-1 whitespace-nowrap max-[408px]:text-sm">
                             {story.content.category}
                         </span>
                     }{formattedDate}
                     </p>
 
-                    <p className="text-2xl font-extrabold">{story.content.title}</p>
+                    <p className="text-2xl font-extrabold mb-1">{story.content.title}</p>
                     <div className="mb-6">
                         <p>{story.content.brief}</p>
                         {story.content.authors ?
-                            <p className="mt-2 opacity-50 italic">
+                            <p className="mt-1 opacity-50 italic">
                                 {`Autor${story.content.authors.length > 1 ? 'es' : ''}: `}{mapAuthors(story.content.authors)}</p> :
                             null}
                     </div>
@@ -32,7 +32,7 @@ const EventsCard = ({ story }: { story: ISbStoryData }) => {
                         {
                             story.tag_list.map((tag: string) => {
                                 return (
-                                    <span className="text-black bg-[#DFDFDF] rounded-3xl font-roboto text-center px-3 py-2 whitespace-nowrap max-[408px]:text-sm" key={tag}>
+                                    <span className="text-black bg-[#DFDFDF] rounded-3xl font-monda text-center px-3 py-2 whitespace-nowrap max-[408px]:text-sm" key={tag}>
                                         {tag}
                                     </span>
                                 )

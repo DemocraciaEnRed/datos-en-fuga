@@ -107,7 +107,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <GoogleAnalytics />
-      <body className={`${nippo.variable} ${raleway.variable} ${roboto.variable} ${lexendDeca.variable} ${inter.variable} ${openSans.className} ${monda.variable} ${mada.variable} ${kanit.variable} flex flex-col min-h-[100vh] text-white`}>
+      <body className={`${nippo.variable} ${raleway.variable} ${roboto.variable} ${lexendDeca.variable} ${inter.variable} ${openSans.className} ${monda.variable} ${kanit.variable} ${mada.className} flex flex-col min-h-[100vh] text-white`}>
         <NavBar />
         {children}
         <ScrollTopButton />

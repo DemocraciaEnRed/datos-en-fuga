@@ -35,7 +35,7 @@ const EventosBySlug = async ({ params }: { params: { slug: string } }) => {
                 <p className="bg-gray-700 bg-opacity-80 px-7 py-3 text-white"><Link href={'/blog'}>Blog</Link> &gt; <Link href={`/blog/${slug}`}>{name}</Link></p>
             </header>
             <section className="w-[90vw] md:w-[58vw] mx-auto py-[4vw]">
-                <h1 className="text-3xl font-bold mb-4">{content.title}</h1>
+                <h1 className="font-kanit text-3xl font-bold mb-4">{content.title}</h1>
                 <p className="mb-4 text-xl md:mr-[13vw]">Por <span className="uppercase">{content.authors ? mapAuthors(content.authors) : 'Anónimo'}</span></p>
                 <div className="flex flex-col-reverse md:flex-row flex-wrap md:flex-nowrap gap-4 md:gap-9">
                     <article className="flex-grow w-full md:w-auto">
@@ -61,7 +61,7 @@ const EventosBySlug = async ({ params }: { params: { slug: string } }) => {
                             <div className="flex flex-col items-end gap-2 md:w-[10vw] max-sm:flex-row max-sm:py-2 max-sm:flex-wrap">
                                 {tag_list.length > 0 ? tag_list.map((tag) => {
                                     return (
-                                        <span className="md:max-w-[10vw] text-white bg-[#008BB4] text-[10px] rounded-3xl font-roboto font-bold text-center py-1 px-3 capitalize truncate hover:whitespace-normal" key={tag}>
+                                        <span className="md:max-w-[10vw] text-white bg-[#008BB4] text-[10px] rounded-3xl font-monda font-bold text-center py-1 px-3 capitalize truncate hover:whitespace-normal" key={tag}>
                                             {tag}
                                         </span>
                                     )

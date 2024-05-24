@@ -16,7 +16,7 @@ const Reportes = () => {
                     height={356}
                     priority
                 />
-                <h1 className="text-3xl font-extrabold text-der-black my-5">¿ENCONTRASTE UNA FALLA DE SEGURIDAD Y TEMÉS REPORTARLA?</h1>
+                <h1 className="font-kanit text-3xl font-extrabold text-der-black my-5">¿ENCONTRASTE UNA FALLA DE SEGURIDAD Y TEMÉS REPORTARLA?</h1>
                 <Link href="#reporta" className="border-2 border-black rounded-xl p-2 my-2 bg-[#212121] text-white w-full max-w-[270px] text-center">
                     ¿CÓMO REPORTAR SEGURO?
                 </Link>
@@ -55,7 +55,7 @@ const Reportes = () => {
                         REPORTÁ
                     </a>
 
-                    <h2 className="text-3xl text-[#F1F1F1] font-extrabold my-5">¿CÓMO TE PROTEGEMOS?</h2>
+                    <h2 className="font-kanit text-3xl text-[#F1F1F1] font-extrabold my-5">¿CÓMO TE PROTEGEMOS?</h2>
 
                     <div className="grid gap-2.5 grid-cols-3 grid-flow-row mx-auto justify-items-center items-center w-[830px] my-4 max-[845px]:grid-cols-2 max-[775px]:flex flex-col justify-center content-center max-[775px]:w-0">
                         {squaresData2.map((square) => {
@@ -112,7 +112,7 @@ const Reportes = () => {
                 </div>
                 <div className="bg-[#D9D9D9] text-der-black py-10 sm:py-[4vw]">
                     <div className="w-[85vw] mx-auto">
-                        <h2 className="mb-5 text-3xl font-extrabold uppercase">Entonces, ¿Qué y cómo reportar?</h2>
+                        <h2 className="font-kanit mb-5 text-3xl font-extrabold uppercase">Entonces, ¿Qué y cómo reportar?</h2>
                         <p className="text-left text-xl">
                             La Fundación Via Libre se encarga de recibir reportes sobre defectos en aplicaciones empleadas por organizaciones públicas o privadas que afecten derechos de las personas. En particular, cuando se ponen en riesgo sus datos personales. Así, si encontraste una falla en una aplicación que permite que alguien no autorizado extraiga o modifique datos, tuyos o de otras personas, este es el lugar para poder informarlo. También sirve para informar sobre vulnerabilidades potenciales, por ejemplo si encontraste que un sitio está corriendo una versión obsoleta (por &quot;obsoleta&quot; entendemos una versión que ya no recibe soporte ni parches de seguridad) o insegura de software.
                         </p>
@@ -136,14 +136,14 @@ const Reportes = () => {
 
                         <hr className="border-black border-0.5 my-10 md:my-[4vw]" />
 
-                        <h2 className="mb-5 text-3xl font-extrabold">¿QUÉ SE HACE CON TUS REPORTES?</h2>
+                        <h2 className="font-kanit mb-5 text-3xl font-extrabold">¿QUÉ SE HACE CON TUS REPORTES?</h2>
                         <p className="text-xl text-left w-[85vw] mx-auto">
                             La Fundación Via Libre se encarga de recibir reportes anónimos sobre fallas de ciberseguridad. Trabajamos para proteger la identidad de quienes nos informan y tomamos medidas para asegurarnos de que se les dé el seguimiento adecuado. En caso de ser relevante, presentamos los informes a organismos competentes, además de explorar mecanismos de reclamo judiciales. Tu seguridad y confidencialidad son nuestra prioridad.
                         </p>
                     </div>
                 </div>
                 <div className="bg-[#212121] py-10 sm:py-[4vw]">
-                    <h2 className="mb-5 text-3xl font-extrabold">SOBRE EL PROYECTO</h2>
+                    <h2 className="font-kanit mb-5 text-3xl font-extrabold">SOBRE EL PROYECTO</h2>
                     <p className="text-xl text-left w-[85vw] mx-auto">
                         Desde Fundación Vía Libre, ODIA y Democracia en Red realizamos todos los esfuerzos técnicos para no conservar datos personales a través de los reportes recibidos. Tal como se puede consultar en la sección “¿Cómo te protegemos?”, la información que envíes es absolutamente anónima para nosotros: la plataforma está diseñada de forma tal que únicamente conserva el contenido presentado en la denuncia y genera en consecuencia un código único para identificarla, sin quedar asociada a quien la realiza. No accedemos a ni conservamos registros que permitan individualizar o identificar a quienes completan el formulario: no empleamos ningún mecanismo para trazar tu conexión ni guardamos registro de las direcciones de red desde las que te hayas conectado o cualquier otro metadato que pueda identificarte. De todas formas, recomendamos como precaución general no incluir información personal y, en lo posible, acceder a través del navegador TOR.
                     </p>
