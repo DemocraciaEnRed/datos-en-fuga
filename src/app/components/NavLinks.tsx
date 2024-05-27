@@ -28,7 +28,7 @@ const NavLinks = () => {
         <>
         <li className="flex items-center ml-4">
             <Link href={links[0].href} className="mx-4">
-                <Image src={canilla} alt="Datos en Fuga logo" height={40} width={40} />
+                <Image src={canilla} alt="Datos en Fuga logo" height={20} width={20} />
             </Link>
         </li>
             {links.map((link, i) => {
