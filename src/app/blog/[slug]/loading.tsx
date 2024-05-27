@@ -1,6 +1,6 @@
 const EventoBySlugLoading = () => {
     return (
-        <main className="flex-grow bg-[#F1F1F1] text-[#212121] text-base font-lexend-deca">
+        <main className="flex-grow bg-[#F1F1F1] text-[#212121] text-base font-monda">
             <header className="h-[25vh] bg-der-black">
                 <div className="bg-gray-700 bg-opacity-80 px-7 py-3 mb-4">
                     <p className="bg-gray-200 h-2 w-48 rounded-full"></p>

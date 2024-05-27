@@ -5,7 +5,7 @@ const NavBar = () => {
     return (
         <>
             <nav className="hidden sm:block bg-black p-4">
-                <ul className="flex justify-center flex-wrap gap-5 uppercase font-inter">
+                <ul className="flex justify-center flex-wrap gap-5 uppercase font-monda">
                     <NavLinks />
                 </ul>
             </nav>

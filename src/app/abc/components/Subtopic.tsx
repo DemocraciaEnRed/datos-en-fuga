@@ -4,7 +4,7 @@ import { SubtopicIF } from "./SubtopicsMap"
 const Subtopic = ({ subtopic }: { subtopic: SubtopicIF }) => {
     return (
         <>
-            <h3 className="font-nippo text-2xl font-bold uppercase">{subtopic?.title}</h3>
+            {/* <h3 className="font-kanit text-2xl font-bold uppercase">{subtopic?.title}</h3> */}
             <div className="mx-auto">
                 {subtopic?.details.map((detail, i) => {
                     return (
