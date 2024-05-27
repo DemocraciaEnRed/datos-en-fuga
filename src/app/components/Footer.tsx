@@ -4,7 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { sharedImages } from "~/shared/index"
 
-const darkThemeSegments = ['about', 'abc', 'novedades']
+const darkThemeSegments = ['about', 'abc', 'blog']
 const isDarkTheme = (path: string) => darkThemeSegments.some(segment => segment === path.split('/')[1])
 
 const Footer = () => {
@@ -22,7 +22,7 @@ const Footer = () => {
             className="block h-2/3 w-auto"
             priority
           />
-          <div className="font-raleway text-sm">
+          <div className="font-monda text-sm">
             <span>Desarrollado por</span>
             <span className="block">
               <strong className="font-semibold">Democracia en Red</strong>
@@ -67,7 +67,7 @@ const Footer = () => {
 
       <div className="flex flex-row justify-center items-center">
         <Link href="mailto:contacto@democraciaenred.com" target="_blank">
-          <p className="font-raleway">contacto@democraciaenred.org</p>
+          <p className="font-monda">contacto@democraciaenred.org</p>
         </Link>
       </div>
     </footer>

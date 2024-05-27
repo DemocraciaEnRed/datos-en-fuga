@@ -9,7 +9,7 @@ const RelatedArticles = async ({ uid, tags }: { uid: string, tags: string[] }) =
 
     return (
         <>
-            <h2 className="text-center text-xl mb-5">Artículos relacionados</h2>
+            <h2 className="font-monda text-center text-xl mb-5">Artículos relacionados</h2>
             <div className="flex gap-4 [&_a]:max-w-[374px] justify-center flex-wrap">
                 {articles.length > 0 ?
                     articles.map((story) => <EventsCard key={story.id} story={story} />) :

@@ -21,15 +21,15 @@ const Amparo = () => {
   return (
     <main>
       <header className='bg-[#2D2D2D] py-[8vh] px-8 sm:px-[65px] md:px-[130px]'>
-        <h1 className='font-nippo text-[29px] max-[810px]:w-[500px] max-[500px]:w-[250px] sm:text-[40px]'>
-          <span className="font-extrabold">#CON</span>MIS<span className='font-extrabold'>DATOS</span>NO
+        <h1 className='font-kanit text-[29px] max-[810px]:w-[500px] max-[500px]:w-[250px] sm:text-[40px]'>
+          <span className="font-extrabold">#Con</span>Mis<span className='font-extrabold'>Datos</span>No
         </h1>
         <p className='text-2xl max-[810px]:w-[500px] max-[500px]:w-[250px] sm:text-4xl'>
           PRESENTAMOS UN AMPARO CONTRA EL <br /> ESTADO PARA PROTEGER NUESTROS DATOS <br /> PERSONALES EN UN AÑO DE ELECCIONES.
         </p>
       </header>
       <section className='py-[4vh] px-8 sm:px-[65px] md:px-[130px] h-4/6 bg-[#F1F1F1] text-black'>
-        <h2 className='md:w-[65%] mx-auto text-center text-2xl font-nippo font-bold sm:text-4xl'>
+        <h2 className='md:w-[65%] mx-auto text-center text-2xl font-kanit font-bold sm:text-4xl'>
           PRESENTAMOS UN AMPARO PARA PROTEGER NUESTROS DATOS PERSONALES Y NUESTRA DEMOCRACIA
         </h2>
         <div className='my-10'>
@@ -60,7 +60,7 @@ const Amparo = () => {
 
           </div>
         </div>
-        <p className='text-2xl font-extrabold font-nippo text-center sm:text-4xl'>¿Y QUÉ ES LO QUE PUEDE PASAR MIENTRAS SIGA VIGENTE?</p>
+        <p className='text-2xl font-extrabold font-kanit text-center sm:text-4xl'>¿Y QUÉ ES LO QUE PUEDE PASAR MIENTRAS SIGA VIGENTE?</p>
         <div className='my-7 flex flex-row flex-wrap gap-5 items-center justify-center mx-auto'>
           <Image
             alt="amparo"
@@ -100,7 +100,7 @@ const Amparo = () => {
             className='block md:hidden w-full h-auto max-w-[535px]'
           />
         </div>
-        <p className='text-2xl font-extrabold font-nippo mx-auto text-center md:w-[65%] my-6 sm:text-4xl'>PERO, ADEMÁS, EL USO DE DATOS PERSONALES TAMBIÉN AMENAZA LA DEMOCRACIA Y TIENE GRANDES ANTECEDENTES…</p>
+        <p className='text-2xl font-extrabold font-kanit mx-auto text-center md:w-[65%] my-6 sm:text-4xl'>PERO, ADEMÁS, EL USO DE DATOS PERSONALES TAMBIÉN AMENAZA LA DEMOCRACIA Y TIENE GRANDES ANTECEDENTES…</p>
         <div className='flex flex-col overflow-auto overflow-y-hidden w-full my-5'>
           <Image
             alt="amparo"
@@ -121,7 +121,7 @@ const Amparo = () => {
         </div>
       </section>
       <section className='py-[4vh] bg-der-black'>
-        <h2 className='font-nippo text-4xl bg-[#006482] py-4 pl-8 sm:pl-[65px] md:pl-[130px] pr-5 inline-block font-extrabold max-[466px]:text-2xl'>¿QUÉ PRESENTAMOS?
+        <h2 className='font-kanit text-4xl bg-[#006482] py-4 pl-8 sm:pl-[65px] md:pl-[130px] pr-5 inline-block font-extrabold max-[466px]:text-2xl'>¿QUÉ PRESENTAMOS?
         </h2>
         <div className='flex flex-col justify-center items-center w-[90vw] md:w-[75vw] max-w-[950px] bg-gray-100 text-black rounded-md mx-auto my-[3vw] p-6 gap-5'>
           <p className='text-2xl font-bold'>AMPARO</p>
@@ -131,7 +131,7 @@ const Amparo = () => {
             height={96}
             width={96}
           />
-          <p className='text-center text-2xl font-nippo'>
+          <p className='text-center text-2xl font-kanit'>
             Presentamos un amparo colectivo contra el Estado solicitando el pronunciamiento de inconstitucionalidad de la DA 431/2020 y de determinados artículos de Ley de Datos Personales, y solicitando se dicte una medida cautelar que ordena la suspensión de lo que disponen para evitar la transferencia y el mal uso de nuestros datos personales.
           </p>
           <div className='flex justify-center items-center gap-5 flex-wrap'>
@@ -143,7 +143,7 @@ const Amparo = () => {
             </a>
           </div>
         </div>
-        <div className='text-lg font-nippo mx-8 sm:mx-[65px] md:mx-[130px]'>
+        <div className='text-lg font-kanit mx-8 sm:mx-[65px] md:mx-[130px]'>
           <h3 className='font-bold underline uppercase mb-3'>estado:</h3>
           <p className='text-white text-lg mb-3'>El amparo colectivo se presento el 18 de abril de 2023 y radica en el juzgado Contencioso Administrativo Federal N 8, a cargo de la Jueza Dra. María Cecilia GILARDI MADARIAGA de NEGRE. Luego de 5 meses, el 07/09/2023, la Sra. Jueza se pronuncio sobre la medida cautelar solicitada por nosotros y rechazo la misma. Este rechazo fue apelado por nosotros y  desde el 11 de septiembre aguardamos que la Sala V del mismo fuero revise la decisión del Juzgado de origen y nos conceda la medida cautelar.</p>
           <p className='font-extralight'>Ultima actualización: 21/11/2023</p>

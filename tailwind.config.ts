@@ -13,13 +13,16 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      // inter: ['var(--font-inter)'],
+      // nippo: ['var(--font-nippo)'],
+      // roboto: ['var(--font-roboto)'],
+      // raleway: ['var(--font-raleway)'],
+      // "lexend-deca": ['var(--font-lexend-deca)'],
+      // "open-sans": ['var(--font-open-sans)'],
       fontFamily: {
-        inter: ['var(--font-inter)'],
-        nippo: ['var(--font-nippo)'],
-        roboto: ['var(--font-roboto)'],
-        raleway: ['var(--font-raleway)'],
-        "lexend-deca": ['var(--font-lexend-deca)'],
-        "open-sans": ['var(--font-open-sans)']
+        monda: ['var(--font-monda)'],
+        mada: ['var(--font-mada)'],
+        kanit: ['var(--font-kanit)']
       },
       listStyleType: {
         disc: 'disc'
