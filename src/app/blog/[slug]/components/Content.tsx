@@ -41,7 +41,13 @@ const Content = ({ document }: { document: ISbStoryData }) => {
                 },
             },
             nodeResolvers: {
-                [NODE_PARAGRAPH]: (children: ReactNode) => <p className="my-2">{children}</p>,
+                [NODE_PARAGRAPH]: (children: ReactNode) => {
+
+                    let paragraph = <p className="my-2">{children}</p>
+                    // Empty paragraph handler (Enter pressed for multiple lines after an element)
+                    children == null && (paragraph = <br/>)
+                    return paragraph
+                },
                 [NODE_HEADING]: (children: ReactNode, { level }) => {
                     let elem = ''
                     let setClass = ''
