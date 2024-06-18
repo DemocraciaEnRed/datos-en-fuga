@@ -4,7 +4,7 @@ import { subtopics, iframes, resources } from './_data'
 import amparoIcon from '../../../public/shared/amparo.png'
 import SubtopicsMap from "./components/SubtopicsMap"
 import Image from 'next/image'
-import Link from 'next/link'
+// import Link from 'next/link'
 import { Metadata } from 'next'
 import ResourcesListItem from './components/ResourcesListItem'
 
@@ -24,13 +24,13 @@ const page = () => {
     return (
         <main>
             <header className="py-[6vw] md:py-[3vw] px-8 sm:px-[65px] md:px-[130px] bg-der-black">
-                <h1 className="font-kanit text-3xl sm:text-4xl font-bold uppercase">La ciberseguridad no es un tema tabú</h1>
+                <h1 className="font-kanit text-3xl sm:text-4xl font-bold">La ciberseguridad no es un tema tabú</h1>
             </header>
             <section className="py-[6vw] md:py-[3vw] px-8 sm:px-[65px] md:px-[130px] bg-gray-100 text-der-black">
                 <SubtopicsMap subtopics={subtopics} />
             </section>
             <section className="py-[6vw] md:py-[3vw] px-8 sm:px-[65px] md:px-[130px] bg-gray-100 text-der-black text-lg">
-                <h2 className="font-kanit text-2xl sm:text-3xl font-bold uppercase">recursos útiles</h2>
+                <h2 className="font-kanit text-2xl sm:text-3xl font-bold">Recursos útiles</h2>
                 <div className='flex flex-col justify-center items-center bg-white text-black shadow-xl rounded-lg my-[3vw] p-6 gap-5'>
                     <p className='text-xl font-bold'>AMPARO</p>
                     <Image

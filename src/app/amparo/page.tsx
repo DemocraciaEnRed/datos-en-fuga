@@ -24,8 +24,8 @@ const Amparo = () => {
         <h1 className='font-kanit text-[29px] max-[810px]:w-[500px] max-[500px]:w-[250px] sm:text-[40px]'>
           <span className="font-extrabold">#Con</span>Mis<span className='font-extrabold'>Datos</span>No
         </h1>
-        <p className='text-2xl max-[810px]:w-[500px] max-[500px]:w-[250px] sm:text-4xl'>
-          PRESENTAMOS UN AMPARO CONTRA EL <br /> ESTADO PARA PROTEGER NUESTROS DATOS <br /> PERSONALES EN UN AÑO DE ELECCIONES.
+        <p className='text-2xl max-[810px]:w-[500px] max-[500px]:w-[250px] sm:text-4xl font-kanit'>
+          Presentamos un amparo contra el Estado para proteger nuestros datos personales en un año de elecciones.
         </p>
       </header>
       <section className='py-[4vh] px-8 sm:px-[65px] md:px-[130px] h-4/6 bg-[#F1F1F1] text-black'>

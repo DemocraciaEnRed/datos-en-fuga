@@ -24,7 +24,7 @@ const mada = Mada({
 })
 const kanit = Kanit({
   subsets: ['latin'],
-  weight: ['600'],
+  weight: ['400' ,'600'],
   variable: '--font-kanit'
 })
 
