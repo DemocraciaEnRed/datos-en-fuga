@@ -135,23 +135,32 @@ const Amparo = () => {
             Presentamos un amparo colectivo contra el Estado solicitando el pronunciamiento de inconstitucionalidad de la DA 431/2020 y de determinados artículos de Ley de Datos Personales, y solicitando se dicte una medida cautelar que ordena la suspensión de lo que disponen para evitar la transferencia y el mal uso de nuestros datos personales.
           </p>
           <div className='flex justify-center items-center gap-5 flex-wrap'>
-            <a href="https://drive.google.com/file/d/1E98MIeIvUPRuz2jz_EODQy4TKd3Xahnw/view" target='_blank' type="button" className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
-              descargar amparo
+            <a href="https://drive.google.com/file/d/1E98MIeIvUPRuz2jz_EODQy4TKd3Xahnw/view" target='_blank' type="button" className="border-2 border-[#CC4356] rounded-xl p-1 bg-[#CC4356] text-white w-[295px] text-center">
+              <p className='font-bold uppercase'>amparo</p>
+              <p className='font-light text-sm'>Abril 2023</p>
             </a>
-            <a href="https://drive.google.com/file/d/1kw6bYhov5m9-YloW4B5_d8OiasdJzIwO/view" target='_blank' type="button" className="border-2 border-[#CC4356] rounded-xl p-2 bg-[#CC4356] text-white w-[295px] text-center font-bold uppercase">
-              descargar gacetilla
+            <a href="https://drive.google.com/file/d/1kw6bYhov5m9-YloW4B5_d8OiasdJzIwO/view" target='_blank' type="button" className="border-2 border-[#CC4356] rounded-xl p-1 bg-[#CC4356] text-white w-[295px] text-center">
+              <p className='font-bold uppercase'>gacetilla amparo</p>
+              <p className='font-light text-sm'>Abril 2023</p>
+            </a>
+          </div>
+          <div className='flex justify-center items-center gap-5 flex-wrap'>
+            <a href="https://drive.google.com/file/d/1Fgt4WNEfsCTEZMi-f6pKDXkfWBnj9jet/view?usp=drive_link" target='_blank' type="button" className="border-2 border-[#CC4356] rounded-xl p-1 bg-[#CC4356] text-white w-[295px] text-center">
+              <p className='font-bold uppercase'>sentencia</p>
+              <p className='font-light text-sm'>Junio 2024</p>
+            </a>
+            <a href="https://drive.google.com/file/d/18OvsTaKZV5PkJONvuVuESCgHdt6TbRZj/view?usp=drive_link" target='_blank' type="button" className="border-2 border-[#CC4356] rounded-xl p-1 bg-[#CC4356] text-white w-[295px] text-center">
+              <p className='font-bold uppercase'>gacetilla sentencia</p>
+              <p className='font-light text-sm'>Junio 2024</p>
             </a>
           </div>
         </div>
         <div className='text-lg font-kanit mx-8 sm:mx-[65px] md:mx-[130px]'>
           <h3 className='font-bold underline uppercase mb-3'>estado:</h3>
-          <p className='text-white text-lg mb-3'>El amparo colectivo se presento el 18 de abril de 2023 y radica en el juzgado Contencioso Administrativo Federal N 8, a cargo de la Jueza Dra. María Cecilia GILARDI MADARIAGA de NEGRE. Luego de 5 meses, el 07/09/2023, la Sra. Jueza se pronuncio sobre la medida cautelar solicitada por nosotros y rechazo la misma. Este rechazo fue apelado por nosotros y  desde el 11 de septiembre aguardamos que la Sala V del mismo fuero revise la decisión del Juzgado de origen y nos conceda la medida cautelar.</p>
-          <p className='font-extralight'>Ultima actualización: 21/11/2023</p>
+          <p className='text-white text-lg mb-3'>El amparo colectivo que presentamos en abril de 2023 contra el Estado Nacional, el 7 este mes, luego de mas de un año, tuvo sentencia de segunda instancia de la que la Sala V, del Fuero Contencioso Administrativo Federal, en la que se pronunció a favor nuestro, contrario a la sentencia de primera instancia, y ordeno al Estado Nacional a que presente un plan de borrado integral de las bases de datos creadas a partir de la aplicación <a href="http://cuidar.ar/" target="_blank" rel="noopener noreferrer">Cuid.Ar</a>.</p>
+          <p className='font-extralight'>Última actualización: junio 2024</p>
         </div>
       </section>
-      {/* <section className='px-[5vw] mx-auto bg-der-black border-t-2 border-t-white'>
-        <SiteMapFooter/>
-      </section> */}
     </main>
   )
 }
