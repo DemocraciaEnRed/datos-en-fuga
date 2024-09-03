@@ -28,7 +28,6 @@ const kanit = Kanit({
   variable: '--font-kanit'
 })
 
-
 const metaTitle = 'Datos en Fuga | ¿Tu información está segura?'
 const metaDescription = 'Queremos que el Estado asegure estándares de ciberseguridad y que  deje de perseguir hackers que realizan denuncias.'
 
