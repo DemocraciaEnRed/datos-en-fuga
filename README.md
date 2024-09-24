@@ -7,8 +7,6 @@
 ![License](https://img.shields.io/github/license/DemocraciaEnRed/datosenfuga-next)
 ![Docker](https://img.shields.io/badge/docker-ready-blue)
 
----
-
 Web estática del proyecto [Datos en Fuga](https://datosenfuga.org)
 
 > _Queremos que el Estado asegure estándares de ciberseguridad y que atienda a las alarmas que suenan por todos lados. Queremos que el Estado deje de perseguir penalmente a quienes identifican, denuncian y reportan vulnerabilidades informáticas._
