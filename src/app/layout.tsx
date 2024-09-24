@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter, Lexend_Deca, Open_Sans, Raleway, Roboto } from 'next/font/google'
-import localFont from 'next/font/local'
+import { Monda, Mada, Kanit } from 'next/font/google'
 import './globals.css'
 import NavBar from './components/NavBar'
 
 import { storyblokInit, apiPlugin } from "@storyblok/react";
 import ScrollTopButton from './components/ScrollTopButton'
-// import Footer from './components/Footer'
 import GoogleAnalytics from './components/GoogleAnalytics'
 
 storyblokInit({
@@ -14,58 +12,20 @@ storyblokInit({
   use: [apiPlugin]
 });
 
-const inter = Inter({
+const monda = Monda({
   subsets: ['latin'],
-  variable: '--font-inter'
-})
-const lexendDeca = Lexend_Deca({
-  subsets: ['latin'],
-  variable: '--font-lexend-deca'
-})
-const raleway = Raleway({
-  subsets: ['latin'],
-  variable: '--font-raleway'
-})
-const roboto = Roboto({
   weight: ['400', '700'],
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
-  variable: '--font-roboto'
+  variable: '--font-monda'
 })
-const openSans = Open_Sans({
+const mada = Mada({
   subsets: ['latin'],
-  variable: '--font-open-sans'
+  weight: ['300', '400', '700'],
+  variable: '--font-mada'
 })
-const nippo = localFont({
-  src: [
-    {
-      path: './fonts/NIPPO-EXTRALIGHT.otf',
-      weight: '200',
-      style: 'normal',
-    },
-    {
-      path: './fonts/NIPPO-LIGHT.otf',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: './fonts/NIPPO-REGULAR.otf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './fonts/NIPPO-MEDIUM.otf',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: './fonts/NIPPO-BOLD.otf',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-nippo',
-  display: 'swap'
+const kanit = Kanit({
+  subsets: ['latin'],
+  weight: ['400' ,'600'],
+  variable: '--font-kanit'
 })
 
 const metaTitle = 'Datos en Fuga | ¿Tu información está segura?'
@@ -76,7 +36,7 @@ export const metadata: Metadata = {
   title: metaTitle,
   description: metaDescription,
   colorScheme: 'dark',
-  openGraph:{
+  openGraph: {
     title: metaTitle,
     description: metaDescription
   }
@@ -91,11 +51,10 @@ export default function RootLayout({
   return (
     <html lang="es">
       <GoogleAnalytics />
-      <body className={`${nippo.variable} ${raleway.variable} ${roboto.variable} ${lexendDeca.variable} ${inter.variable} ${openSans.className} flex flex-col min-h-[100vh] text-white`}>
+      <body className={`${monda.variable} ${kanit.variable} ${mada.className} flex flex-col min-h-[100vh] text-white`}>
         <NavBar />
         {children}
         <ScrollTopButton />
-        {/* <Footer /> */}
       </body>
     </html>
   )
