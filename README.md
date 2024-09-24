@@ -9,9 +9,9 @@
 
 ---
 
-Web estática del proyecto Datos en Fuga
-Queremos que el Estado asegure estándares de ciberseguridad y que atienda a las alarmas que suenan por todos lados.
-Queremos que el Estado deje de perseguir penalmente a quienes identifican, denuncian y reportan vulnerabilidades informáticas.
+Web estática del proyecto [Datos en Fuga](https://datosenfuga.org)
+
+> _Queremos que el Estado asegure estándares de ciberseguridad y que atienda a las alarmas que suenan por todos lados. Queremos que el Estado deje de perseguir penalmente a quienes identifican, denuncian y reportan vulnerabilidades informáticas._
 
 ## ⚒️ Guía de instalación y ejecución
 
