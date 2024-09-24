@@ -2,10 +2,13 @@ version: '3'
 
 services:
   app:
-    build:
-      context: .
-    image: democraciaenred/datosenfuga-next:latest
-    # env_file:
-    #   - .env.local 
+    build: .
+    image: ghcr.io/democraciaenred/datosenfuga-next:latest
+    env_file:
+      - .env.local 
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules      
     ports:
       - 3000:3000
+    command: npm run dev
