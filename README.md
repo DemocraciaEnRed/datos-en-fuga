@@ -1,33 +1,69 @@
-![Header](public/header-doc.png)
+![Header](./docs/der-logo.png)
 
-# Datos en Fuga - Web
+# Datos en fuga
 
-[![GitHub license](https://img.shields.io/github/license/DemocraciaEnRed/leyesabiertas-notifier)](https://github.com/DemocraciaEnRed/leyesabiertas-notifier/blob/master/LICENSE)
-
-Este es uno de los cuatros modulos que se requieren descargar, hacer setup e instalar cada uno de los repositorios para poder utilizar Leyes Abiertas.
-Para saber mas del conjunto de modulos que compone leyes abiertas, hace [click aqui](https://github.com/DemocraciaEnRed/leyesabiertas) 
+![Node Version](https://img.shields.io/badge/node-v16-red)
+![Documentation](https://img.shields.io/badge/docs-available-brightgreen)
+![License](https://img.shields.io/github/license/DemocraciaEnRed/datosenfuga-next)
+![Docker](https://img.shields.io/badge/docker-ready-blue)
 
 ---
 
+Web estática del proyecto Datos en Fuga
+Queremos que el Estado asegure estándares de ciberseguridad y que atienda a las alarmas que suenan por todos lados.
+Queremos que el Estado deje de perseguir penalmente a quienes identifican, denuncian y reportan vulnerabilidades informáticas.
 
-Este es un proyecto hecho en [Next.js](https://nextjs.org/) generado con [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## ⚒️ Guía de instalación y ejecución
 
-## Getting Started
+Hay 2 maneras de preparar el entorno para desarrollo. A través de Docker, o configurando el entorno de Node
 
-Primero, ejecuta el servidor de desarrollo:
+### Docker
+
+> #### ⚠️ Prerequisito
+>
+> Este entorno virtual requiere de tener [Docker](https://docs.docker.com/) instalado
+
+#### Instalación
+
+Abrí una terminal del sistema en el directorio raiz del proyecto y construí la imagen de docker
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+$ docker compose build
 ```
 
-Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
+#### Ejecución
 
-La página se actualizará automáticamente a medida que edites el archivo.
+Abrí una terminal del sistema en el directorio raiz del proyecto y ejecutá la imagen en un contenedor
 
-Este proyecto utiliza [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) para optimizar y cargar automáticamente Inter, una fuente personalizada de Google.
+```bash
+$ docker compose up
+```
+
+### Entorno de Node
+
+> #### ⚠️ Prerequisitos
+>
+> Este entorno virtual requiere de:
+>
+> - [Node.js v16](https://nodejs.org/en/blog/release/v16/).
+
+#### Instalación y Ejecución
+
+Abrí una terminal del sistema en el directorio raiz del proyecto y ejecutá el proyecto.
+
+```bash
+$ npm install
+$ npm run dev
+```
+
+## 👷‍♀️ Cómo colaborar
+
+Las contribuciones siempre son bienvenidas. Si te interesa contribuir a este proyecto y no estás seguro de por dónde empezar, preparamos esta [guía de colaboración](https://github.com/DemocraciaEnRed/.github/blob/main/docs/CONTRIBUTING.md).
+
+## ⚖️ Licencia
+
+El software se encuentra licensiado bajo [GPL-v3](./LICENSE). Creemos en la importancia del código abierto para la transformación social y fomentamos que la comunidad aporte de manera activa.
+
+---
+
+⌨️ con ❤️ por [DER](https://github.com/DemocraciaEnRed/)
