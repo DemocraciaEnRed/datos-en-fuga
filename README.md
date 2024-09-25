@@ -2,8 +2,7 @@
 
 # Datos en fuga
 
-![Node Version](https://img.shields.io/badge/node-v16-red)
-![Documentation](https://img.shields.io/badge/docs-available-brightgreen)
+![Node Version](https://img.shields.io/badge/node-v18-red)
 ![License](https://img.shields.io/github/license/DemocraciaEnRed/datosenfuga-next)
 ![Docker](https://img.shields.io/badge/docker-ready-blue)
 
